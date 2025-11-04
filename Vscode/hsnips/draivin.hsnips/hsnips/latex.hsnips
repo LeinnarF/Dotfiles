@@ -1,0 +1,443 @@
+global
+function math(context) {
+    return context.scopes.some(s => s.startsWith("meta.math"));
+}
+endglobal
+
+
+snippet mk "Inline Math" A
+$ $0 $
+endsnippet
+
+# snippet dm "Math Block" A
+# $$
+# $0
+# $$
+# endsnippet
+
+snippet dm "Math Block" A
+\[
+$0
+\]
+endsnippet
+
+snippet tag "Math Tag" A
+\\tag{$0}
+endsnippet
+
+
+######################
+#  Proving Snippets  #
+######################
+
+context math(context)
+snippet then "Implies" A
+\\implies
+endsnippet
+
+context math(context)
+snippet iff "If and only if" A
+\\iff
+endsnippet
+
+context math(context)
+snippet therefore "Therefore" A
+\\therefore
+endsnippet
+
+context math(context)
+snippet inn "In" A
+\\in
+endsnippet
+
+context math(context)
+snippet notin "Not in" A
+\\notin
+endsnippet
+
+context math(context)
+snippet sub "Subset" A
+\\subset
+endsnippet
+
+context math(context)
+snippet ge "Greater than or equal to" A
+\\geq
+endsnippet
+
+context math(context)
+snippet le "Less than or equal to" A
+\\leq
+endsnippet
+
+context math(context)
+snippet neq "Not equal to" A
+\\neq
+endsnippet
+
+context math(context)
+snippet approx "Approximately equal to" A
+\\approx
+endsnippet
+
+context math(context)
+snippet exi "Exists" A
+\\exists
+endsnippet
+
+context math(context)
+snippet fora "For all" A
+\\forall
+endsnippet
+
+######################
+#  General Snippets  #
+######################
+
+context math(context)
+snippet pi "Pi" A
+\\pi
+endsnippet
+
+context math(context)
+snippet oo "Infinity" A
+\\infty
+endsnippet
+
+context math(context)
+snippet cod "cdots" A
+\\cdots
+endsnippet
+
+context math(context)
+snippet sq "Square Root" A
+\\sqrt{$0}
+endsnippet
+
+context math(context)
+snippet root "n-th Root" A
+\\sqrt[n]{$0}
+endsnippet
+
+context math(context)
+snippet sr "Squared" A
+^{2}
+endsnippet
+
+context math(context)
+snippet cb "Cubed" A
+^{3}
+endsnippet
+
+context math(context)
+snippet dd "&" A 
+& 
+endsnippet
+
+context math(context)
+snippet ll "next line" A
+\\\\
+endsnippet
+
+context math(context)
+snippet disp "Displaystyle" A
+\\displaystyle$0 
+endsnippet
+
+context math(context)
+snippet add "(+)" iA
++
+endsnippet
+
+context math(context)
+snippet min "(-)" iA
+-
+endsnippet
+
+context math(context) 
+snippet eql "(=)" iA
+=
+endsnippet
+
+context math(context)
+snippet sci "Scientific Notation" A
+\\times 10^{$0}$1
+endsnippet
+
+context math(context)
+snippet ff "f(x)" A
+f($0)
+endsnippet
+
+context math(context)
+snippet rr "Raised to Power" A
+^{$0}
+endsnippet
+
+context math(context)
+snippet ss "Subscript" A
+_{$0}
+endsnippet
+
+context math(context)
+snippet fr "Fraction" A
+\\frac{$0}{}
+endsnippet
+
+context math(context)
+snippet dfr "Display Fraction" A
+\\dfrac{$0}{}
+endsnippet
+
+#######################                      
+#  Grouping Snippets  #
+#######################
+
+context math(context)
+snippet abs "Absolute value" A
+\\left| $0 \\right|
+endsnippet
+
+context math(context)
+snippet pp "parentheses" A
+( $0 )
+endsnippet
+
+context math(context)
+snippet brk "Brackets" A
+\\left[ $0 \\right]
+endsnippet
+
+context math(context)
+snippet set "Set" A
+\\left\\{ $0 \\right\\}
+endsnippet
+
+context math(context)
+snippet brc "Braces" A
+\\left\\{ $0 \\right\\}
+endsnippet
+
+context math(context)
+snippet PP "Parentheses" A
+\\left( $0 \\right)
+endsnippet
+
+#######################
+#  Calculus Snippets  #
+#######################
+
+context math(context)
+snippet lim "Limit" A
+\\lim_{$1 \\to $2} $0
+endsnippet
+
+context math(context)
+snippet dint "Definite Integral" A
+\\int_{$1}^{$2} $0 \\, d$3
+endsnippet
+
+context math(context)
+snippet sum "Summation" A
+\\sum_{$1}^{$2} $0
+endsnippet
+
+context math(context)
+snippet int "Integral" A
+\\int $0 \\, d$1
+endsnippet
+
+context math(context)
+snippet eval "Evaluate Integral" A
+\\left[$0 \\right]_{$4}^{$5}$6
+endsnippet
+
+context math(context)
+snippet deriv "Derivative" A
+\\frac{d}{dx}\\left( $0 \\right)
+endsnippet
+
+######################
+#   Environments     #
+######################
+
+context math(context)
+snippet bmat "Matrix" A
+\\begin{bmatrix}
+$0
+\\end{bmatrix}
+endsnippet
+
+context math(context)
+snippet pmat "Parentheses Matrix" A
+\\begin{pmatrix}
+$0
+\\end{pmatrix}
+endsnippet
+
+context math(context)
+snippet vmat "Vertical Bars Matrix" A
+\\begin{vmatrix}
+$0
+\\end{vmatrix}
+endsnippet
+
+context math(context)
+snippet Bmat "Braces Matrix" A
+\\begin{Bmatrix}
+$0
+\\end{Bmatrix}
+endsnippet
+
+context math(context)
+snippet Vmat "Double Vertical Bars Matrix" A
+\\begin{Vmatrix}
+$0
+\\end{Vmatrix}
+endsnippet
+
+context math(context)
+snippet eqn "Equation Environment" A
+\\begin{equation}
+$0
+\\end{equation}
+endsnippet
+
+context math(context)
+snippet align "Align Environment" A
+\\begin{align}
+$0
+\\end{align}
+endsnippet
+
+context math(context)
+snippet case "Cases Environment" A
+\\begin{cases}
+$0
+\\end{cases}
+endsnippet
+
+
+#########################
+#  Greek Letters small  #
+#########################
+
+context math(context)
+snippet alpha "alpha" A
+\\alpha
+endsnippet
+
+context math(context)
+snippet beta "beta" A
+\\beta
+endsnippet 
+
+context math(context)
+snippet gamma "gamma" A
+\\gamma
+endsnippet
+
+context math(context)
+snippet delta "delta" A
+\\delta
+endsnippet
+
+context math(context)
+snippet epsilon "epsilon" A
+\\epsilon
+endsnippet
+
+context math(context)
+snippet zeta "zeta" A
+\\zeta
+endsnippet
+
+context math(context)
+snippet eta "eta" A
+\\eta
+endsnippet
+
+context math(context)
+snippet theta "theta" A
+\\theta
+endsnippet
+
+context math(context)
+snippet iota "iota" A
+\\iota
+endsnippet
+
+context math(context)
+snippet kappa "kappa" A
+\\kappa
+endsnippet
+
+context math(context)
+snippet lambda "lambda" A
+\\lambda
+endsnippet
+
+context math(context)
+snippet mu "mu" A
+\\mu
+endsnippet
+
+context math(context)
+snippet nu "nu" A
+\\nu
+endsnippet
+
+context math(context)
+snippet xi "xi" A
+\\xi
+endsnippet
+
+context math(context)
+snippet omicron "omicron" A
+\\omicron
+endsnippet
+
+context math(context)
+snippet pi "pi" A
+\\pi
+endsnippet
+
+context math(context)
+snippet rho "rho" A
+\\rho
+endsnippet
+
+context math(context)
+snippet sigma "sigma" A
+\\sigma
+endsnippet
+
+context math(context)
+snippet tau "tau" A
+\\tau
+endsnippet
+
+context math(context)
+snippet upsilon "upsilon" A
+\\upsilon
+endsnippet
+
+context math(context)
+snippet phi "phi" A
+\\phi
+endsnippet
+
+context math(context)
+snippet chi "chi" A
+\\chi
+endsnippet
+
+context math(context)
+snippet psi "psi" A
+\\psi
+endsnippet
+
+context math(context)
+snippet omega "omega" A
+\\omega
+endsnippet

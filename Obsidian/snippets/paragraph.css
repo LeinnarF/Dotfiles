@@ -1,0 +1,14 @@
+p {
+    text-align: justify;
+    line-height: 1.75em;
+}
+
+ul > li, ol > li {
+    line-height: 2em;
+}
+
+.view-header-title-container {
+    text-align: left !important;
+    opacity: 1 !important;
+    transition: opacity .1s ease-in-out;
+}

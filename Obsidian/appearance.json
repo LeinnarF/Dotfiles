@@ -1,0 +1,14 @@
+{
+  "showRibbon": false,
+  "theme": "obsidian",
+  "cssTheme": "Minimal",
+  "accentColor": "",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font",
+  "showViewHeader": true,
+  "nativeMenus": true,
+  "baseFontSize": 18,
+  "textFontFamily": "Arial",
+  "enabledCssSnippets": [
+    "paragraph"
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "82f9a5bb9290a2d1",
+    "type": "split",
+    "children": [
+      {
+        "id": "de4d9c3df29bb081",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7dd5b6c267a231c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Daily/Nov 02, 2025.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Nov 02, 2025"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2c1f7b83810138ba",
+    "type": "split",
+    "children": [
+      {
+        "id": "f5a0014c86402b35",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8852ed11e7494fac",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "0d7cc7c0acca3abc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#realanalysis",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "0af2d313b9e2544c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "right": {
+    "id": "87b5bdb46152530b",
+    "type": "split",
+    "children": [
+      {
+        "id": "d2f44ddd0b24b80d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4a7353a1ae22930f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Projects/Temperature Modeling/Temperature Modeling.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Temperature Modeling"
+            }
+          },
+          {
+            "id": "9361de23e0823720",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a3ded20cc25a237d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Projects/Temperature Modeling/Temperature Modeling.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Temperature Modeling"
+            }
+          },
+          {
+            "id": "47c9dfce7e491bc3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Thesis/RRL/Recommendation System.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Recommendation System"
+            }
+          },
+          {
+            "id": "06d0d3d937e5905f",
+            "type": "leaf",
+            "state": {
+              "type": "dictionary-view",
+              "state": {},
+              "icon": "quote-glyph",
+              "title": "Dictionary"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 203.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "7dd5b6c267a231c5",
+  "lastOpenFiles": [
+    "Daily/Oct 30, 2025.md",
+    "Daily/Nov 02, 2025.md",
+    "Python/Scripting.md",
+    "Template/Snippets/Daily Notes.md",
+    "Daily/Oct 29, 2025.md",
+    "!Quick Notes/AI bypass.md",
+    "Projects/Thesis/Chapter 2/Relevant Theories.md",
+    "Projects/Thesis/Chapter 3/Revision.md",
+    "Projects/Thesis/Chapter 2",
+    "Projects/Thesis/Chapter 3",
+    "!Quick Notes/Git cached.md",
+    "Projects/Temperature Modeling/Backlogs.md",
+    "Projects/Thesis/Algorithm/African Buffalo Optimization.md",
+    "Template/Snippets/Quick Notes.md",
+    "Template/Snippets/New Notes.md",
+    "Template/Snippets/Metadata.md",
+    "Projects/Thesis/Algorithm",
+    "Linux/Unititled.md",
+    "Template/Snippets/new.md",
+    "Untitled.md",
+    "!Quick Notes/Fire.md",
+    "!Quick Notes/Untitled.md",
+    "Daily/Untitled.md",
+    "Quick Notes/Oct 29 2025.md",
+    "Daily/new.md",
+    "Daily",
+    "Template/Standards/Fleeting Notes.md",
+    "Template/Standards",
+    "Template/Snippets",
+    "Python/Virtual Environment.md",
+    "Template/Snippets.md",
+    "Template",
+    "!Quick Notes",
+    "Projects/Temperature Modeling/NotebookLM/Epsilon-N Definition.md",
+    "BASE.base",
+    "Projects/Temperature Modeling/NotebookLM",
+    "Untitled.canvas"
+  ]
+}
