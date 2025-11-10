@@ -1,0 +1,12 @@
+{
+  "minWidth": 40,
+  "leftPadding": 12,
+  "closeButtonLeftPadding": 30,
+  "closeButtonRightPadding": 8,
+  "transitionDuration": 375,
+  "iconWidth": 20,
+  "maxWidth": 0,
+  "ignorePinnedTabs": false,
+  "hideTabIcons": true,
+  "ignoreWebLinks": true
+}

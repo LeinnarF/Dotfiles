@@ -1,0 +1,8 @@
+keycode 66 = Mode_switch
+keysym i = i I Up
+keysym l = l L Right
+keysym j = j J Left
+keysym k = k K Down
+keysym u = u U Escape
+keysym p = p P colon
+keysym semicolon = semicolon colon colon

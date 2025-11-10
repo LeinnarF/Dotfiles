@@ -39,7 +39,7 @@ obsidian = {"obsidian": os.path.expanduser("~/Documents/Vault/.obsidian/")}
 scripts = {"scripts": os.path.expanduser("~/Coding/Python/Scripts/")}
 
 # --- OUTPUT PATHS --- #
-repo_path = "/mnt/Storage2/Dotfiles"
+repo_path = "/home/leinnarf/Dotfiles/"
 
 output_config = repo_path + "/Config"
 output_vscode = repo_path + "/Vscode"

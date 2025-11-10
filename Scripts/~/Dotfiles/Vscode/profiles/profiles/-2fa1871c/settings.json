@@ -1,0 +1,56 @@
+{
+    "workbench.colorTheme": "Dracula Theme",
+    "workbench.navigationControl.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "editor.fontSize": 15,
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false,
+        "rasi": false,
+        "latex": true,
+        "hsnips": true,
+        "python": true
+    },
+    "editor.scrollbar.vertical": "hidden",
+    "workbench.editor.tabActionLocation": "left",
+    "workbench.editor.tabSizing": "shrink",
+    "telemetry.feedback.enabled": false,
+    "telemetry.editStats.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "[properties]": {
+        
+    },
+    "files.associations": {
+        "*.conf": "shellscript"
+    },
+    "animations.Install-Method": "Apc Customize UI++",
+    "glassit.alpha": 255,
+    "window.titleBarStyle": "native",
+    "editor.renderWhitespace": "none",
+    "explorer.confirmDelete": false,
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "chat.editor.wordWrap": "on",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "window.customTitleBarVisibility": "never",
+    "git.confirmSync": false,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.explorerKind": "external",
+    "jupyter.askForKernelRestart": false,
+    "code-runner.runInTerminal": true,
+    "umath.preview.CursorType": "blacktriangleright",
+    "umath.preview.EnableCursor": false,
+    "workbench.activityBar.location": "top",
+    "git.autofetch": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.enabled": false,
+    "umath.preview.macros": []
+}

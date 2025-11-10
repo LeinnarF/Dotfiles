@@ -1,0 +1,21 @@
+[global]
+    format                  = "<b>%s</b> \n%b"
+    width                   = 400
+    offset                  = 10
+    origin                  = bottom-right
+    shrink                  = false
+    
+    corner_radius           = 10
+
+    font                    = JetBrainsMono Nerd Font 11
+
+    frame_width             = 0
+    frame_color             = "#bd93f9"
+
+    separator_color         = "#282a36FF"
+    separator_height        = 10
+
+    padding                 = 8
+    horizontal_padding      = 8
+
+    background              = "#282a36E0"
