@@ -1,0 +1,24 @@
+@media print{
+	@page {
+		margin: 0.8in;
+	}
+	body, p, li, div.callout {
+		font-size: 11pt !important;
+		color: black !important;
+		word-spacing: 1.1pt;
+		letter-spacing: 0.2pt;
+	}
+
+	title{
+		text-align: center !important;
+		display: block !important;
+	}
+
+	h1{
+		border-bottom: 1px solid lightgray;
+	}
+
+	ol > li::marker, ul > li::marker {
+    	color: black !important;
+	}
+}

@@ -15,7 +15,6 @@
         "hsnips": true,
         "python": true
     },
-    "editor.scrollbar.vertical": "hidden",
     "workbench.editor.tabActionLocation": "left",
     "workbench.editor.tabSizing": "shrink",
     "telemetry.feedback.enabled": false,

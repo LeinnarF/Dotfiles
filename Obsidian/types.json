@@ -5,7 +5,7 @@
     "tags": "tags",
     "date": "text",
     "time": "text",
-    "lt-language": "text",
+    "lt-language": "number",
     "lt-picky": "checkbox",
     "lt-autoCheck": "checkbox",
     "lt-dictionary": "multitext",
@@ -31,6 +31,10 @@
     "TQ_show_tags": "checkbox",
     "TQ_show_task_count": "checkbox",
     "TQ_show_tree": "checkbox",
-    "TQ_show_urgency": "checkbox"
+    "TQ_show_urgency": "checkbox",
+    "author": "multitext",
+    "year": "number",
+    "number": "number",
+    "volume": "number"
   }
 }

@@ -3,7 +3,7 @@
   "showLineNumber": true,
   "readableLineLength": true,
   "defaultViewMode": "preview",
-  "newFileLocation": "current",
+  "newFileLocation": "root",
   "showInlineTitle": true,
   "pdfExportSettings": {
     "includeName": true,

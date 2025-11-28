@@ -1,0 +1,19 @@
+/* .callout {
+  background: none;
+  border-width: 1px;
+  border-color: rgba(var(--callout-color), 0.75);
+  box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.116);
+} */
+.callout[data-callout="box"] {
+  border: solid rgb(165, 165, 165) 2px;
+  padding: 0px;
+  padding-left: 10px;
+  background:none;
+}
+
+.callout[data-callout="box"] .callout-title {
+  display: none;
+}
+.callout[data-callout="box"] .callout-content > p {
+  margin: 10px;
+}

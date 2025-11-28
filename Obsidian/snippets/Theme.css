@@ -1,0 +1,68 @@
+.mod-header {
+  display: none;
+}
+span.cm-foldPlaceholder {
+  visibility: hidden;
+}
+.inline-title {
+  font-size: 18px;
+  line-height: 0px;
+  /* font-family: Century Gothic; */
+  font-weight: 500;
+  color: rgb(173, 173, 173);
+}
+
+p {
+  text-align: justify;
+}
+
+ol > li::marker,
+ul > li::marker {
+  color: lightgray;
+}
+
+ol > li,
+ul > li {
+  margin-bottom: 8px;
+}
+.markdown-preview-view.is-readable-line-width
+  .markdown-preview-sizer
+  .cm-table-widget,
+.markdown-preview-view.is-readable-line-width
+  .markdown-preview-sizer
+  > div:has(> .block-language-dataview > table),
+.markdown-preview-view.is-readable-line-width
+  .markdown-preview-sizer
+  > div:has(> .block-language-dataviewjs),
+.markdown-preview-view.is-readable-line-width
+  .markdown-preview-sizer
+  > div:has(> table),
+.markdown-source-view.mod-cm6.is-readable-line-width
+  .cm-contentContainer.cm-contentContainer
+  > .cm-content
+  .cm-table-widget,
+.markdown-source-view.mod-cm6.is-readable-line-width
+  .cm-contentContainer.cm-contentContainer
+  > .cm-content
+  > div:has(> .block-language-dataview > table),
+.markdown-source-view.mod-cm6.is-readable-line-width
+  .cm-contentContainer.cm-contentContainer
+  > .cm-content
+  > div:has(> .block-language-dataviewjs),
+.markdown-source-view.mod-cm6.is-readable-line-width
+  .cm-contentContainer.cm-contentContainer
+  > .cm-content
+  > div:has(> table) {
+  width: 640px;
+  max-width: var(--container-table-max-width);
+}
+
+.markdown-rendered hr {
+  border: none;
+  border-top: 1px solid;
+  border-color: lightgrey;
+}
+
+.math-booster-end-proof {
+  margin-left: 600px;
+}

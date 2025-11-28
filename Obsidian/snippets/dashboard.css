@@ -1,0 +1,105 @@
+/* Updated 2023-08-07 */
+
+body {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.dashboard {
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  padding-top: 20px !important;
+}
+
+.dashboard .markdown-preview-section {
+  max-width: 100%;
+}
+
+/* Title at top of the document */
+.dashboard .markdown-preview-section .title {
+  top: 60px;
+  position: absolute;
+  font-size: 26pt !important;
+  font-weight: bolder;
+  letter-spacing: 8px;
+}
+
+.dashboard h1 {
+  border-bottom: solid 1px #ccc !important;
+  /* border-width: 1px !important; */
+  padding: 3px !important;
+  /* border-color: rgb(107, 107, 107) !important; */
+  /* background-color: gray !important; */
+}
+
+.home-tab-wordmark.svelte-1yjwmjb h1.svelte-1yjwmjb {
+  margin: unset;
+  visibility: hidden;
+}
+
+/* Get rid of the parent bullet */
+.dashboard div.markdown-preview-section > div > ul > li > div.list-bullet {
+  display: none !important;
+}
+
+/* Remove the indentation guide lines */
+.dashboard.markdown-rendered.show-indentation-guide li > ul::before,
+.dashboard.markdown-rendered.show-indentation-guide li > ol::before {
+  display: none;
+}
+
+.dashboard div > ul {
+  list-style: none;
+  display: flex;
+  column-gap: 50px;
+  flex-flow: row wrap;
+}
+
+.dashboard div > ul.has-list-bullet > li {
+  padding: 10px !important;
+  margin: 3px !important;
+  /* border: 1px solid #eeeeee */
+  /* font-family: century gothic; */
+  /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.116); */
+}
+
+.dashboard div > ul > li {
+  min-width: 250px;
+  width: 15%;
+}
+
+/* Dataview support */
+/* .dashboard div ul.dataview {
+  row-gap: 5px !important;
+  list-style-type: circle !important;
+  display: block !important;
+} */
+
+.dashboard ul.dataview {
+  row-gap: 0px !important;
+  list-style-type: disc !important;
+}
+
+.dashboard div ul.dataview li {
+  padding: 5px !important;
+  /* border: 1px solid #eeeeee !important; */
+  /* font-family: century gothic; */
+  display: block !important;
+  width: 100% !important;
+  list-style: circle !important;
+}
+
+/* animation
+.dashboard div ul.dataview li,
+.dashboard div > ul.has-list-bullet > li {
+  transition: transform 0.1s ease-in-out;
+}
+
+.dashboard div ul.dataview li:hover,
+.dashboard div > ul.has-list-bullet > li:hover {
+  transform: scale(1.06);
+}
+
+.dashboard div ul.dataview li,
+.dashboard div > ul.has-list-bullet > li {
+  animation: dropDown 0.5s ease-in-out;
+} */

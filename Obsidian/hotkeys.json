@@ -25,14 +25,6 @@
       "key": "J"
     }
   ],
-  "app:toggle-left-sidebar": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "L"
-    }
-  ],
   "app:toggle-right-sidebar": [
     {
       "modifiers": [
@@ -42,14 +34,6 @@
     }
   ],
   "editor:toggle-checklist-status": [],
-  "editor:insert-wikilink": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "L"
-    }
-  ],
   "editor:set-heading": [
     {
       "modifiers": [
@@ -89,13 +73,18 @@
       "key": "N"
     }
   ],
-  "file-explorer:new-file": [],
   "insert-template": [
     {
       "modifiers": [
         "Alt"
       ],
       "key": "T"
+    },
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "P"
     }
   ],
   "daily-notes": [
@@ -104,6 +93,47 @@
         "Alt"
       ],
       "key": "D"
+    }
+  ],
+  "file-explorer:move-file": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "M"
+    }
+  ],
+  "webviewer:focus-address-bar": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "L"
+    }
+  ],
+  "webviewer:open": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "T"
+    }
+  ],
+  "app:toggle-left-sidebar": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "L"
+    }
+  ],
+  "editor:insert-wikilink": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "["
     }
   ]
 }
