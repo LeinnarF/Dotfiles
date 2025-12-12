@@ -85,7 +85,6 @@ plugins=(
 	sudo
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-	vi-mode
 )
 
 
@@ -122,7 +121,18 @@ export EDITOR='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# User-Local binaries
 export PATH="$HOME/.local/bin:$PATH"
+
+# Android SDK
+export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_SDK_ROOT=$ANDROID_HOME
+
+# SDK tools to PATH
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+
+
 
 # Aliases
 alias config='cd ~/.config'
