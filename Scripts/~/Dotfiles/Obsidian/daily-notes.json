@@ -1,6 +1,0 @@
-{
-  "format": "MMM DD, YYYY",
-  "folder": "Daily",
-  "autorun": true,
-  "template": "Template/Snippets/Daily Notes"
-}

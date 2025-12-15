@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec=xremap ~/.config/xremap/config.yml
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
-Name=Xremap
-Comment=Key remapping daemon
-
