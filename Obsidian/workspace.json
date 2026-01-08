@@ -4,25 +4,111 @@
     "type": "split",
     "children": [
       {
-        "id": "3c1f85b6b773f1ef",
+        "id": "a6e4423b55108b5a",
         "type": "tabs",
         "children": [
           {
-            "id": "1adce9eb6fc9ee80",
+            "id": "7a3759b96a0b8e03",
+            "type": "leaf",
+            "state": {
+              "type": "start-page-view",
+              "state": {},
+              "icon": "home",
+              "title": "Start page"
+            }
+          },
+          {
+            "id": "a8b5a56b48e9e1b0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Linear Algebra/Span.md",
+                "file": "Mathematics/Probability/Bernoulli Distribution.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Span"
+              "title": "Bernoulli Distribution"
+            }
+          },
+          {
+            "id": "cafd5dc02f2df2c1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Probability/Binomial Distribution.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Binomial Distribution"
+            }
+          },
+          {
+            "id": "2ac2fd4b12555a2d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Probability/Hypergeometric distribution.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Hypergeometric distribution"
+            }
+          },
+          {
+            "id": "5d9133296fa9d480",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Probability/Negative Binomial Distribution.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Negative Binomial Distribution"
+            }
+          },
+          {
+            "id": "d7766f861016d8e1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Probability/Geometric Distribution.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Geometric Distribution"
+            }
+          },
+          {
+            "id": "3d5f8cc11f00388e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Probability/Poisson Distribution.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Poisson Distribution"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -79,7 +165,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 282.5,
     "collapsed": true
   },
   "right": {
@@ -136,34 +222,38 @@
       "start-page:Open start page": false
     }
   },
-  "active": "1adce9eb6fc9ee80",
+  "active": "cafd5dc02f2df2c1",
   "lastOpenFiles": [
-    "Mathematics/Linear Algebra/Span.md",
-    "Mathematics/Linear Algebra/Linear Combination.md",
-    "03 Library/Text Book/Elementary Linear Algebra.md",
-    "03 Library/Index.base",
-    "Mathematics/Linear Algebra/Linear Independence.md",
-    "Mathematics/Linear Algebra/Vector.md",
-    "04 Tasks/Linear Algebra Task.md",
-    "Matrix.md",
-    "Mathematics/Linear Algebra/Vector Space.md",
+    "Mathematics/Probability/Poisson Distribution.md",
+    "Mathematics/Probability/Bernoulli Distribution.md",
+    "Mathematics/Probability/Geometric Distribution.md",
+    "Mathematics/Probability/Binomial Distribution.md",
+    "Mathematics/Probability/Hypergeometric distribution.md",
+    "Mathematics/Probability/Negative Binomial Distribution.md",
+    "Mathematics/Probability/Discrete Uniform Distribution.md",
+    "output.pdf",
+    "Fleeting-Common Probability Distribution.md",
+    "Error Analysis.md",
+    "Mathematics/Probability/Random Variable.md",
+    "Sample Space.md",
+    "Range.md",
+    "Mathematics/Probability",
+    "Matrix Multiplication.md",
+    "Linear Transformation.md",
+    "VecVEc.md",
+    "Dimension.md",
     "Mathematics/Linear Algebra/Scalar Multiplication.md",
-    "Mathematics/Linear Algebra/Row Space.md",
-    "Mathematics/Linear Algebra/Column Space.md",
-    "Mathematics/Linear Algebra/Subspaces.md",
-    "Mathematics/Linear Algebra/Trivial Solution.md",
-    "Mathematics/Linear Algebra/Linear Equation.md",
-    "Mathematics/Linear Algebra/Gauss Jordan Elimination.md",
-    "Mathematics/Real Analysis/Neighborhoods.md",
-    "Mathematics/Real Analysis/Accumulation Points.md",
-    "Mathematics/Real Analysis/Absolute Value Function.md",
-    "ztest.md",
-    "Mathematics/De Morgan's Law.md",
-    "Mathematics/Linear Algebra/Vector Addition.md",
-    "Mathematics/Linear Algebra/System of Linear Equations.md",
-    "Mathematics/Linear Algebra/Gaussian Elimination.md",
-    "Mathematics/Linear Algebra/Augmented Matrix.md",
-    "04 Tasks/Tasks.md",
+    "Matrix Transformation.md",
+    "Matrix.md",
+    "04 Tasks/Linear Algebra Task.md",
+    "Cross Product.md",
+    "inverse of a matrix.md",
+    "Dot Product.md",
+    "Determinants.md",
+    "Mathematics/Linear Algebra/Vector Space.md",
+    "Mathematics/Linear Algebra/Coordinate Vector.md",
+    "05 Learning",
+    "03 Library/Index.base",
     "Programming/Python",
     "03 Library/Text Book",
     "03 Library",
@@ -171,9 +261,6 @@
     "Pasted image 20251124220750.png",
     "05 Rough Notes",
     "04 Tasks",
-    "Untitled.base",
-    "01 Bases/Math_base.base",
-    "Mathematics/Graph Theory",
     "02 Mathematics/Real Analysis/Real Analysis Map.canvas"
   ]
 }

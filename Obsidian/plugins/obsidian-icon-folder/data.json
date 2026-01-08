@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiLeafyGreen",
       "LiBook",
       "LiAlbum",
       "LiNotebookPen",
-      "LiCode",
-      "LiPlus"
+      "LiCode"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -42,5 +42,6 @@
   "01 Quick Notes": "LiNotebookPen",
   "Programming": "LiCode",
   "03 Library": "LiAlbum",
-  "03 Library/Text Book": "LiBook"
+  "03 Library/Text Book": "LiBook",
+  "05 Learning": "LiLeafyGreen"
 }

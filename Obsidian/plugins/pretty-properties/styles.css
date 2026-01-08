@@ -1,11 +1,4 @@
-
-
-
-
-
 /* BANNERS */
-
-
 
 
 .hover-popover {
@@ -22,6 +15,11 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: -1;
+}
+
+.workspace-split.mod-root .view-content.has-banner {
+  background-color: transparent;
 }
 
 .banner-image img {
@@ -47,7 +45,14 @@
 
 .cm-scroller:has(.banner-image:not(:empty)) > .cm-sizer,
 .markdown-preview-view:has(.banner-image:not(:empty)) > .markdown-preview-sizer {
-  margin-top: calc(var(--banner-height) + var(--banner-margin));
+  --pp-banner-top-spacing-phone: calc(var(--banner-height) + var(--banner-margin) - var(--view-top-spacing-markdown));
+  --pp-banner-top-spacing: calc(var(--banner-height) + var(--banner-margin));
+  margin-top: var(--pp-banner-top-spacing);
+}
+
+.is-phone .mod-root .workspace-leaf-content .view-content .markdown-source-view > .cm-editor > .cm-scroller:has(.banner-image:not(:empty)) > .cm-sizer,
+.is-phone .mod-root .workspace-leaf-content .view-content .markdown-reading-view > .markdown-preview-view:has(.banner-image:not(:empty)) > .markdown-preview-sizer {
+  margin-top: var(--pp-banner-top-spacing-phone, var(--pp-banner-top-spacing));
 }
 
 
@@ -60,7 +65,15 @@
 
 .cm-scroller:has(.banner-image:not(:empty)):has(.icon-image:not(:empty)) > .cm-sizer,
 .markdown-preview-view:has(.banner-image:not(:empty)):has(.icon-image:not(:empty)) > .markdown-preview-sizer {
-  margin-top: calc(var(--banner-height) + var(--pp-banner-icon-gap));
+  --pp-banner-icon-top-spacing-phone: calc(var(--banner-height) + var(--pp-banner-icon-gap) - var(--view-top-spacing-markdown));
+  --pp-banner-icon-top-spacing: calc(var(--banner-height) + var(--pp-banner-icon-gap));
+  margin-top: var(--pp-banner-icon-top-spacing);
+}
+
+
+.is-phone .mod-root .workspace-leaf-content .view-content .markdown-source-view > .cm-editor > .cm-scroller:has(.banner-image:not(:empty)):has(.icon-image:not(:empty)) > .cm-sizer,
+.is-phone .mod-root .workspace-leaf-content .view-content .markdown-reading-view > .markdown-preview-view:has(.banner-image:not(:empty)):has(.icon-image:not(:empty)) > .markdown-preview-sizer {
+  margin-top: var(--pp-banner-icon-top-spacing-phone, var(--pp-banner-icon-top-spacing));
 }
 
 
@@ -79,6 +92,8 @@
 
 
 
+
+
 /* ICONS */
 
 
@@ -89,7 +104,17 @@
     right: 0;
     overflow-x: clip;
     overflow-y: visible;
+
 }
+
+
+.cm-scroller:has(.banner-image:not(:empty)):has(.icon-image:not(:empty)) > .icon-wrapper,
+.markdown-preview-view:has(.banner-image:not(:empty)):has(.icon-image:not(:empty)) > .icon-wrapper {
+  top: 0px;
+}
+
+
+
 
 .icon-outer {
   padding: var(--file-margins);
@@ -172,7 +197,7 @@
 
 
 @media (min-width: 600px) {
-  .metadata-container:has(.metadata-side-image img) {
+  .metadata-container:has(.metadata-side-image .pp-cover-image) {
     --metadata-display-editing: grid;
     --metadata-display-reading: grid;
     grid-column-gap: 22px;
@@ -254,13 +279,13 @@
 
 
 
-.metadata-side-image img {
+.metadata-side-image .pp-cover-image {
   max-height: var(--cover-max-height);
 }
 
-.metadata-side-image.initial img,
-.metadata-side-image.initial-2 img,
-.metadata-side-image.initial-3 img {
+.metadata-side-image.initial .pp-cover-image,
+.metadata-side-image.initial-2 .pp-cover-image,
+.metadata-side-image.initial-3 .pp-cover-image {
   object-fit: cover;
 }
 
@@ -271,27 +296,27 @@
     text-align: center;
   }
   
-  .metadata-side-image img {
+  .metadata-side-image .pp-cover-image {
     height: 200px !important;
 	width: auto !important;
     margin: auto;
   }
 
-  .metadata-side-image.vertical img,
-  .metadata-side-image.vertical-cover img,
-  .metadata-side-image.vertical-contain img {
+  .metadata-side-image.vertical .pp-cover-image,
+  .metadata-side-image.vertical-cover .pp-cover-image,
+  .metadata-side-image.vertical-contain .pp-cover-image {
     aspect-ratio: auto !important;
     max-width: 150px !important;
   }
 
-  .metadata-side-image.horizontal img,
-  .metadata-side-image.horizontal-cover img,
-  .metadata-side-image.horizontal-contain img{
+  .metadata-side-image.horizontal .pp-cover-image,
+  .metadata-side-image.horizontal-cover .pp-cover-image,
+  .metadata-side-image.horizontal-contain .pp-cover-image {
     width: 100% !important;
   }
 
-  .metadata-side-image.square img,
-  .metadata-side-image.circle img {
+  .metadata-side-image.square .pp-cover-image,
+  .metadata-side-image.circle .pp-cover-image {
     width: 200px !important;
   }
 }
@@ -302,42 +327,42 @@
 
 
 
-.metadata-side-image.vertical-cover img,
-.metadata-side-image.vertical-contain img {
+.metadata-side-image.vertical-cover .pp-cover-image,
+.metadata-side-image.vertical-contain .pp-cover-image {
   aspect-ratio: 0.63;
   object-position: top;
 }
 
-.metadata-side-image.vertical-contain img {
+.metadata-side-image.vertical-contain .pp-cover-image {
   object-fit: contain;
 }
 
-.metadata-side-image.vertical-cover img {
+.metadata-side-image.vertical-cover .pp-cover-image {
   object-fit: cover;
 }
 
 
-.metadata-side-image.horizontal-cover img,
-.metadata-side-image.horizontal-contain img {
+.metadata-side-image.horizontal-cover .pp-cover-image,
+.metadata-side-image.horizontal-contain .pp-cover-image {
   aspect-ratio: 4/3;
 }
 
-.metadata-side-image.horizontal-contain img {
+.metadata-side-image.horizontal-contain .pp-cover-image {
   object-fit: contain;
 }
 
-.metadata-side-image.horizontal-cover img {
+.metadata-side-image.horizontal-cover .pp-cover-image {
   object-fit: cover;
 }
 
 
 
-.metadata-side-image.square img {
+.metadata-side-image.square .pp-cover-image {
   aspect-ratio: 1;
   object-fit: cover;
 }
 
-.metadata-side-image.circle img {
+.metadata-side-image.circle .pp-cover-image {
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50% !important;
@@ -345,7 +370,7 @@
 
 
 
-.metadata-side-image > img {
+.metadata-side-image > .pp-cover-image {
   width: 100%;
 }
 
@@ -663,6 +688,7 @@
 .is-mobile .metadata-property-value.has-custom-date  input.metadata-input-text.mod-date,
 .is-mobile .metadata-property-value.has-custom-date  input.metadata-input-text.mod-datetime {
   font-size: 0; 
+  width: 1rem !important;
 }
 
 body {
@@ -852,12 +878,12 @@ button.pp-settings-tab:not(.pp-settings-tab-selected):hover {
 }
 
 
-.color-picker-modal input {
+.color-picker-modal .setting-item input[type="color"]{
   height: 80px;
   width: 80px;
 }
 
-.color-picker-modal input::-webkit-color-swatch  {
+.color-picker-modal .setting-item input[type="color"]::-webkit-color-swatch  {
 border-radius: 50%;
 height: 100% !important;
 }
@@ -928,10 +954,11 @@ a.tag.transparent-color {
 
 
 .cm-hashtag:hover,
-.cm-hashtag-begin:hover + .cm-hashtag-end,
-.cm-hashtag-begin:has(+.cm-hashtag-end:hover),
 .cm-hashtag-begin:hover + .cm-hashtag > .cm-hashtag-inner,
-.cm-hashtag-begin:has(+ .cm-hashtag-end:hover) > .cm-hashtag-inner {
+.cm-hashtag-begin:hover + .cm-hashtag + .cm-hashtag > .cm-hashtag-inner,
+.cm-hashtag:hover + .cm-hashtag-end > .cm-hashtag-inner,
+.cm-hashtag-begin:has(+ .cm-hashtag:hover, + .cm-hashtag + .cm-hashtag:hover) > .cm-hashtag-inner,
+.cm-hashtag:has(+ .cm-hashtag-end:hover) > .cm-hashtag-inner {
   background-color: var(--tag-background-hover);
 }
 
@@ -1053,14 +1080,13 @@ body {
 }
 
 .metadata-input-longtext.theme-color:not(:hover, :focus),
-/*.md-wrapper.theme-color,*/
 .bases-cards-line.theme-color,
 .bases-rendered-value.theme-color {
   background-color: rgba(var(--pp-color-rgb), 0.2);
+  /*color: rgba(var(--pp-color-rgb), 1);*/
 }
 
 .metadata-input-longtext.custom-color:not(:hover),
-/*.md-wrapper.custom-color,*/
 .bases-cards-line.custom-color,
 .bases-rendered-value.custom-color {
   background-color: hsl(var(--pp-background-hsl));
@@ -1068,7 +1094,6 @@ body {
 }
 
 .metadata-input-longtext,
-/*.md-wrapper,*/
 .bases-cards-line[data-property-longtext-value] {
   border-radius: 4px;
   display: block;
@@ -1305,12 +1330,30 @@ button.longtext-color-button:hover {
   --pp-text-color: var(--metadata-input-text-color);
 }
 
+.metadata-property-value .internal-link, .markdown-rendered .internal-link {
+    cursor: var(--cursor-link);
+    text-decoration-line: var(--link-decoration);
+    --font-weight: var(--link-weight);
+    color: var(--link-color);
+    transition: opacity var(--anim-duration-fast) ease-in-out;
+}
 
 .theme-text-color, .custom-text-color, .none-text-color {
   color: var(--pp-text-color) !important;
   --pill-color-remove: var(--pp-text-color) !important;
   --pill-color-remove-hover: var(--pp-text-color) !important;
 }
+
+.theme-color, .custom-color, .theme-text-color, .custom-text-color {
+  --link-color: var(--pp-text-color);
+  --link-color-hover: var(--pp-text-color);
+}
+
+.none-text-color {
+  --link-color: var(--text-accent);
+  --link-color-hover: var(--text-accent-hover);
+}
+
 
 
 .custom-date:empty {
@@ -1325,8 +1368,69 @@ button.longtext-color-button:hover {
   display: none;
 }
 
+.metadata-property:focus-within, 
+.metadata-property[data-property-key=""] {
+  display: flex !important;
+}
+
 body:not(.show-hidden-properties) .workspace-leaf-content[data-type='markdown'] .metadata-property.is-empty.pp-property-hidden-when-empty, 
 body:not(.show-hidden-properties).hidden-props-in-prop-tab .workspace-leaf-content[data-type='file-properties'] .metadata-property.is-empty.pp-property-hidden-when-empty, 
 body:not(.show-hidden-properties) .hover-popover .metadata-property.is-empty.pp-property-hidden-when-empty {
   display: none;
+}
+
+
+
+
+
+.title-wrapper {
+  margin-block-end: var(--inline-title-margin-bottom);
+}
+
+.title-wrapper .inline-title {
+  display: inline;
+  vertical-align: middle;
+}
+
+.title-icon-wrapper {
+  display: inline;
+  margin-right: 8px;
+  font-weight: var(--inline-title-weight);
+  font-style: var(--inline-title-style);
+  font-variant: var(--inline-title-variant);
+  font-family: var(--inline-title-font);
+  letter-spacing: -0.015em;
+  
+}
+
+.title-icon-wrapper .pp-icon {
+  height: var(--pp-title-icon-size);
+  --icon-size: var(--pp-title-icon-size);
+  
+  vertical-align: middle;
+  
+}
+
+.pp-icon {
+  image-rendering: auto !important;
+}
+
+.title-icon-wrapper .pp-text-icon {
+  display: inline;
+  font-size: var(--pp-title-icon-size);
+}
+
+.text-icon-match-title-size .title-icon-wrapper .pp-text-icon {
+  font-size: var(--inline-title-size);
+}
+
+
+
+.multi-select-pill {
+max-width: unset;
+}
+
+.pp-pdf-cover-canvas {
+  width: 100%;
+  height: 100%;
 }

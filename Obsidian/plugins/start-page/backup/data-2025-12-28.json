@@ -4,8 +4,7 @@
   "pinnedNotes": [
     "04 Tasks/Tasks.md",
     "04 Tasks/Thesis.md",
-    "04 Tasks/Linear Algebra Task.md",
-    "04 Tasks/Data Science Roadmap.md"
+    "04 Tasks/Linear Algebra Task.md"
   ],
   "replaceNewTab": true,
   "showTitleNavigationBar": "show",
@@ -14,9 +13,8 @@
   "todayRandomEnFooterText": "",
   "todayRandomZhFooterText": "",
   "customFooterText": "",
-  "scrollPosition": 360,
+  "scrollPosition": 0,
   "showStatBar": true,
-  "lastVersionCheck": 1767676056421,
-  "latestVersion": "0.3.3",
-  "excludeList": []
+  "lastVersionCheck": 1764303266367,
+  "latestVersion": ""
 }

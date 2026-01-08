@@ -30,7 +30,6 @@
     },
     "animations.Install-Method": "Apc Customize UI++",
     "glassit.alpha": 255,
-    "window.titleBarStyle": "native",
     "editor.renderWhitespace": "none",
     "editor.stickyScroll.enabled": false,
     "explorer.confirmDelete": false,
@@ -49,7 +48,9 @@
     "umath.preview.CursorType": "blacktriangleright",
     "umath.preview.EnableCursor": false,
     "workbench.activityBar.location": "top",
-    "window.customTitleBarVisibility": "never",
     "workbench.colorTheme": "Dracula Theme",
-    "window.menuBarVisibility": "toggle"
+    "window.menuBarVisibility": "toggle",
+    "window.menuStyle": "custom",
+    "window.titleBarStyle": "native",
+    "window.customTitleBarVisibility": "never"
 }

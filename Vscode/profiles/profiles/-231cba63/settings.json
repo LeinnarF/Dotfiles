@@ -50,7 +50,7 @@
     "umath.preview.EnableCursor": false,
     "workbench.activityBar.location": "top",
     "window.customTitleBarVisibility": "never",
-    "workbench.colorTheme": "Dracula Theme",
+    "workbench.colorTheme": "Tokyo Night",
     "window.menuBarVisibility": "toggle",
     "emulator.emulatorPath": "/home/leinnarf/Android/Sdk/emulator/"
 }

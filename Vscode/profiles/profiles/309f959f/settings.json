@@ -6,7 +6,7 @@
     "editor.fontFamily": "JetBrainsMono Nerd Font",
     "github.copilot.enable": {
         "*": false,
-        "plaintext": false,
+        "plaintext": true,
         "markdown": true,
         "scminput": false,
         "rasi": false,
@@ -45,11 +45,13 @@
     "code-runner.runInTerminal": true,
     "umath.preview.CursorType": "blacktriangleright",
     "umath.preview.EnableCursor": false,
-    "workbench.colorTheme": "Dracula Theme",
+    "workbench.colorTheme": "Tokyo Night",
     "workbench.activityBar.location": "top",
     "workbench.navigationControl.enabled": false,
     "workbench.layoutControl.enabled": false,
     "window.commandCenter": false,
     "notebook.lineNumbers": "on",
-    "git.autofetch": true
+    "git.autofetch": true,
+    "window.zoomLevel": 1,
+    "editor.cursorSmoothCaretAnimation": "on"
 }

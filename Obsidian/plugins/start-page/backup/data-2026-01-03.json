@@ -14,9 +14,9 @@
   "todayRandomEnFooterText": "",
   "todayRandomZhFooterText": "",
   "customFooterText": "",
-  "scrollPosition": 360,
+  "scrollPosition": 0,
   "showStatBar": true,
-  "lastVersionCheck": 1767676056421,
+  "lastVersionCheck": 1767361057569,
   "latestVersion": "0.3.3",
   "excludeList": []
 }

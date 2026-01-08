@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Dracula Theme",
+    "workbench.colorTheme": "Tokyo Night",
     "workbench.navigationControl.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
     "github.copilot.nextEditSuggestions.enabled": true,
@@ -51,5 +51,6 @@
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
     "editor.minimap.enabled": false,
-    "umath.preview.macros": []
+    "umath.preview.macros": [],
+    "editor.cursorSmoothCaretAnimation": "on"
 }
