@@ -81,10 +81,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	z
 	sudo
 	zsh-autosuggestions
 	zsh-syntax-highlighting
+	z
 )
 
 
@@ -132,25 +132,39 @@ export ANDROID_SDK_ROOT=$ANDROID_HOME
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 
-
-
 # Aliases
 alias config='cd ~/.config'
+alias home='cd ~'
 alias update='checkupdates && yay -Qu'
 alias supac='sudo pacman'
+alias ls='exa --icons=always --no-time --no-user --no-permissions'
+alias cat='bat --theme=tokyonight_night'
+alias y='yazi'
+alias cd='z'
 
-source <(fzf --zsh)
+
+eval "$(zoxide init zsh)"
 
 # eval $(thefuck --alias)
 # eval $(thefuck --alias fk)
-#
+
+# export FZF_DEFAULT_OPTS="
+#   --color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9
+#   --color=fg+:#f8f8f2,bg+:#44475a,hl+:#ff79c6
+#   --color=info:#8be9fd,prompt:#50fa7b,pointer:#ffb86c
+#   --color=marker:#ff79c6,spinner:#8be9fd,header:#6272a4
+# "
+
+source <(fzf --zsh)
+
+# FZF theme
 export FZF_DEFAULT_OPTS="
-  --color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9
-  --color=fg+:#f8f8f2,bg+:#44475a,hl+:#ff79c6
-  --color=info:#8be9fd,prompt:#50fa7b,pointer:#ffb86c
-  --color=marker:#ff79c6,spinner:#8be9fd,header:#6272a4
+  --color=fg:#c0caf5,bg:#1a1b26,hl:#7aa2f7
+  --color=fg+:#c0caf5,bg+:#24283b,hl+:#bb9af7
+  --color=info:#7dcfff,prompt:#9ece6a,pointer:#f7768e
+  --color=marker:#bb9af7,spinner:#7dcfff,header:#565f89
 "
-# 
+ 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

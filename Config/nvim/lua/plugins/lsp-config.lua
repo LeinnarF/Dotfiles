@@ -6,40 +6,46 @@ return {
 			require("mason").setup()
 		end,
 	},
+
 	{
 		"williamboman/mason-lspconfig.nvim",
-		lazy = false,
-		opts = {
-      		auto_install = true,
-    	},
+		config = function ()
+			require("mason-lspconfig").setup({
+				ensure_installed = {
+					"lua_ls",
+					"pyright",
+					"html",
+					"cssls",
+					"ts_ls"
+				},
+			})
+		end,
 	},
+
 	{
 		"neovim/nvim-lspconfig",
-		lazy = false,
-		config = function()
-			local cmp_nvim_lsp = require("cmp_nvim_lsp")
-			local capabilities = vim.tbl_deep_extend(
-				"force",
-				{},
-				vim.lsp.protocol.make_client_capabilities(),
-				cmp_nvim_lsp.default_capabilities()
-			)
+			config = function ()
+				local capabilities = require("cmp_nvim_lsp").default_capabilities()
+				capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-			local lspconfig = require("lspconfig")
-			
-			-- Add LSPs here
-			lspconfig.lua_ls.setup ({
-					capabilities = capabilities
-			})
-			lspconfig.pylsp.setup({
-				capabilities = capabilities
-			})
+				if vim.lsp.config then
+					vim.lsp.config.html = {capabilities = capabilities}
+					vim.lsp.config.cssls = {capabilities = capabilities}
+					vim.lsp.config.ts_ls = {capabilities = capabilities}
+					vim.lsp.config.pyright = {capabilities = capabilities}
+					
+					vim.lsp.config.lua_ls = {
+						capabilities = capabilities,
+						settings = {
+							Lua = {
+								diagnostics = {global = {"vim"}},
+								workspace = {library = vim.api.nvim_get_runtime_file("",true)}
+						}
+					}
+				}
 
-			lspconfig.kotlin_language_server.setup({
-				capabilities = capabilities
-			})
-
-		end,
+				end
+			end
 	},
 }
 

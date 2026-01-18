@@ -50,7 +50,9 @@
     "umath.preview.EnableCursor": false,
     "workbench.activityBar.location": "top",
     "window.customTitleBarVisibility": "never",
-    "workbench.colorTheme": "Tokyo Night",
     "window.menuBarVisibility": "toggle",
-    "emulator.emulatorPath": "/home/leinnarf/Android/Sdk/emulator/"
+    "emulator.emulatorPath": "/home/leinnarf/Android/Sdk/emulator/",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "window.zoomLevel": 1,
+    "git.autofetch": true
 }

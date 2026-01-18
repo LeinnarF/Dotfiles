@@ -1,54 +1,74 @@
-return
-{
+return {
     {
-        "Mofiqul/dracula.nvim",
+        "folke/tokyonight.nvim",
         lazy = false,
-        config = function ()
-            vim.cmd.colorscheme('dracula')
+        priority = 1000,
+        config = function()
+            require("tokyonight").setup({
+                style = "night",
+                transparent = false,
+                terminal_colors = true,
+                styles = {
+                    comments = { italic = true },
+                    keywords = { italic = true },
+                    functions = {},
+                    variables = {},
+                },
+            })
+            vim.cmd.colorscheme("tokyonight")
         end,
     },
+
     {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
-        require("lualine").setup {
-            options = { theme = "dracula" }
-        }
+            require("lualine").setup({
+                options = {
+                    theme = "tokyonight",
+                    -- section_separators = "",
+                    component_separators = "|",
+                },
+            })
         end,
     },
+
     {
         "folke/noice.nvim",
         event = "VeryLazy",
         opts = {
-        -- add any options here
+            presets = {
+                bottom_search = true,
+                command_palette = true,
+                long_message_to_split = true,
             },
-            dependencies = {
-                -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-                "MunifTanjim/nui.nvim",
-                -- OPTIONAL:
-                --   `nvim-notify` is only needed, if you want to use the notification view.
-                --   If not available, we use `mini` as the fallback
-                "rcarriga/nvim-notify",
-        }
+        },
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+            "rcarriga/nvim-notify",
+        },
     },
+
     {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
-        ---@module "ibl"
-        ---@type ibl.config
-        opts = {},
+        opts = {
+            indent = { char = "│" },
+            scope = { enabled = false },
+        },
     },
+
     {
         "akinsho/bufferline.nvim",
         version = "*",
         dependencies = "nvim-tree/nvim-web-devicons",
         config = function()
-            require("bufferline").setup {
+            require("bufferline").setup({
                 options = {
-                    mode = "tabs", -- set to "tabs" to only show tabpages
+                    mode = "tabs",
                     numbers = "none",
-                    separator_style = "thin", -- "slant" | "thick" | "thin"
-                    diagnostics = "nvim_lsp",  -- show LSP errors/warnings in tab
+                    separator_style = "thin",
+                    diagnostics = "nvim_lsp",
                     show_buffer_close_icons = false,
                     show_close_icon = false,
                     always_show_bufferline = true,
@@ -57,11 +77,12 @@ return
                             filetype = "neo-tree",
                             text = "File Explorer",
                             highlight = "Directory",
-                            separator = true
-                        }
+                            separator = true,
+                        },
                     },
-                }
-            }
+                },
+            })
         end,
-    }
+    },
 }
+

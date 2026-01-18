@@ -53,5 +53,10 @@
     "notebook.lineNumbers": "on",
     "git.autofetch": true,
     "window.zoomLevel": 1,
-    "editor.cursorSmoothCaretAnimation": "on"
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.html": "default"
+    },
+    "explorer.confirmDragAndDrop": false
 }

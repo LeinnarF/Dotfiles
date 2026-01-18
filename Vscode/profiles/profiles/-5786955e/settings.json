@@ -1,22 +1,20 @@
 {
     "editor.minimap.enabled": false,
-    "workbench.navigationControl.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
     "github.copilot.nextEditSuggestions.enabled": true,
-    "python.defaultInterpreterPath": "/bin/python3.13",
     "editor.fontSize": 15,
     "editor.fontFamily": "JetBrainsMono Nerd Font",
     "github.copilot.enable": {
-        "*": false,
-        "plaintext": false,
+        "*": true,
+        "plaintext": true,
         "markdown": true,
         "scminput": false,
         "rasi": false,
         "latex": true,
         "hsnips": true,
-        "python": true,
-        "css": true
+        "python": true
     },
+    "editor.scrollbar.vertical": "hidden",
     "workbench.editor.tabActionLocation": "left",
     "workbench.editor.tabSizing": "shrink",
     "telemetry.feedback.enabled": false,
@@ -30,15 +28,15 @@
     },
     "animations.Install-Method": "Apc Customize UI++",
     "glassit.alpha": 255,
+    "window.titleBarStyle": "native",
     "editor.renderWhitespace": "none",
     "editor.stickyScroll.enabled": false,
     "explorer.confirmDelete": false,
-    "window.commandCenter": false,
-    "workbench.layoutControl.enabled": false,
     "chat.editor.wordWrap": "on",
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "window.customTitleBarVisibility": "never",
     "git.confirmSync": false,
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.cursorBlinking": true,
@@ -47,12 +45,19 @@
     "code-runner.runInTerminal": true,
     "umath.preview.CursorType": "blacktriangleright",
     "umath.preview.EnableCursor": false,
-    "workbench.activityBar.location": "top",
-    "window.menuBarVisibility": "toggle",
-    "window.menuStyle": "custom",
-    "window.titleBarStyle": "native",
-    "window.customTitleBarVisibility": "never",
     "workbench.colorTheme": "Tokyo Night",
+    "workbench.activityBar.location": "top",
+    "workbench.navigationControl.enabled": false,
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+    "notebook.lineNumbers": "on",
+    "git.autofetch": true,
     "window.zoomLevel": 1,
-    "editor.cursorSmoothCaretAnimation": "on"
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.html": "default"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "makefile.configureOnOpen": true
 }
