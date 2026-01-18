@@ -1,0 +1,63 @@
+{
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+	"logo": {
+	// "source": "~/.config/fastfetch/arch-linux.png",
+	"type": "small",
+	"padding": {
+		"top": 3,
+		"left" : 2
+	}
+	},
+	"display": {
+		"separator": "  ",
+		"color": {
+			"keys": "magenta"
+		}
+	},
+	"modules": [
+		"break",
+		"title",
+		"separator",
+		{
+			"type": "os",
+			"key": " ",
+			"keyColor": "blue"
+		},
+		{
+			"type": "kernel",
+			"key": " ",
+			"keyColor": "blue"
+		},
+		{
+			"type": "uptime",
+			"key": "󱑎 ",
+			"keyColor": "blue"
+		},
+		{
+			"type": "packages",
+			"key": "󰮯 ",
+			"keyColor": "blue"
+		},
+		{
+			"type": "display",
+			"key": "󰍹 ",
+			"keyColor": "blue"
+		},
+		{
+			"type": "cpu",
+			"key" : " ",
+			"keyColor": "blue"
+		},
+		{
+			"type": "gpu",
+			"key" : " ",
+			"keyColor": "blue"
+		},
+		{
+			"type": "memory",
+			"key": "󰾆 ",
+			"keyColor": "blue"
+		},
+		"break"
+	]
+}

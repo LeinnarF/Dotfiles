@@ -25,6 +25,7 @@ config = [
     Config("autostart"),
     Config("conky"),
     Config("hypr"),
+    Config("fastfetch"),
 ]
 
 vscode = {
