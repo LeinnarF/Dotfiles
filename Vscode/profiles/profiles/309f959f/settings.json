@@ -58,5 +58,9 @@
         "*.copilotmd": "vscode.markdown.preview.editor",
         "*.html": "default"
     },
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "right"
+    }
 }

@@ -117,5 +117,15 @@
     {
         "key": "ctrl+shift+enter",
         "command": "notebook.execute"
+    },
+    {
+        "key": "delete",
+        "command": "umath.preview.closeAllPreview",
+        "when": "umathShowPreview"
+    },
+    {
+        "key": "escape",
+        "command": "-umath.preview.closeAllPreview",
+        "when": "umathShowPreview"
     }
 ]

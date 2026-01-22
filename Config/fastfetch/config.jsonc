@@ -4,18 +4,18 @@
 	// "source": "~/.config/fastfetch/arch-linux.png",
 	"type": "small",
 	"padding": {
-		"top": 3,
+		"top": 1,
 		"left" : 2
 	}
 	},
 	"display": {
-		"separator": "  ",
+		"separator": " ",
 		"color": {
-			"keys": "magenta"
+			"keys": "green"
 		}
 	},
 	"modules": [
-		"break",
+		// "break",
 		"title",
 		"separator",
 		{
