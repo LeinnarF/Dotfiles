@@ -62,5 +62,6 @@
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "right"
-    }
+    },
+    "explorer.confirmPasteNative": false
 }
