@@ -46,6 +46,7 @@ def in_config(target):
 
 config_list = [
     os.path.expanduser('/.zshrc'),
+    os.path.expanduser('/.p10k.zsh'),
     in_config('nvim'),
     in_config('kitty'),
     in_config('dunst'),
@@ -108,23 +109,7 @@ def backup_all():
     kde_backup.check_paths()
     kde_backup.backup_paths()
 
-    subprocess.run(['notify-send', 'Dotfiles Backup', 'All configuration backups completed successfully.'])
-
-def git_commit_and_push():
-    try:
-        print("\033[36mCommitting and pushing to GitHub...\033[0m")
-        subprocess.run(["git", "add", "."], cwd=repo_path, check=True)
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        commit_message = f"Auto backup on {timestamp}"
-        subprocess.run(["git", "commit", "-m", commit_message], cwd=repo_path, check=True)
-        subprocess.run(["git", "push"], cwd=repo_path, check=True)
-        print("\033[32mPushed to GitHub successfully!\033[0m")
-    except subprocess.CalledProcessError:
-        print("\033[31mGit push failed. Please check your remote or authentication.\033[0m")
-
 if __name__ == '__main__':
     backup_all()
-    # git_commit_and_push()
-    
     subprocess.run(['notify-send', 'Dotfiles Backup', 'Backup completed successfully.'])
     print("\033[32mBackup completed successfully!\033[0m")
