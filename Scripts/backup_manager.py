@@ -42,10 +42,10 @@ class BackupManager:
             subprocess.run(['rsync', '-avh', path, output_path], check=True)
 
 def in_config(target):
-    return os.path.expanduser(f'~/.config/{target}')
+    return os.path.expanduser(f'/.config/{target}')
 
 config_list = [
-    os.path.expanduser('~/.zshrc'),
+    os.path.expanduser('/.zshrc'),
     in_config('nvim'),
     in_config('kitty'),
     in_config('dunst'),
@@ -68,21 +68,20 @@ vscode_list = [
     in_config('Code/User/profiles')
 ]
 obsidian_list = [
-    os.path.expanduser('~/Documents/Vault/.obsidian/')
+    os.path.expanduser('/Documents/Vault/.obsidian/')
 ]
 script_list = [
-    os.path.expanduser('~/Dotfiles/Scripts/')
+    os.path.expanduser('/Dotfiles/Scripts/')
 ]
 
 kde_list = os.path.expanduser('~/Dotfiles/Scripts/path.txt')
 
-repo_path = os.path.expanduser('~/Dotfiles/')
-output_config = os.path.join(repo_path, 'Config')
-output_vscode = os.path.join(repo_path, 'Vscode')
-output_obsidian = os.path.join(repo_path, 'Obsidian')
-output_scripts = os.path.join(repo_path, 'Scripts')
-output_kde = os.path.join(repo_path, 'KDE')
-
+repo_path = os.path.expanduser('/Dotfiles/')
+output_config = repo_path + 'Config'
+output_vscode = repo_path + 'Vscode'
+output_obsidian = repo_path + 'Obsidian'
+output_scripts = repo_path + 'Scripts'
+output_kde = repo_path + 'KDE'
 def backup_all():
     # Backup Configs
     config_backup = BackupManager(input_list=config_list, backup_dir=output_config)
@@ -125,7 +124,7 @@ def git_commit_and_push():
 
 if __name__ == '__main__':
     backup_all()
-    git_commit_and_push()
+    # git_commit_and_push()
     
-    subprocess.run(['notify-send', 'Dotfiles Backup', 'Backup completed and pushed to GitHub successfully.'])
+    subprocess.run(['notify-send', 'Dotfiles Backup', 'Backup completed successfully.'])
     print("\033[32mBackup completed successfully!\033[0m")
