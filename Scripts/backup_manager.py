@@ -47,6 +47,8 @@ def in_config(target):
 config_list = [
     os.path.expanduser('/.zshrc'),
     os.path.expanduser('/.p10k.zsh'),
+    os.path.expanduser('/.oh-my-zsh'),
+    os.path.expanduser('/.zprofile'),
     in_config('nvim'),
     in_config('kitty'),
     in_config('dunst'),
