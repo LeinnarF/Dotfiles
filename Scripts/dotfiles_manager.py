@@ -2,6 +2,7 @@
 import subprocess
 import os
 from datetime import datetime
+from kde_config_manager import backup_kde_configs
 
 # --- CONFIG PATH HELPERS --- #
 def Config(target):
@@ -114,6 +115,7 @@ def backup():
     backup_vscode()
     backup_obsidian()
     backup_scripts()
+    backup_kde_configs()
     git_commit_and_push()
     notify("Dotfiles Backup", "Backup completed and pushed to GitHub successfully.")
     print("\033[32mBackup completed successfully!\033[0m")
