@@ -1,7 +1,9 @@
-# I use Arch btw 
+<h1 align=center>I use Arch btw</h1>
 
-## Todo
+### Todo
 - Refactor Scripts
+
+<br>
 
 # Instructions
 This is a personal repository containing my Arch Linux setup and configurations. Feel free to explore and use it as a reference for your own setup.
