@@ -31,7 +31,7 @@
   <title>Coding</title>
   <info>
    <metadata owner="http://freedesktop.org">
-    <bookmark:icon name="inode-directory"/>
+    <bookmark:icon name="folder-linux"/>
    </metadata>
    <metadata owner="http://www.kde.org">
     <ID>1759233536/2</ID>
@@ -47,6 +47,7 @@
    <metadata owner="http://www.kde.org">
     <ID>1758012749/1</ID>
     <isSystemItem>true</isSystemItem>
+    <IsHidden>true</IsHidden>
    </metadata>
   </info>
  </bookmark>
@@ -83,6 +84,7 @@
    <metadata owner="http://www.kde.org">
     <ID>1758012749/6</ID>
     <isSystemItem>true</isSystemItem>
+    <IsHidden>true</IsHidden>
    </metadata>
   </info>
  </bookmark>
@@ -107,6 +109,7 @@
    <metadata owner="http://www.kde.org">
     <ID>1758012749/8</ID>
     <isSystemItem>true</isSystemItem>
+    <IsHidden>true</IsHidden>
    </metadata>
   </info>
  </bookmark>
@@ -119,17 +122,6 @@
    <metadata owner="http://www.kde.org">
     <ID>1758012749/4</ID>
     <isSystemItem>true</isSystemItem>
-   </metadata>
-  </info>
- </bookmark>
- <bookmark href="file:///home/leinnarf/Games">
-  <title>Games</title>
-  <info>
-   <metadata owner="http://freedesktop.org">
-    <bookmark:icon name="folder-games"/>
-   </metadata>
-   <metadata owner="http://www.kde.org">
-    <ID>1769146748/0</ID>
    </metadata>
   </info>
  </bookmark>
@@ -245,17 +237,6 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="file:///home/leinnarf/FileStorage">
-  <title>FileStorage</title>
-  <info>
-   <metadata owner="http://freedesktop.org">
-    <bookmark:icon name="applications-other-symbolic"/>
-   </metadata>
-   <metadata owner="http://www.kde.org">
-    <ID>1769090064/0</ID>
-   </metadata>
-  </info>
- </bookmark>
  <bookmark href="trash:/">
   <title>Trash</title>
   <info>
@@ -265,6 +246,28 @@
    <metadata owner="http://www.kde.org">
     <ID>1758012749/5</ID>
     <isSystemItem>true</isSystemItem>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/leinnarf/Games">
+  <title>Games</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="folder-games"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1769146748/0</ID>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/leinnarf/FileStorage">
+  <title>FileStorage</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="folder-download-open"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1769090064/0</ID>
    </metadata>
   </info>
  </bookmark>
