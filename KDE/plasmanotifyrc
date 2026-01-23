@@ -1,0 +1,9 @@
+[Applications][code]
+Seen=true
+
+[Applications][timeshift-gtk]
+Seen=true
+
+[Notifications]
+PopupPosition=TopRight
+PopupTimeout=3000

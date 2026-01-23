@@ -1,0 +1,9 @@
+[GuiConfig]
+includePointer=true
+
+[ImageSave]
+lastImageSaveLocation=file:///home/leinnarf/Pictures/Screenshots/Screenshot_20260106_224223-1.png
+translatedScreenshotsFolder=Screenshots
+
+[VideoSave]
+translatedScreencastsFolder=Screencasts

@@ -1,0 +1,12 @@
+[General]
+count=1
+rules=a1ba744f-57f5-4125-b75b-1c3e0ab8a9e0
+
+[a1ba744f-57f5-4125-b75b-1c3e0ab8a9e0]
+Description=Window settings for kitty
+Enabled=false
+noborder=true
+noborderrule=3
+types=1
+wmclass=kitty
+wmclassmatch=1

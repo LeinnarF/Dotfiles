@@ -1,0 +1,5 @@
+[Greeter][Wallpaper][org.kde.image][General]
+Image=/home/leinnarf/Pictures/Wallpapers/2b.png
+
+[Greeter][Wallpaper][org.kde.slideshow][General]
+Image=file:///usr/share/wallpapers/Flow/

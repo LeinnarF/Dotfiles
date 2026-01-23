@@ -1,0 +1,1 @@
+/home/leinnarf/.config/katevirc

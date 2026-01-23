@@ -1,0 +1,26 @@
+MenuBar=Disabled
+
+[CompactMode]
+PreviewSize=22
+
+[General]
+UseTabForSwitchingSplitView=true
+Version=202
+ViewPropsTimestamp=2025,9,19,23,19,56.636
+
+[IconsMode]
+PreviewSize=80
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+
+[PreviewSettings]
+Plugins=windowsexethumbnail,cursorthumbnail,fontthumbnail,djvuthumbnail,kraorathumbnail,jpegthumbnail,exrthumbnail,svgthumbnail,directorythumbnail,comicbookthumbnail,imagethumbnail,windowsimagethumbnail,appimagethumbnail,audiothumbnail,ebookthumbnail,opendocumentthumbnail,librsvg,gdk-pixbuf-thumbnailer,avif,heif,ffmpegthumbnailer,jxl
+
+[ViewPropertiesDialog]
+1920x1080 screen: Height=334
+1920x1080 screen: Width=379

@@ -9,3 +9,7 @@
 - [ ] Add configuration instructions
 - [ ] Add FAQ section
 - [ ] Add Kde setup instructions
+
+
+
+
