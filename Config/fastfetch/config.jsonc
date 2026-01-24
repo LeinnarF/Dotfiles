@@ -28,11 +28,11 @@
 			"key": " ",
 			"keyColor": "blue"
 		},
-		{
-			"type": "uptime",
-			"key": "󱑎 ",
-			"keyColor": "blue"
-		},
+		// {
+		// 	"type": "uptime",
+		// 	"key": "󱑎 ",
+		// 	"keyColor": "blue"
+		// },
 		{
 			"type": "packages",
 			"key": "󰮯 ",

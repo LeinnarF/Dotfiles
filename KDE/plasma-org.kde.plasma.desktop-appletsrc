@@ -118,8 +118,8 @@ wallpaperplugin=org.kde.image
 positions={"1920x1080":[]}
 
 [Containments][434]
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
+ItemGeometries-1920x1080=Applet-435:144,304,528,160,0;
+ItemGeometriesHorizontal=Applet-435:144,304,528,160,0;
 activityId=2de68380-7e79-45d0-9464-263a686af5ea
 formfactor=0
 immutability=1
@@ -127,6 +127,10 @@ lastScreen=0
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
+
+[Containments][434][Applets][435]
+immutability=1
+plugin=com.github.prayag2.modernclock
 
 [Containments][434][ConfigDialog]
 DialogHeight=741
@@ -137,7 +141,7 @@ positions={"1920x1080":["1","17"]}
 sortMode=-1
 
 [Containments][434][Wallpaper][org.kde.image][General]
-Image=file:///home/leinnarf/Pictures/Wallpapers/ign-waifu.png
+Image=file:///home/leinnarf/Pictures/Wallpapers/retro_room.png
 SlidePaths=/home/leinnarf/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][55]
@@ -418,7 +422,7 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][55][Applets][398][Applets][412][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][55][Applets][398][Applets][413][Configuration]
 PreloadWeight=42

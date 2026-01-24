@@ -61,7 +61,8 @@ config_list = [
     in_config('hypr'),
     in_config('fastfetch'),
     in_config('xremap'),
-    in_config('bat')    
+    in_config('bat'),
+    in_config('btop')    
 ]
 vscode_list = [
     in_config('Code/User/settings.json'),
