@@ -16,8 +16,21 @@
               "icon": "home",
               "title": "Start page"
             }
+          },
+          {
+            "id": "82368f8d93484130",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.5"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.5"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -130,7 +143,7 @@
       "start-page:Open start page": false
     }
   },
-  "active": "cc36f7ee255cb926",
+  "active": "82368f8d93484130",
   "lastOpenFiles": [
     "Recursive Meta-Cognition.md",
     "06 Pendings/Range.md",

@@ -1,3 +1,7 @@
+[Daemon]
+Autolock=false
+Timeout=0
+
 [Greeter][Wallpaper][org.kde.image][General]
 Image=/home/leinnarf/Pictures/Wallpapers/2b.png
 

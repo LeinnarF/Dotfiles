@@ -147,6 +147,7 @@ toolBarFont=JetBrains Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [KDE]
 LookAndFeelPackage=com.github.vinceliuice.Layan
+widgetStyle=kvantum
 
 [KFileDialog Settings]
 Allow Expansion=false

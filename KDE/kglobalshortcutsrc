@@ -330,7 +330,6 @@ activate widget 253=Meta+Shift+O,none,Activate PlasMusic Toolbar Widget
 activate widget 268=none,none,Activate System Monitor Widget
 activate widget 275=none,none,Activate System Monitor Widget
 activate widget 283=none,none,Activate Desktop Indicator Widget
-activate widget 427=Alt+F4,none,Activate Lock/Logout Widget
 activate widget 53=none,none,Activate Pager Widget
 clear-history=none,,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu

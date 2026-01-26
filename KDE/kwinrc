@@ -31,14 +31,16 @@ SlideBackground=false
 [Effect-windowview]
 BorderActivateAll=5
 
+[MouseBindings]
+CommandAllWheel=Change Opacity
+
 [NightColor]
 Active=true
 NightTemperature=3800
 
 [Plugins]
-blurEnabled=false
+blurEnabled=true
 contrastEnabled=true
-cubeEnabled=true
 krohnkiteEnabled=true
 kzonesEnabled=false
 minimizeallEnabled=true

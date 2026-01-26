@@ -139,12 +139,12 @@ export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 alias config='cd ~/.config'
 alias home='cd ~'
 alias update='checkupdates && yay -Qu'
-alias supac='sudo pacman'
+alias sp='sudo pacman'
 alias ls='exa --icons=always --no-time --no-user --no-permissions'
 alias cat='bat --theme=tokyonight_night'
 alias y='yazi'
 alias cd='z'
-
+alias b='btop'
 
 eval "$(zoxide init zsh)"
 
