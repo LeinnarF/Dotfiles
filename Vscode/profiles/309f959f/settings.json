@@ -63,5 +63,6 @@
         "default": "right",
         "jupyter-notebook": "right"
     },
-    "explorer.confirmPasteNative": false
+    "explorer.confirmPasteNative": false,
+    "vscode-blur-linux.opacity": 50
 }
