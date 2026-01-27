@@ -1,12 +1,36 @@
-[General]
-count=1
-rules=a1ba744f-57f5-4125-b75b-1c3e0ab8a9e0
-
-[a1ba744f-57f5-4125-b75b-1c3e0ab8a9e0]
-Description=Window settings for kitty
-Enabled=false
-noborder=true
-noborderrule=3
+[2afd46e5-681f-4f1b-a552-ce0b453bf096]
+Description=Oobsidian
+opacityactive=95
+opacityactiverule=2
 types=1
-wmclass=kitty
+wmclass=obsidian obsidian
+wmclasscomplete=true
 wmclassmatch=1
+
+[74d7348d-29f2-487f-9f90-f28803b5024d]
+Description=Braave
+desktopfile=brave-browser
+desktopfilerule=3
+opacityactive=95
+opacityactiverule=2
+types=1
+wmclass=brave brave-browser
+wmclasscomplete=true
+wmclassmatch=1
+
+[7fb9d08f-47aa-4a8c-98c0-9517a86453bf]
+Description=Vscoode
+decocolor=Layan
+decocolorrule=2
+desktopfile=code
+desktopfilerule=3
+opacityactive=95
+opacityactiverule=2
+types=1
+wmclass=code code
+wmclasscomplete=true
+wmclassmatch=1
+
+[General]
+count=3
+rules=7fb9d08f-47aa-4a8c-98c0-9517a86453bf,74d7348d-29f2-487f-9f90-f28803b5024d,2afd46e5-681f-4f1b-a552-ce0b453bf096

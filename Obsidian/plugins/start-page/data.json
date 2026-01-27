@@ -16,7 +16,41 @@
   "customFooterText": "",
   "scrollPosition": 0,
   "showStatBar": true,
-  "lastVersionCheck": 1769349883578,
+  "lastVersionCheck": 1769495800830,
   "latestVersion": "0.3.4",
-  "excludeList": []
+  "excludeList": [],
+  "pinnedNotesStyle": {
+    "sectionMargin": "",
+    "sectionPadding": "",
+    "headerMargin": "",
+    "headerPadding": "",
+    "titleFontSize": "",
+    "titleMargin": "",
+    "titlePadding": "",
+    "listGap": "",
+    "itemPadding": "",
+    "itemMargin": "",
+    "noteTitleFontSize": "",
+    "noteTitleMargin": "",
+    "noteTitlePadding": "",
+    "noteDateFontSize": "",
+    "noteFolderFontSize": ""
+  },
+  "recentNotesStyle": {
+    "sectionMargin": "",
+    "sectionPadding": "",
+    "headerMargin": "",
+    "headerPadding": "",
+    "titleFontSize": "",
+    "titleMargin": "",
+    "titlePadding": "",
+    "listGap": "",
+    "itemPadding": "",
+    "itemMargin": "",
+    "noteTitleFontSize": "",
+    "noteTitleMargin": "",
+    "noteTitlePadding": "",
+    "noteDateFontSize": "",
+    "noteFolderFontSize": ""
+  }
 }

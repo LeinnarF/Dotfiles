@@ -27,7 +27,7 @@
         "*.conf": "shellscript"
     },
     "animations.Install-Method": "Apc Customize UI++",
-    "glassit.alpha": 255,
+    "glassit.alpha": 100,
     "window.titleBarStyle": "native",
     "editor.renderWhitespace": "none",
     "editor.stickyScroll.enabled": false,
@@ -64,5 +64,6 @@
         "jupyter-notebook": "right"
     },
     "explorer.confirmPasteNative": false,
-    "vscode-blur-linux.opacity": 50
+    "vscode-blur-linux.opacity": 50,
+    "glassit.force_sway": true
 }

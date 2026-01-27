@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4cc7bf1f5bf431fd",
+        "id": "c4d5847474c66245",
         "type": "tabs",
         "children": [
           {
-            "id": "cc36f7ee255cb926",
+            "id": "168ce7467e0bc3e6",
             "type": "leaf",
             "state": {
               "type": "start-page-view",
@@ -16,21 +16,8 @@
               "icon": "home",
               "title": "Start page"
             }
-          },
-          {
-            "id": "82368f8d93484130",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.11.5"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.5"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -143,7 +130,7 @@
       "start-page:Open start page": false
     }
   },
-  "active": "82368f8d93484130",
+  "active": "168ce7467e0bc3e6",
   "lastOpenFiles": [
     "Recursive Meta-Cognition.md",
     "06 Pendings/Range.md",

@@ -54,5 +54,6 @@
     "emulator.emulatorPath": "/home/leinnarf/Android/Sdk/emulator/",
     "editor.cursorSmoothCaretAnimation": "on",
     "window.zoomLevel": 1,
-    "git.autofetch": true
+    "git.autofetch": true,
+    "workbench.colorTheme": "Tokyo Night"
 }

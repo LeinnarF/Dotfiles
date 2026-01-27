@@ -11,8 +11,7 @@ Number=4
 Rows=1
 
 [Effect-blur]
-BlurStrength=2
-NoiseStrength=14
+BlurStrength=1
 
 [Effect-blurplus]
 BlurStrength=6
@@ -20,6 +19,9 @@ WindowClasses=class1\nclass2\nclass3\nkitty
 
 [Effect-diminactive]
 Strength=10
+
+[Effect-kwin4_effect_geometry_change]
+ExcludedWindowClasses=yakuake
 
 [Effect-overview]
 BorderActivate=9
@@ -39,11 +41,14 @@ Active=true
 NightTemperature=3800
 
 [Plugins]
-blurEnabled=true
+blurEnabled=false
 contrastEnabled=true
 krohnkiteEnabled=true
+kwin4_effect_geometry_changeEnabled=true
+kwin6_effect_tvEnabled=true
 kzonesEnabled=false
 minimizeallEnabled=true
+scaleEnabled=false
 
 [Script-krohnkite]
 binaryTreeLayoutOrder=0
