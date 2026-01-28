@@ -7,6 +7,22 @@ wmclass=obsidian obsidian
 wmclasscomplete=true
 wmclassmatch=1
 
+[4d7660b9-e6d1-4545-a1f7-7e4e44b054bf]
+Description=Spootify
+opacityactive=95
+opacityactiverule=2
+types=1
+wmclass=spotify Spotify
+wmclasscomplete=true
+wmclassmatch=1
+
+[54aaab2e-9c70-4902-b38c-c51a3d69f1b8]
+Description=Steem
+opacityactive=96
+opacityactiverule=2
+wmclass=steam
+wmclassmatch=1
+
 [74d7348d-29f2-487f-9f90-f28803b5024d]
 Description=Braave
 desktopfile=brave-browser
@@ -32,5 +48,5 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=3
-rules=7fb9d08f-47aa-4a8c-98c0-9517a86453bf,74d7348d-29f2-487f-9f90-f28803b5024d,2afd46e5-681f-4f1b-a552-ce0b453bf096
+count=5
+rules=7fb9d08f-47aa-4a8c-98c0-9517a86453bf,74d7348d-29f2-487f-9f90-f28803b5024d,2afd46e5-681f-4f1b-a552-ce0b453bf096,4d7660b9-e6d1-4545-a1f7-7e4e44b054bf,54aaab2e-9c70-4902-b38c-c51a3d69f1b8

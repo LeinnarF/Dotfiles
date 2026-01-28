@@ -31,7 +31,7 @@
   <title>Coding</title>
   <info>
    <metadata owner="http://freedesktop.org">
-    <bookmark:icon name="folder-linux"/>
+    <bookmark:icon name="code-context"/>
    </metadata>
    <metadata owner="http://www.kde.org">
     <ID>1759233536/2</ID>
@@ -48,6 +48,17 @@
     <ID>1758012749/1</ID>
     <isSystemItem>true</isSystemItem>
     <IsHidden>true</IsHidden>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/leinnarf/Dotfiles">
+  <title>Dotfiles</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="configuration"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1769508714/0</ID>
    </metadata>
   </info>
  </bookmark>

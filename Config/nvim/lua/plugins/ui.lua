@@ -6,16 +6,18 @@ return {
 		config = function()
 			require("tokyonight").setup({
 				style = "night",
-				transparent = false,
+				transparent = true,
 				terminal_colors = true,
 				styles = {
 					comments = { italic = true },
 					keywords = { italic = true },
 					functions = {},
 					variables = {},
+					sidebars = "transparent",
+					floats = "transparent",
 				},
 			})
-			vim.cmd.colorscheme("tokyonight")
+			vim.cmd.colorscheme("tokyonight-night")
 		end,
 	},
 
@@ -23,30 +25,16 @@ return {
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
+			local custom_theme = require("lualine.themes.auto")
 			require("lualine").setup({
 				options = {
-					-- theme = "catppuccin",
-					-- section_separators = "",
-					component_separators = "|",
+					theme = custom_theme,
+					section_separators = { left = "", right = "" },
+					component_separators = " ",
+					globalstatus = true,
 				},
 			})
 		end,
-	},
-
-	{
-		"folke/noice.nvim",
-		event = "VeryLazy",
-		opts = {
-			presets = {
-				bottom_search = true,
-				command_palette = true,
-				long_message_to_split = true,
-			},
-		},
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-			"rcarriga/nvim-notify",
-		},
 	},
 
 	{
@@ -56,33 +44,6 @@ return {
 			indent = { char = "│" },
 			scope = { enabled = false },
 		},
-	},
-
-	{
-		"akinsho/bufferline.nvim",
-		version = "*",
-		dependencies = "nvim-tree/nvim-web-devicons",
-		config = function()
-			require("bufferline").setup({
-				options = {
-					mode = "tabs",
-					numbers = "none",
-					separator_style = "thin",
-					diagnostics = "nvim_lsp",
-					show_buffer_close_icons = true,
-					show_close_icon = true,
-					always_show_bufferline = true,
-					offsets = {
-						{
-							filetype = "neo-tree",
-							text = "File Explorer",
-							highlight = "Directory",
-							separator = true,
-						},
-					},
-				},
-			})
-		end,
 	},
 }
 
