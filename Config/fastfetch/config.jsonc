@@ -33,11 +33,11 @@
 		// 	"key": "󱑎 ",
 		// 	"keyColor": "blue"
 		// },
-		{
-			"type": "packages",
-			"key": "󰮯 ",
-			"keyColor": "blue"
-		},
+		// {
+		// 	"type": "packages",
+		// 	"key": "󰮯 ",
+		// 	"keyColor": "blue"
+		// },
 		{
 			"type": "display",
 			"key": "󰍹 ",
@@ -58,6 +58,7 @@
 			"key": "󰾆 ",
 			"keyColor": "blue"
 		},
+		"break",
 		"break"
 	]
 }

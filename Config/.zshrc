@@ -145,6 +145,8 @@ alias cat='bat --theme=tokyonight_night'
 alias y='yazi'
 alias cd='z'
 alias b='btop'
+alias ff='fastfetch'
+alias nvimconf='nvim ~/.config/nvim/'
 
 eval "$(zoxide init zsh)"
 

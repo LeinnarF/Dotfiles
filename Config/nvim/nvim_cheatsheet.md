@@ -1,6 +1,7 @@
 # Neovim (nvim) Cheatsheet
 
 ## 1. Modes
+
 * **Esc**: Switch to Normal Mode (from any other mode)
 * **i**: Insert mode (before cursor)
 * **a**: Insert mode (after cursor)
@@ -9,96 +10,198 @@
 * **Ctrl + v**: Visual Block mode (rectangular selection)
 * **:**: Command-line mode
 * **R**: Replace mode
+* **:terminal**: Open terminal buffer (Neovim)
+* **Ctrl + \ Ctrl + n**: Exit terminal mode
+
+---
 
 ## 2. Basic Movement (Normal Mode)
+
 * **h / j / k / l**: Left / Down / Up / Right
-* **w**: Jump forward to start of next word
-* **b**: Jump backward to start of previous word
-* **e**: Jump forward to end of word
-* **0** (zero): Jump to start of line
-* **^**: Jump to first non-blank character of line
-* **$**: Jump to end of line
-* **gg**: Go to first line of file
-* **G**: Go to last line of file
-* **:n**: Go to line number `n` (e.g., `:42`)
-* **%**: Jump to matching bracket `()`, `{}`, `[]`
+* **w / b / e**: Next word / previous word / end of word
+* **W / B / E**: Word motions ignoring punctuation
+* **ge**: Backward to end of previous word
+* **0**: Start of line
+* **^**: First non-blank character of line
+* **$**: End of line
+* **gg / G**: First line / last line of file
+* **:n**: Go to line number `n`
+* **%**: Jump to matching bracket
+* **H / M / L**: Top / middle / bottom of screen
+* **gj / gk**: Move by visual (wrapped) lines
+* **{ / }**: Previous / next paragraph
+* **( / )**: Previous / next sentence
 
-## 3. Editing (Normal Mode)
+---
+
+## 3. Operators (Combine With Motions)
+
+* **d**: Delete
+* **c**: Change
+* **y**: Yank (copy)
+* **g~**: Toggle case
+* **gu / gU**: Lowercase / Uppercase
+* **> / <**: Indent / Un-indent
+
+**Examples:**
+
+```
+daw   delete a word
+ci(   change inside parentheses
+yap   yank paragraph
+```
+
+---
+
+## 4. Text Objects (Power Feature)
+
+Used with operators or visual mode.
+
+* **iw / aw**: Inner / around word
+* **ip / ap**: Inner / around paragraph
+* **i" i' i( i[ i{**: Inside delimiters
+* **a" a' a( a[ a{**: Around delimiters
+
+**Examples:**
+
+```
+ciw   change word
+di"  delete inside quotes
+vi{   select inside braces
+```
+
+---
+
+## 5. Editing (Normal Mode)
+
 * **x**: Delete character under cursor
-* **r**: Replace single character under cursor
-* **u**: Undo
-* **Ctrl + r**: Redo
-* **dd**: Delete (cut) current line
-* **yy**: Yank (copy) current line
-* **p**: Paste after cursor / below line
-* **P**: Paste before cursor / above line
-* **cw**: Change word (delete word and enter Insert mode)
-* **cc**: Change line (delete line and enter Insert mode)
-* **D**: Delete from cursor to end of line
-* **C**: Change from cursor to end of line
-* **J**: Join current line with next line
-* **~**: Toggle case of character under cursor
+* **r**: Replace single character
+* **u / Ctrl + r**: Undo / redo
+* **dd / yy**: Delete / yank line
+* **p / P**: Paste after / before
+* **cw / cc**: Change word / line
+* **D / C**: Delete / change to end of line
+* **J**: Join lines
+* **~**: Toggle case
+* **.**: Repeat last change
 
-## 4. Search & Replace
-* **/pattern**: Search forward for `pattern`
-* **?pattern**: Search backward for `pattern`
-* **n**: Repeat search in same direction
-* **N**: Repeat search in opposite direction
-* **\***: Search forward for word under cursor
-* **#**: Search backward for word under cursor
-* **:s/old/new**: Replace first `old` with `new` in current line
-* **:s/old/new/g**: Replace all `old` with `new` in current line
-* **:%s/old/new/g**: Replace all `old` with `new` in entire file
-* **:%s/old/new/gc**: Replace all with confirmation prompt
-* **:noh**: Clear search highlighting
+---
 
-## 5. Visual Mode Actions
-*(First, select text using `v`, `V`, or `Ctrl+v`)*
-* **y**: Yank (copy) selection
-* **d**: Delete (cut) selection
-* **p**: Paste over selection
-* **>**: Indent selection
-* **<**: Un-indent selection
-* **=**: Auto-indent selection
+## 6. Search & Replace
 
-## 6. Windows & Splits
-* **:sp** (or **:split**): Horizontal split
-* **:vsp** (or **:vsplit**): Vertical split
-* **Ctrl + w, w**: Cycle focus between windows
-* **Ctrl + w, h/j/k/l**: Move focus to window (Left/Down/Up/Right)
-* **Ctrl + w, c**: Close current window
-* **Ctrl + w, o**: Close all windows except current one
-* **Ctrl + w, =**: Equalize width/height of all windows
+* **/pattern**: Search forward
+* **?pattern**: Search backward
+* **n / N**: Repeat search
+* *** / #**: Search word under cursor
+* **:s/old/new**: Replace once (line)
+* **:s/old/new/g**: Replace all (line)
+* **:%s/old/new/g**: Replace all (file)
+* **:%s/old/new/gc**: Replace with confirmation
+* **:noh**: Clear highlights
 
-## 7. Tabs
-* **:tabnew**: Open new tab
-* **gt**: Go to next tab
-* **gT**: Go to previous tab
-* **:tabclose**: Close current tab
+---
 
-## 8. File Management
-* **:w**: Save file
-* **:q**: Quit
-* **:q!**: Quit without saving (force)
-* **:wq** (or **ZZ**): Save and quit
-* **:x**: Save and quit (only saves if changes made)
-* **:e filename**: Open `filename` for editing
+## 7. Visual Mode Actions
 
-## 9. Advanced Power User
-* **.** (dot): Repeat last change/command
-* **ma**: Set mark `a` at cursor position
+*(Select first)*
+
+* **y / d / p**: Yank / delete / paste
+* **> / <**: Indent / un-indent
+* **=**: Auto-indent
+
+---
+
+## 8. Buffers (Files)
+
+* **:ls**: List buffers
+* **:b next / :b prev**: Switch buffers
+* **:b n**: Go to buffer `n`
+* **:bd**: Delete buffer
+
+---
+
+## 9. Windows & Splits
+
+* **:sp / :vsp**: Horizontal / vertical split
+* **Ctrl + w w**: Cycle windows
+* **Ctrl + w h/j/k/l**: Move focus
+* **Ctrl + w c**: Close window
+* **Ctrl + w o**: Close others
+* **Ctrl + w =**: Equalize sizes
+
+---
+
+## 10. Tabs (Layouts)
+
+* **:tabnew**: New tab
+* **gt / gT**: Next / previous tab
+* **:tabclose**: Close tab
+
+---
+
+## 11. Registers & Clipboard
+
+* **"ay / "ap**: Yank / paste register `a`
+* **"0**: Last yank
+* **"_**: Black hole register
+* **"+**: System clipboard
+
+**Examples:**
+
+```
+"_dd   delete without overwriting clipboard
+"+y    copy to system clipboard
+```
+
+---
+
+## 12. Marks & Jumps
+
+* **ma**: Set mark `a`
 * **'a**: Jump to mark `a`
-* **qa**: Start recording macro into register `a`
-* **q**: Stop recording macro
-* **@a**: Replay macro `a`
-* **@@**: Replay last used macro
-* **"ay**: Yank into register `a`
-* **"ap**: Paste from register `a`
-* **Ctrl + o**: Jump to previous cursor position (jump list)
-* **Ctrl + i**: Jump to next cursor position
+* **Ctrl + o / Ctrl + i**: Jump backward / forward
 
-## 10. Neovim Specifics
-* **:checkhealth**: Check health of plugins and external tools
-* **:Tutor**: Open the interactive tutorial
-* **:lua**: Run Lua code directly
-* **:so %**: Source (reload) the current configuration file
+---
+
+## 13. Macros
+
+* **qa**: Record macro `a`
+* **q**: Stop recording
+* **@a / @@**: Play macro / last macro
+
+---
+
+## 14. Folding
+
+* **zf**: Create fold
+* **zo / zc**: Open / close fold
+* **za**: Toggle fold
+* **zR / zM**: Open / close all folds
+
+---
+
+## 15. Undo Tree
+
+* **:undolist**: Show undo history
+* **:undo n**: Jump to undo state `n`
+
+---
+
+## 16. Command-Line Editing
+
+* **Ctrl + w**: Delete word
+* **Ctrl + u**: Clear line
+* **↑ / ↓**: Command history
+* **q:**: Command history window
+
+---
+
+## 17. Help & Neovim Utilities
+
+* **:help**: Open help
+* **K**: Help for word under cursor
+* **:Tutor**: Interactive tutorial
+* **:checkhealth**: Plugin/tool diagnostics
+* **:lua**: Run Lua code
+* **:so %**: Reload current config
+

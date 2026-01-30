@@ -2,7 +2,7 @@
 application/json=code.desktop;zen.desktop;vim.desktop;nvim.desktop;okularApplication_txt.desktop;
 application/json-patch+json=code.desktop;zen.desktop;vim.desktop;nvim.desktop;okularApplication_txt.desktop;
 application/ld+json=code.desktop;zen.desktop;vim.desktop;nvim.desktop;okularApplication_txt.desktop;
-application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+application/pdf=okularApplication_pdf.desktop;org.pwmt.zathura-pdf-mupdf.desktop;
 application/x-shellscript=kitty-open.desktop;org.gnome.gedit.desktop;
 audio/aac=mpv.desktop;
 audio/mp4=mpv.desktop;
@@ -39,7 +39,7 @@ x-scheme-handler/https=xfce4-web-browser.desktop;
 application/json=code.desktop;
 application/json-patch+json=code.desktop;
 application/ld+json=code.desktop;
-application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+application/pdf=okularApplication_pdf.desktop;
 audio/aac=mpv.desktop;
 audio/mp4=mpv.desktop;
 audio/mpeg=mpv.desktop;

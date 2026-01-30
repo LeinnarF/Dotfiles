@@ -1,0 +1,182 @@
+global !p
+def math():
+    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+
+def comment(): 
+    return vim.eval('vimtex#syntax#in_comment()') == '1'
+
+def env(name):
+    [x,y] = vim.eval("vimtex#env#is_inside('" + name + "')") 
+    return x != '0' and y != '0'
+
+endglobal
+
+# SNIPPET
+
+snippet mk "Inline Math" Ai
+\( $1 \)$0
+endsnippet
+
+snippet dm "Display Math" Ai
+\[ 
+$1 
+\]$0
+endsnippet
+
+snippet template "Basic template" b
+\documentclass{article}
+
+\begin{document}
+	Hello World
+\end{document}
+endsnippet
+
+context "math()"
+snippet frac "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+context "math()"
+snippet ss "Subscript" iA
+_{$1}$0
+endsnippet
+
+context "math()"
+snippet rr "Superscript" iA
+^{$2}$0
+endsnippet 
+
+context "math()"
+snippet sqrt "Square Root" iA
+\\sqrt{$1}$0
+endsnippet
+
+context "math()"
+snippet int "Integral" iA
+\\int_{${1:a}}^{${2:b}} $3 \, dx$0
+endsnippet
+
+context "math()"
+snippet lim "Limit" iA
+\\lim_{${1:x \\to ${2:\\infty}}}$0
+endsnippet
+
+context "math()"
+snippet sum "Summation" iA
+\\sum_{${1:i=1}}^{${2:n}}$0
+endsnippet
+
+context "math()"
+snippet eql "Equals" iA
+=$0
+endsnippet
+
+context "env('equation')"
+snippet eql "Equals" iA
+=$0
+endsnippet
+
+context "math()"
+snippet neq "Not Equals" iA
+\\neq$0
+endsnippet
+
+context "math()"
+snippet add "Addition" wA
++$0
+endsnippet
+
+context "math()"
+snippet min "Minus" iA
+-$0
+endsnippet
+
+context "math()"
+snippet dd "Separator" wA
+&$0
+endsnippet
+
+# Grouping Snippets 
+context "math()"
+snippet pp "parentheses" iA
+($1)$0
+endsnippet
+context "math()"
+snippet PP "Parentheses" wA
+\\left( $1 \\right)$0
+endsnippet
+
+context "math()"
+snippet bra "Brackets" wA
+\\left[ $1 \\right]$0
+endsnippet
+
+context "math()"
+snippet set "Braces" wA
+\\left\\{ $1 \\right\\}$0
+endsnippet
+
+context "math()"
+snippet abs "Absolute Value" wA
+\\left| $1 \\right|$0
+endsnippet
+
+context "math()"
+snippet norm "Norm" wA
+\\left\\| $1 \\right\\|$0
+endsnippet
+
+# Proving Snippets
+context "math()"
+snippet then "Implies" iA
+\\implies$0
+endsnippet
+
+context "math()"
+snippet iff "If and Only If" iA
+\\iff$0
+endsnippet
+
+context "math()"
+snippet inn "Element Of" iA
+\\in$0
+endsnippet
+
+context "math()"
+snippet notin "Not Element Of" iA
+\\notin$0
+endsnippet
+
+context "math()"
+snippet sub "Subset" iA
+\\subseteq$0
+endsnippet
+
+context "math()"
+snippet oo "Infinity" iA
+\\infty$0
+endsnippet
+
+context "math()"
+snippet to "Arrow" iA
+\\to$0
+endsnippet
+
+context "math()"
+snippet fora "For all" iA
+\\forall$0
+endsnippet
+
+context "math()"
+snippet exi "There exists" iA
+\\exists$0
+endsnippet
+
+context "math()"
+snippet neg "Negation" iA
+\\neg$0
+endsnippet
+
+
+
+

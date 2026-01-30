@@ -20,7 +20,8 @@ return {
 					"pyright",
 					"html",
 					"cssls",
-					"ts_ls"
+					"ts_ls",
+					"texlab",
 				},
 			})
 		end,
@@ -37,6 +38,7 @@ return {
 				vim.lsp.config.cssls = {capabilities = capabilities}
 				vim.lsp.config.ts_ls = {capabilities = capabilities}
 				vim.lsp.config.pyright = {capabilities = capabilities}
+				vim.lsp.config.texlab = {capabilities = capabilities}
 
 				vim.lsp.config.lua_ls = {
 					capabilities = capabilities,
@@ -52,4 +54,5 @@ return {
 		end
 	},
 }
+
 

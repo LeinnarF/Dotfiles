@@ -52,5 +52,6 @@
     "editor.minimap.showSlider": "always",
     "editor.minimap.enabled": false,
     "umath.preview.macros": [],
-    "editor.cursorSmoothCaretAnimation": "on"
+    "editor.cursorSmoothCaretAnimation": "on",
+    "window.zoomLevel": 1
 }

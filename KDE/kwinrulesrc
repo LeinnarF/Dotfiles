@@ -1,3 +1,10 @@
+[0bfd3f12-1ea7-44a7-8162-88375d1b7b95]
+Description=Settings for Zathura
+opacityactive=96
+opacityactiverule=2
+wmclass=Zathura
+wmclassmatch=2
+
 [2afd46e5-681f-4f1b-a552-ce0b453bf096]
 Description=Oobsidian
 opacityactive=95
@@ -48,5 +55,16 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=5
-rules=7fb9d08f-47aa-4a8c-98c0-9517a86453bf,74d7348d-29f2-487f-9f90-f28803b5024d,2afd46e5-681f-4f1b-a552-ce0b453bf096,4d7660b9-e6d1-4545-a1f7-7e4e44b054bf,54aaab2e-9c70-4902-b38c-c51a3d69f1b8
+count=6
+rules=7fb9d08f-47aa-4a8c-98c0-9517a86453bf,74d7348d-29f2-487f-9f90-f28803b5024d,2afd46e5-681f-4f1b-a552-ce0b453bf096,4d7660b9-e6d1-4545-a1f7-7e4e44b054bf,54aaab2e-9c70-4902-b38c-c51a3d69f1b8,a5e0b0de-9127-48a2-876d-c3dfc00542b5
+
+[a5e0b0de-9127-48a2-876d-c3dfc00542b5]
+Description=Settings for zathura org.pwmt.zathura
+opacityactive=95
+opacityactiverule=2
+opacityinactive=95
+opacityinactiverule=2
+types=1
+wmclass=zathura org.pwmt.zathura
+wmclasscomplete=true
+wmclassmatch=1

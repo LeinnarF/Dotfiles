@@ -1,0 +1,41 @@
+# TOKYO NIGHT THEME
+# Base
+set default-bg                  "#1a1b26"
+set default-fg                  "#c0caf5"
+
+# Status Bar
+set statusbar-bg                "#1a1b26"
+set statusbar-fg                "#c0caf5"
+
+# Input Bar
+set inputbar-bg                 "#1a1b26"
+set inputbar-fg                 "#c0caf5"
+
+# Notifications
+set notification-bg             "#1a1b26"
+set notification-fg             "#c0caf5"
+set notification-error-bg       "#1a1b26"
+set notification-error-fg       "#f7768e"
+set notification-warning-bg     "#1a1b26"
+set notification-warning-fg     "#e0af68"
+
+# Selections & Highlights
+set highlight-color             "#7aa2f7"
+set highlight-active-color      "#9ece6a"
+
+# Completion
+set completion-bg               "#1a1b26"
+set completion-fg               "#c0caf5"
+set completion-group-bg         "#1a1b26"
+set completion-group-fg         "#7aa2f7"
+set completion-highlight-bg     "#414868"
+set completion-highlight-fg     "#c0caf5"
+
+# RECOLOR MODE (The most important part)
+# This forces the PDF background to be dark and text to be light
+set recolor-lightcolor          "#1a1b26"
+set recolor-darkcolor           "#c0caf5"
+
+# Startup options
+set recolor                     "true"
+set recolor-keep-true-color     "true"

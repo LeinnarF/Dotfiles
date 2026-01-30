@@ -1,8 +1,3 @@
--- Indentation
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
-vim.opt.autoindent = true
-vim.opt.smartindent = true
 
 -- Auto indent 
 vim.keymap.set('v', '<', '<gv', { desc='Indent Left', silent = true })
@@ -29,7 +24,7 @@ vim.keymap.set({'n','i','v'}, '<C-a>', '<Esc>ggVG', { desc='Select All', silent 
 vim.keymap.set({'n','i','v'}, '<C-c>', '"+y', { desc='Copy to Clipboard', silent = true })
 
 -- Command Pallete
-vim.keymap.set({'n', 'i', 'v'}, "<C-l>", "<Esc>:", { noremap = true, silent = false, desc = "Command-line" })
+vim.keymap.set('n', "<C-l>", ":", { noremap = true, silent = false, desc = "Command-line" })
 -- vim.keymap.set({'n', 'i', 'v'}, "<C-p>", "<Esc>:", { noremap = true, silent = false, desc = "Command-line" })
 vim.keymap.set('n', "<leader>cc", ":", { noremap = true, silent = false, desc = "Command-line" })
 vim.keymap.set('n', "<leader>ch", ":h ", { noremap = true, silent = false, desc = "Help" })
@@ -49,6 +44,10 @@ vim.keymap.set('n', '<C-t>', ':enew<CR>', { desc='Add Buffer', silent = true })
 
 -- Copilot 
 vim.keymap.set('n', '<leader>cp', ':Copilot panel<CR>|<C-w>L', { desc='Open Copilot panel', silent = true })
+vim.api.nvim_set_keymap('i', '<C-l>', 'copilot#Accept("<CR>")', { silent = true, expr = true, desc='Accept Copilot Suggestion' })
+vim.keymap.set("i", "<A-l>", "<Plug>(copilot-accept-word)", { silent = true })
+vim.keymap.set("i", "<A-S-l>", "<Plug>(copilot-accept-line)", { silent = true })
+
 
 -- Window Operations
 vim.keymap.set('n', '<leader>wv', '<C-w>v', { desc='Split Window Vertically', silent = true })
@@ -79,3 +78,6 @@ local cheat_sheet_path = '~/.config/nvim/nvim_cheatsheet.md'
 vim.keymap.set('n', '<leader>cs', function()
 	vim.cmd.edit(cheat_sheet_path)
 end, { desc='Open Cheat Sheet', silent = true })
+
+
+
