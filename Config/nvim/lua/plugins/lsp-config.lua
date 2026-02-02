@@ -22,6 +22,10 @@ return {
 					"cssls",
 					"ts_ls",
 					"texlab",
+					"clangd",
+					"bashls",
+					"jsonls",
+					"yamlls",
 				},
 			})
 		end,
@@ -39,6 +43,10 @@ return {
 				vim.lsp.config.ts_ls = {capabilities = capabilities}
 				vim.lsp.config.pyright = {capabilities = capabilities}
 				vim.lsp.config.texlab = {capabilities = capabilities}
+				vim.lsp.config.clangd = {capabilities = capabilities}
+				vim.lsp.config.bashls = {capabilities = capabilities}
+				vim.lsp.config.jsonls = {capabilities = capabilities}
+				vim.lsp.config.yamlls = {capabilities = capabilities}
 
 				vim.lsp.config.lua_ls = {
 					capabilities = capabilities,
@@ -54,5 +62,6 @@ return {
 		end
 	},
 }
+
 
 

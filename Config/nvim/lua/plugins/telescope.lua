@@ -1,5 +1,5 @@
 return {
-	"nvim-telescope/telescope.nvim", 
+	"nvim-telescope/telescope.nvim",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	config = function ()
 		local builtin = require("telescope.builtin")
@@ -11,8 +11,8 @@ return {
 		vim.keymap.set('n', '<leader>fc', builtin.commands, {desc='Find Commands'})
 		vim.keymap.set('n', '<leader>fc', builtin.commands, {desc='Find Commands'})
 		vim.keymap.set('n', '<C-p>', builtin.commands, {desc='Find Commands'})
-		vim.keymap.set('n', '<C-f>', function()	    
-			builtin.find_files({hidden=true,no_ignore=true}) 
+		vim.keymap.set('n', '<C-f>', function()
+			builtin.find_files({hidden=true,no_ignore=true})
 		end, {})
 	end
 }

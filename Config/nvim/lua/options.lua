@@ -14,9 +14,22 @@ vim.opt.showmode = false
 vim.opt.cmdheight = 0
 
 vim.g.copilot_no_tab_map = true
-vim.g.copilot_assume_mapped = true 
+vim.g.copilot_assume_mapped = true
 
 -- Latex setup
-vim.g.vimtex_compiler_method = 'latexmk' 
+vim.g.vimtex_compiler_method = 'latexmk'
 vim.g.vimtex_quickfix_mode = 0
 
+-- Error lens 
+vim.diagnostic.config({
+	virtual_text = {
+		spacing = 4,
+		prefix = '~ ',
+	},
+	severity_sort = true,
+	float = {
+		source = true
+	},
+	signs = {},
+	update_in_insert = false,
+})
