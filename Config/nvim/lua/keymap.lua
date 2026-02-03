@@ -87,6 +87,7 @@ vim.keymap.set('n', '<leader>cs', function()
 	vim.cmd.edit(cheat_sheet_path)
 end, { desc='Open Cheat Sheet', silent = true })
 
+
 -- LSP Keymaps 
 vim.keymap.set('n', '<leader>cd', vim.lsp.buf.definition, { desc='Go to Definition', silent = true })
 vim.keymap.set('n', '<leader>ch', vim.lsp.buf.hover, { desc='Hover Documentation', silent = true })
@@ -94,3 +95,16 @@ vim.keymap.set('n', '<leader>ci', vim.lsp.buf.implementation, { desc='Go to Impl
 vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc='Rename Symbol', silent = true })
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc='Code Action', silent = true })
 vim.keymap.set('n', '<leader>cR', vim.lsp.buf.references, { desc='List References', silent = true })
+
+
+-- Terminal Keymaps
+vim.keymap.set('n', '<leader>tt', ':terminal<CR>', { desc='Open Terminal', silent = true })
+vim.keymap.set('n', '<leader>tv', ':vsplit | terminal<CR>', { desc='Open Terminal Vertically', silent = true })
+vim.keymap.set('n', '<leader>th', ':split | terminal<CR>', { desc='Open Terminal Horizontally', silent = true })
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc='Exit Terminal Mode', silent = true })
+
+
+-- Diagnostics Keymaps
+vim.keymap.set('n', '<leader>cD', vim.diagnostic.open_float, { desc='Show Diagnostic', silent = true })
+vim.keymap.set('n', '<leader>cl', vim.diagnostic.setloclist, { desc='Set Location List', silent = true })
+
