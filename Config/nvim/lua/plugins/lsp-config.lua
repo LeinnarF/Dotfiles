@@ -26,6 +26,7 @@ return {
 					"bashls",
 					"jsonls",
 					"yamlls",
+					"ltex",
 				},
 			})
 		end,
@@ -47,6 +48,16 @@ return {
 				vim.lsp.config.bashls = {capabilities = capabilities}
 				vim.lsp.config.jsonls = {capabilities = capabilities}
 				vim.lsp.config.yamlls = {capabilities = capabilities}
+
+				vim.lsp.config.ltex = {
+					capabilities = capabilities,
+					filetypes = {"tex", "latex", "bib", "markdown", "plaintex"},
+					settings = {
+						ltex = {
+							language = "en-US",
+						}
+					}
+				}
 
 				vim.lsp.config.lua_ls = {
 					capabilities = capabilities,

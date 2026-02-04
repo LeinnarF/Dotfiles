@@ -147,6 +147,8 @@ alias cd='z'
 alias b='btop'
 alias ff='fastfetch'
 alias nvimconf='nvim ~/.config/nvim/'
+alias lgit='lazygit'
+
 
 eval "$(zoxide init zsh)"
 
