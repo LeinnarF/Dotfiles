@@ -49,9 +49,14 @@ vim.keymap.set('n', '<C-t>', ':enew<CR>', { desc='Add Buffer', silent = true })
 
 -- Copilot 
 vim.keymap.set('n', '<leader>cp', ':Copilot panel<CR>|<C-w>L', { desc='Open Copilot panel', silent = true })
-vim.api.nvim_set_keymap('i', '<C-l>', 'copilot#Accept("<CR>")', { silent = true, expr = true, desc='Accept Copilot Suggestion' })
 vim.keymap.set("i", "<A-l>", "<Plug>(copilot-accept-word)", { silent = true })
 vim.keymap.set("i", "<A-S-l>", "<Plug>(copilot-accept-line)", { silent = true })
+vim.keymap.set("i", "<C-l>", 'copilot#Accept("<CR>")', {
+    expr = true,
+    silent = true,
+    replace_keycodes = false,
+    desc = "Accept Copilot Suggestion"
+})
 
 
 -- Window Operations

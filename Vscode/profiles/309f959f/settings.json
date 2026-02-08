@@ -65,4 +65,8 @@
   "vscode-blur-linux.opacity": 50,
   "glassit.force_sway": true,
   "chat.viewSessions.orientation": "stacked",
+  "open-in-browser.default": "brave",
+  "breadcrumbs.enabled": false,
+  "vim.vimrc.path": "$HOME/.vimrc",
+  "vim.vimrc.enable": true,
 }

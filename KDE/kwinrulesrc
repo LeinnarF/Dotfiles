@@ -7,7 +7,7 @@ wmclassmatch=2
 
 [2afd46e5-681f-4f1b-a552-ce0b453bf096]
 Description=Oobsidian
-opacityactive=95
+opacityactive=97
 opacityactiverule=2
 types=1
 wmclass=obsidian obsidian
@@ -16,12 +16,21 @@ wmclassmatch=1
 
 [4d7660b9-e6d1-4545-a1f7-7e4e44b054bf]
 Description=Spootify
+ignoregeometry=true
+ignoregeometryrule=3
 opacityactive=95
 opacityactiverule=2
 types=1
 wmclass=spotify Spotify
 wmclasscomplete=true
 wmclassmatch=1
+
+[507cf3ef-6dc1-4357-a4f3-6a38d794016c]
+Description=No Titlebar
+Enabled=false
+noborder=true
+noborderrule=2
+wmclass=*
 
 [54aaab2e-9c70-4902-b38c-c51a3d69f1b8]
 Description=Steem
@@ -34,7 +43,7 @@ wmclassmatch=1
 Description=Braave
 desktopfile=brave-browser
 desktopfilerule=3
-opacityactive=95
+opacityactive=98
 opacityactiverule=2
 types=1
 wmclass=brave brave-browser
@@ -47,7 +56,7 @@ decocolor=Layan
 decocolorrule=2
 desktopfile=code
 desktopfilerule=3
-opacityactive=95
+opacityactive=98
 opacityactiverule=2
 types=1
 wmclass=code code
@@ -55,8 +64,8 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=6
-rules=7fb9d08f-47aa-4a8c-98c0-9517a86453bf,74d7348d-29f2-487f-9f90-f28803b5024d,2afd46e5-681f-4f1b-a552-ce0b453bf096,4d7660b9-e6d1-4545-a1f7-7e4e44b054bf,54aaab2e-9c70-4902-b38c-c51a3d69f1b8,a5e0b0de-9127-48a2-876d-c3dfc00542b5
+count=7
+rules=507cf3ef-6dc1-4357-a4f3-6a38d794016c,7fb9d08f-47aa-4a8c-98c0-9517a86453bf,74d7348d-29f2-487f-9f90-f28803b5024d,2afd46e5-681f-4f1b-a552-ce0b453bf096,4d7660b9-e6d1-4545-a1f7-7e4e44b054bf,54aaab2e-9c70-4902-b38c-c51a3d69f1b8,a5e0b0de-9127-48a2-876d-c3dfc00542b5
 
 [a5e0b0de-9127-48a2-876d-c3dfc00542b5]
 Description=Settings for zathura org.pwmt.zathura

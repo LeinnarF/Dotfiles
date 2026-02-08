@@ -127,5 +127,15 @@
         "key": "escape",
         "command": "-umath.preview.closeAllPreview",
         "when": "umathShowPreview"
+    },
+    {
+        "key": "tab",
+        "command": "editor.action.inlineSuggest.commit",
+        "when": "inInlineEditsPreviewEditor"
+    },
+    {
+        "key": "tab",
+        "command": "-editor.action.inlineSuggest.commit",
+        "when": "inInlineEditsPreviewEditor"
     }
 ]

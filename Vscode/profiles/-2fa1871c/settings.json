@@ -53,5 +53,9 @@
     "editor.minimap.enabled": false,
     "umath.preview.macros": [],
     "editor.cursorSmoothCaretAnimation": "on",
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "breadcrumbs.enabled": false,
+    "vim.leader": " ",
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "$HOME/.vimrc"
 }

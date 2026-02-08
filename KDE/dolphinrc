@@ -3,6 +3,9 @@ MenuBar=Disabled
 [CompactMode]
 PreviewSize=22
 
+[DetailsMode]
+PreviewSize=16
+
 [General]
 UseTabForSwitchingSplitView=true
 Version=202
