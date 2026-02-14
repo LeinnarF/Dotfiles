@@ -5,10 +5,11 @@
   box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.116);
 } */
 .callout[data-callout="box"] {
-  border: solid rgb(165, 165, 165) 2px;
+  border: solid #c0caf5 1px;
   padding: 0px;
   padding-left: 10px;
   background:none;
+	border-radius: 5px;
 }
 
 .callout[data-callout="box"] .callout-title {

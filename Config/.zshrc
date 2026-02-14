@@ -171,7 +171,9 @@ export FZF_DEFAULT_OPTS="
   --color=info:#7dcfff,prompt:#9ece6a,pointer:#f7768e
   --color=marker:#bb9af7,spinner:#7dcfff,header:#565f89
 "
- 
+
+# NPM global
+export PATH="$HOME/.npm-global/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

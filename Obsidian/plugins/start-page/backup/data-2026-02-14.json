@@ -1,6 +1,6 @@
 {
   "includeAllFilesInRecent": true,
-  "recentNotesLimit": 5,
+  "recentNotesLimit": 10,
   "pinnedNotes": [
     "04 Tasks/Tasks.md",
     "04 Tasks/Thesis.md",
@@ -16,7 +16,7 @@
   "customFooterText": "",
   "scrollPosition": 0,
   "showStatBar": true,
-  "lastVersionCheck": 1771036918530,
+  "lastVersionCheck": 1770862197459,
   "latestVersion": "0.3.4",
   "excludeList": [],
   "pinnedNotesStyle": {
