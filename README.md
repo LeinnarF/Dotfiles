@@ -1,8 +1,5 @@
 <h1 align=center>I use Arch btw</h1>
 
-### Todo
-- Refactor Scripts
-
 <br>
 
 # Instructions
@@ -44,6 +41,27 @@ This repository also contains various scripts that I use for system maintenance 
 - Enjoy your Arch Linux experience!
 
 # Showcase 
+
+### Features
+- Tiling Window Manager with Krohnkite
+- Transulent them with Kvantum and Klassy
+- Neovim Configuration with LazyVim
+- Custom Zsh Configuration with Oh My Zsh with Powerlevel10k
+- Custom VSCode Setup with Extensions and snippets
+- Obsidian Vault with custom themes and plugins
+- Terminal setup with kitty
+- Android link with adb and scrcpy
+
+#### Terminal
+- Kitty with Tokyo Night themes
+- Zsh with Oh My Zsh and Powerlevel10k theme 
+- Exa 
+- Zoxide
+- Fzf
+- Lazygit
+- Impala
+- Btop
+- Bat 
 
 ### Wallpapers
 
