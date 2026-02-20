@@ -32,13 +32,6 @@ vim.keymap.set('n', "<leader>cc", ":", { noremap = true, silent = false, desc = 
 vim.keymap.set('n', "<leader>ch", ":h ", { noremap = true, silent = false, desc = "Help" })
 
 
--- Tabs
--- vim.keymap.set('n', "<C-A-j>", ":tabprevious<CR>", { noremap = true, silent = true })
--- vim.keymap.set('n', "<C-A-l>", ":tabnext<CR>", { noremap = true, silent = true })
--- vim.keymap.set('n', '<C-t>', ":tabnew<CR>", { desc='New Tab', noremap = true, silent = true })
--- vim.keymap.set('n', '<leader>x', ":tabclose<CR>", { desc='Close Tab', noremap = true, silent = true })
-
-
 -- Buffers
 vim.keymap.set('n', "<C-A-l>", ':bn<CR>', { desc='Next Buffer' , silent = true})
 vim.keymap.set('n', "<C-A-j>", ':bp<CR>', { desc='Previous Buffer' , silent = true})
@@ -51,12 +44,12 @@ vim.keymap.set('n', '<C-t>', ':enew<CR>', { desc='Add Buffer', silent = true })
 vim.keymap.set('n', '<leader>cp', ':Copilot panel<CR>|<C-w>L', { desc='Open Copilot panel', silent = true })
 vim.keymap.set("i", "<A-l>", "<Plug>(copilot-accept-word)", { silent = true })
 vim.keymap.set("i", "<A-S-l>", "<Plug>(copilot-accept-line)", { silent = true })
-vim.keymap.set("i", "<C-l>", 'copilot#Accept("<CR>")', {
-    expr = true,
-    silent = true,
-    replace_keycodes = false,
-    desc = "Accept Copilot Suggestion"
-})
+-- vim.keymap.set("i", "<C-l>", 'copilot#Accept("<CR>")', {
+--     expr = true,
+--     silent = true,
+--     replace_keycodes = false,
+--     desc = "Accept Copilot Suggestion"
+-- })
 
 
 -- Window Operations
