@@ -43,12 +43,15 @@ NightTemperature=3800
 [Plugins]
 blurEnabled=false
 contrastEnabled=true
+fadeEnabled=true
+fullscreenEnabled=false
 krohnkiteEnabled=true
-kwin4_effect_geometry_changeEnabled=true
-kwin6_effect_tvEnabled=true
 kzonesEnabled=false
+maximizeEnabled=false
 minimizeallEnabled=true
 scaleEnabled=false
+squashEnabled=false
+windowapertureEnabled=false
 
 [Script-krohnkite]
 binaryTreeLayoutOrder=0
@@ -58,10 +61,11 @@ floatingLayoutOrder=2
 ignoreTitle=Open File
 monocleLayoutOrder=0
 quarterLayoutOrder=0
-screenGapBetween=3
-screenGapBottom=5
-screenGapLeft=7
-screenGapRight=7
+screenGapBetween=15
+screenGapBottom=15
+screenGapLeft=15
+screenGapRight=15
+screenGapTop=15
 spiralLayoutOrder=0
 spreadLayoutOrder=0
 stackedLayoutOrder=0
@@ -74,9 +78,6 @@ layoutsJson=[\n   {\n        "name": "Duo Grid",\n        "padding": 5,\n       
 
 [TabBox]
 HighlightWindows=false
-
-[Tiling]
-padding=4
 
 [Tiling][0c78ff2a-495b-4a88-a7c6-bc6053f177e8][1b535813-0b46-4117-903d-6cd85cdd7c75]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -100,6 +101,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][5727edc1-05cd-40df-a48e-f462f2af5ee8][b4477ac7-032e-44c9-9a25-41245e0d171e]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][65a1d8e2-5951-4d81-b5f9-4b10bad79c7b][1b535813-0b46-4117-903d-6cd85cdd7c75]
@@ -118,6 +120,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][88950e08-723b-438b-af35-92749a5d8e4d][b4477ac7-032e-44c9-9a25-41245e0d171e]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][89bfa2f0-502b-452a-98a0-73ecd1e13b0f][1b535813-0b46-4117-903d-6cd85cdd7c75]
@@ -127,6 +130,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][89bfa2f0-502b-452a-98a0-73ecd1e13b0f][b4477ac7-032e-44c9-9a25-41245e0d171e]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][8f5523a5-c5e5-45b3-baf9-933cf26c3fea][1b535813-0b46-4117-903d-6cd85cdd7c75]
@@ -142,6 +146,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][b486dd7b-a386-4fa9-9994-b2b6bcb21a7e][b4477ac7-032e-44c9-9a25-41245e0d171e]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][d1a64b51-bcb7-4fb4-82e3-93f7a7a99297][1b535813-0b46-4117-903d-6cd85cdd7c75]
@@ -163,8 +168,9 @@ RollOverDesktops=true
 XwaylandEavesdrops=None
 
 [org.kde.kdecoration2]
-BorderSize=None
+BorderSize=Normal
 BorderSizeAuto=false
-ButtonsOnRight=X
+ButtonsOnLeft=MFS
+ButtonsOnRight=HIAX
 library=org.kde.klassy
 theme=Klassy

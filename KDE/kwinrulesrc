@@ -41,6 +41,7 @@ wmclassmatch=1
 
 [74d7348d-29f2-487f-9f90-f28803b5024d]
 Description=Braave
+Enabled=false
 desktopfile=brave-browser
 desktopfilerule=3
 opacityactive=98

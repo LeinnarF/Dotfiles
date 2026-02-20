@@ -55,5 +55,6 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "window.zoomLevel": 1,
     "git.autofetch": true,
-    "workbench.colorTheme": "Tokyo Night"
+    "workbench.colorTheme": "Tokyo Night",
+    "chat.viewSessions.orientation": "stacked"
 }

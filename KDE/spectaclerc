@@ -1,8 +1,14 @@
+[Annotations]
+annotationToolType=11
+
+[General]
+ocrLanguages=afr
+
 [GuiConfig]
 includePointer=true
 
 [ImageSave]
-lastImageSaveLocation=file:///home/leinnarf/Pictures/Screenshots/Screenshot_20260106_224223-1.png
+lastImageSaveLocation=file:///home/leinnarf/.config/panel-colorizer/presets/Custom 1/preview.png
 translatedScreenshotsFolder=Screenshots
 
 [VideoSave]

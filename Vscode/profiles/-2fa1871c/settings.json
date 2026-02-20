@@ -57,5 +57,6 @@
     "breadcrumbs.enabled": false,
     "vim.leader": " ",
     "vim.vimrc.enable": true,
-    "vim.vimrc.path": "$HOME/.vimrc"
+    "vim.vimrc.path": "$HOME/.vimrc",
+    "explorer.confirmDragAndDrop": false
 }

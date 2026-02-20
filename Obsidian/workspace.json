@@ -4,17 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "8f87eb0bec35be77",
+        "id": "4f90799397888fae",
         "type": "tabs",
         "children": [
           {
-            "id": "641c44e9a9e7b0fa",
+            "id": "937a601f20d8b79c",
             "type": "leaf",
             "state": {
-              "type": "start-page-view",
-              "state": {},
-              "icon": "home",
-              "title": "Start page"
+              "type": "markdown",
+              "state": {
+                "file": "Data-Collection-Draft.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Data-Collection-Draft"
+            }
+          },
+          {
+            "id": "b1fe8f89c84f54e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data Processing and Analysis - draft.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Data Processing and Analysis - draft"
             }
           }
         ]
@@ -131,13 +151,22 @@
       "start-page:Open start page": false
     }
   },
-  "active": "641c44e9a9e7b0fa",
+  "active": "937a601f20d8b79c",
   "lastOpenFiles": [
-    "Simulated Annealing.md",
-    "Mathematics/Linear Algebra/Vector Addition.md",
-    "test.md",
-    "note.txt",
+    "Data Processing and Analysis - draft.md",
+    "Data-Collection-Draft.md",
+    "Mathematics/Linear Algebra/Linear Transformation.md",
+    "Data-Collection-Draft.md~",
+    "06 Pendings/Dimension.md",
+    "Mathematics/Linear Algebra/Basis.md",
+    "Mathematics/Linear Algebra/Coordinate Vector.md",
+    "Mathematics/Linear Algebra/Vector Space.md",
     "Mathematics/Linear Algebra/Vector.md",
+    "01 Quick Notes/Simulated Annealing.md",
+    "test.md",
+    "04 Tasks/Linear Algebra Optimization.md",
+    "Mathematics/Linear Algebra/Vector Addition.md",
+    "note.txt",
     "Mathematics/Real Analysis/The Triangle Inequality.md",
     "06 Pendings/Determinants.md",
     "Mathematics/Linear Algebra/Column Space.md",
@@ -146,7 +175,6 @@
     "Sample-size-draft.md",
     "Mathematics/Linear Algebra/Augmented Matrix.md",
     "06 Pendings/Dot Product.md",
-    "06 Pendings/Dimension.md",
     "06 Pendings/Cross Product.md",
     "Eigenvalues and Eigenvectors.md",
     "00 Template/Standards/Note Standard.md",
@@ -154,13 +182,6 @@
     "Linux/Restore Point.md",
     "Linux/Linux Essential Commands.md",
     "03 Library/Index.base",
-    "Test.md",
-    "Copilot CLI.md",
-    "Mathematics/Linear Algebra/Subspaces.md",
-    "Daily Notes.md",
-    "04 Tasks/Data Science Roadmap.md",
-    "04 Tasks/Thesis.md",
-    "Mathematics/Linear Algebra/Span.md",
     "test.md~",
     "06 Pendings",
     "output.pdf",
@@ -168,7 +189,6 @@
     "05 Learning",
     "Programming/Python",
     "03 Library/Text Book",
-    "03 Library",
     "Pasted image 20251124220750.png",
     "02 Mathematics/Real Analysis/Real Analysis Map.canvas"
   ]
