@@ -133,7 +133,7 @@ ForegroundPositive=179,225,163
 ForegroundVisited=173,142,230
 
 [General]
-ColorSchemeHash=625c32ae46f33771aca7694ab0deae5a44bbf41c
+ColorSchemeHash=b97562e9308a74623cceab30d237ce2d67fb72a8
 LastUsedCustomAccentColor=125,207,255
 TerminalApplication=kitty
 TerminalService=kitty.desktop
@@ -149,7 +149,7 @@ toolBarFont=JetBrains Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Theme=Tela
 
 [KDE]
-AnimationDurationFactor=0.25
+AnimationDurationFactor=0
 LookAndFeelPackage=com.github.Jayy-Dev.Plasma.Tokyo.Night
 contrast=4
 frameContrast=0.2
