@@ -1,0 +1,73 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 36,
+	"spacing": 6,
+
+	"modules-left": [
+		"sway/workspaces"
+	],
+
+	"modules-center": [
+		"clock"
+	],
+
+	"modules-right": [
+		"pulseaudio",
+		"network",
+		"cpu",
+		"memory",
+		"tray"
+	],
+
+	"sway/workspaces": {
+		"disable-scroll": false,
+		"all-outputs": false,
+		"persistent-workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": []
+		}
+	},
+
+	"cpu": {
+		"format": "  {usage}%",
+		"tooltip": 	true,
+		"interval": 2
+	},
+
+	"memory": {
+		"format": "  {}%",
+		"tooltip": 	true,
+		"interval": 2
+	},
+
+	"clock": {
+		"format": "{:%b %d | %H:%M}"
+	},
+
+	"pulseaudio": {
+		"format": "  {volume}%",
+		"format-muted": "  muted",
+		"scroll-step": 5
+	},
+
+	"network": {
+		"format-wifi": "  {essid}",
+		"format-ethernet": "󰈀  ethernet",
+		"format-disconnected": "󰖪  disconnected"
+	},
+
+	"battery": {
+		"format": "  {capacity}%",
+		"states": {
+			"warning": 30,
+			"critical": 15
+		}
+	},
+
+	"tray": {
+		"spacing": 8
+	}
+}

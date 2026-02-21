@@ -2,6 +2,20 @@
 
 <br>
 
+# Todos
+- Setup Sway
+- configure waybar
+    - ram usage
+    - cpu usage
+    - network speed
+    - music player
+- configure wofi
+- Transition to sway from KDE
+- Add more scripts to the repository
+- Add more wallpapers and themes
+- set theme for everything
+    - Tokyo Night themes for everything
+
 # Instructions
 This is a personal repository containing my Arch Linux setup and configurations. Feel free to explore and use it as a reference for your own setup.
 

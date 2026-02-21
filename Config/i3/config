@@ -218,9 +218,8 @@ exec_always --no-startup-id sh -c "killall -q polybar; polybar -q main -c ~/.con
 exec_always --no-startup-id pkill -x cava; cava -p ~/.config/cava/config &
 
 # Rofi Bindings
-bindsym $mod+space exec rofi -show drun -theme /home/leinnarf/.config/rofi/launcher-alt.rasi
-bindsym $mod+Tab exec rofi -show window -theme /home/leinnarf/.config/rofi/window.rasi
-
+bindsym $mod+space exec wofi -show drun 
+bindsym $mod+Tab exec wofi -show window 
 # Force tiling layout (no stacked/tabbed)
 bindsym $mod+t layout toggle split
 
@@ -230,7 +229,7 @@ client.focused          #ffffff #ffffff #ffffff #ffffff #ffffff
 
 # Set window gaps
 gaps inner 10
-gaps outer 0
+gaps outer 10
 smart_gaps off  # no outer gap if only one window is open
 
 #scratchpad [Minimize window]

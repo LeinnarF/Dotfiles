@@ -49,6 +49,7 @@ blurEnabled=false
 contrastEnabled=true
 fadeEnabled=true
 fullscreenEnabled=false
+karouselEnabled=false
 krohnkiteEnabled=true
 kzonesEnabled=false
 maximizeEnabled=false

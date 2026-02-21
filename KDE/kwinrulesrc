@@ -55,6 +55,7 @@ wmclassmatch=1
 
 [7fb9d08f-47aa-4a8c-98c0-9517a86453bf]
 Description=Vscoode
+Enabled=false
 decocolor=Layan
 decocolorrule=2
 desktopfile=code

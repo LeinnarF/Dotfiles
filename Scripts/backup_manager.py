@@ -65,7 +65,9 @@ config_list = [
     in_config('xremap'),
     in_config('bat'),
     in_config('btop'),
-    in_config('zathura')
+    in_config('zathura'),
+    in_config('sway'),
+    in_config('waybar'),
 ]
 vscode_list = [
     in_config('Code/User/settings.json'),
