@@ -1,0 +1,66 @@
+#!/bin/bash
+
+options="󰐊 Play/Pause
+󰒭 Next
+󰒮 Previous
+󰑖 Stop
+󰍹 Volume Up
+󰍺 Volume Down"
+
+while true; do
+    # 1. Fetch current player and metadata at the start of each loop
+    player=$(playerctl -l 2>/dev/null | head -n 1)
+
+    if [ -z "$player" ]; then
+        notify-send "Media" "No active player found"
+        exit 1
+    fi
+
+    title=$(playerctl metadata title 2>/dev/null)
+    artist=$(playerctl metadata artist 2>/dev/null)
+
+    # 2. Launch fuzzel and wait for selection
+    choice=$(echo -e "$options" | fuzzel --dmenu --mesg "󰎈 $artist - $title" --lines 6 --anchor=top --y-margin=-1 --width=40)
+
+    # 3. Exit the loop if nothing is selected (e.g., pressing Escape)
+    if [ -z "$choice" ]; then
+        break
+    fi
+
+    # 4. Execute the chosen action
+    case "$choice" in
+        *Play/Pause) 
+            playerctl play-pause 
+            sleep 0.2
+            new_status=$(playerctl status 2>/dev/null)
+            new_title=$(playerctl metadata title 2>/dev/null)
+            new_artist=$(playerctl metadata artist 2>/dev/null)
+            notify-send "󰐊 $new_status" "$new_artist - $new_title"
+            ;;
+        *Next) 
+            playerctl next 
+            sleep 0.2
+            new_title=$(playerctl metadata title 2>/dev/null)
+            new_artist=$(playerctl metadata artist 2>/dev/null)
+            notify-send "󰒭 Playing Next" "$new_artist - $new_title"
+            ;;
+        *Previous) 
+            playerctl previous 
+            sleep 0.2
+            new_title=$(playerctl metadata title 2>/dev/null)
+            new_artist=$(playerctl metadata artist 2>/dev/null)
+            notify-send "󰒮 Playing Previous" "$new_artist - $new_title"
+            ;;
+        *Stop) 
+            playerctl stop 
+            notify-send "󰑖 Media Stopped" "Playback halted"
+            break # Exiting the menu makes sense if playback is completely stopped
+            ;;
+        *Volume\ Up) 
+            playerctl volume 0.05+ 
+            ;;
+        *Volume\ Down) 
+            playerctl volume 0.05- 
+            ;;
+    esac
+done

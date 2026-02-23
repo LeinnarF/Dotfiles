@@ -1,0 +1,27 @@
+#!/bin/bash
+
+TREE=$(swaymsg -t get_tree)
+
+mapfile -t ID_ARRAY < <(echo "$TREE" | jq -r '
+  .. | select((.type? == "con" or .type? == "floating_con") and .name?) | .id
+')
+
+WINDOW_LIST=$(echo "$TREE" | jq -r '
+  .. | select((.type? == "con" or .type? == "floating_con") and .name?) | 
+  "\(.app_id // .window_properties.class): \(.name)"
+' | awk '{print NR "  " $0}')
+
+SELECTED=$(echo "$WINDOW_LIST" | fuzzel --dmenu --mesg "Window")
+
+if [ -z "$SELECTED" ]; then
+    exit 0
+fi
+
+SELECTED_NUM=$(echo "$SELECTED" | grep -o '^[0-9]*')
+
+INDEX=$((SELECTED_NUM - 1))
+CON_ID=${ID_ARRAY[$INDEX]}
+
+if [ -n "$CON_ID" ]; then
+    swaymsg "[con_id=$CON_ID] focus"
+fi

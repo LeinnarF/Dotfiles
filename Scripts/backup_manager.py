@@ -80,7 +80,8 @@ obsidian_list = [
     os.path.expanduser('/Documents/Vault/.obsidian/')
 ]
 script_list = [
-    os.path.expanduser('/Dotfiles/Scripts/')
+    os.path.expanduser('/Dotfiles/Scripts/'),
+    os.path.expanduser('.local/bin/')
 ]
 
 kde_list = os.path.expanduser('~/Dotfiles/Scripts/path.txt')

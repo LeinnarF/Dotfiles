@@ -1,0 +1,2 @@
+#!/bin/bash
+cliphist list | fuzzel --dmenu --anchor=bottom --y-margin=15 --width=50 --mesg "Clipboard" --with-nth=2 | cliphist decode | wl-copy

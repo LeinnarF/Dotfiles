@@ -1,0 +1,2 @@
+#!/bin/bash
+sensors | grep "Tctl" | awk '{gsub(/[+°C]/,"",$2); print int($2)}'
