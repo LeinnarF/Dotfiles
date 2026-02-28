@@ -1,3 +1,11 @@
+# Init
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+exec_always --no-startup-id notify-update
+
+seat seat0 xcursor_theme Bibata-Modern-Ice 24
+
 # Mod Key
 set $mod Mod4
 
@@ -6,8 +14,16 @@ set $mod Mod4
 font pango:JetBrainsMono Nerd Font 8
 
 
+# Cava run
+exec_always --no-startup-id pkill -x cava; cava -p ~/.config/cava/config &
+
+
 # Autostart applications
 exec --no-startup-id dex --autostart --environment sway
+
+
+# Current Desktop
+exec_always export XDG_CURRENT_DESKTOP=sway
 
 
 # Start Network Manager Applet
@@ -15,11 +31,6 @@ exec --no-startup-id nm-applet
 
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -28,7 +39,7 @@ floating_modifier $mod
 
 # start a terminal
 set $term kitty
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec $term
 
 
 # kill focused window
@@ -118,33 +129,39 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # Cycle workspace
 # bindsym $mod+Shift+l workspace next
 # bindsym $mod+Shift+j workspace prev
-bindsym $mod+Shift+l exec ~/.config/sway/cycle_ws.sh next
-bindsym $mod+Shift+j exec ~/.config/sway/cycle_ws.sh prev
+bindsym $mod+Shift+l exec sway-workspace next
+bindsym $mod+Shift+j exec sway-workspace prev
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
 # Resize mode
 mode "resize" {
-        bindsym j resize shrink width 1 px or 1 ppt
-        bindsym k resize grow height 1 px or 1 ppt
-        bindsym l resize shrink height 1 px or 1 ppt
-        bindsym semicolon resize grow width 1 px or 1 ppt
+	bindsym j resize shrink width 1 px or 1 ppt
+		bindsym k resize grow height 1 px or 1 ppt
+		bindsym i resize shrink height 1 px or 1 ppt
+		bindsym l resize grow width 1 px or 1 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 1 px or 1 ppt
-        bindsym Down resize grow height 1 px or 1 ppt
-        bindsym Up resize shrink height 1 px or 1 ppt
-        bindsym Right resize grow width 1 px or 1 ppt
+# same bindings, but for the arrow keys
+		bindsym Left resize shrink width 1 px or 1 ppt
+		bindsym Down resize grow height 1 px or 1 ppt
+		bindsym Up resize shrink height 1 px or 1 ppt
+		bindsym Right resize grow width 1 px or 1 ppt
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym Space  mode "default"
-        bindsym $mod+r mode "default"
+		bindsym $mod+Left focus left
+		bindsym $mod+Down focus down
+		bindsym $mod+Up focus up
+		bindsym $mod+Right focus right
+
+		bindsym $mod+j focus left
+		bindsym $mod+k focus down
+		bindsym $mod+i focus up
+		bindsym $mod+l focus right
+# back to normal: Enter or Escape or $mod+r
+		bindsym Return mode "default"
+		bindsym Escape mode "default"
+		bindsym Space  mode "default"
+		bindsym $mod+r mode "default"
 }
 
 
@@ -165,11 +182,6 @@ bar {
 }
 
 
-# Wofi Bindings
-bindsym $mod+Space exec wofi --show drun 
-bindsym $mod+Tab exec wofi --show dmenu 
-
-
 # Force tiling layout (no stacked/tabbed)
 bindsym $mod+t layout toggle split
 
@@ -181,7 +193,7 @@ default_border pixel 1
 for_window [class="^.*"] border pixel 1
 for_window [app_id="^.*"] border pixel 1
 
-client.focused   #ffffff #ffffff #ffffff #ffffff #ffffff 
+client.focused   #c0caf5 #c0caf5 #c0caf5 #c0caf5 #c0caf5 
 # client.unfocused #2e3440 #2e3440 #888888 #2e3440 #2e3440
 
 
@@ -194,25 +206,36 @@ gaps outer 5
 bindsym $mod+m move scratchpad 
 bindsym $mod+Shift+m scratchpad show 
 
-# Open Appskk
-bindsym $mod+b exec brave
-bindsym $mod+c exec code
-
-
-# Clipboard manager
-exec_always wl-paste --type text --watch cliphist store
-exec_always wl-paste --type image --watch cliphist store
-bindsym $mod+Shift+v exec sh -c 'cliphist list | wofi --dmenu --prompt "Clipboard" | cliphist decode | wl-copy'
-
 
 # Take Screenshot
-bindsym $mod+Shift+s exec --no-startup-id grim -g "$(slurp)" - | wl-copy
+bindsym $mod+Shift+s exec --no-startup-id screenshot
 
 
 # Start xremap
 exec xremap ~/.config/xremap/config.yml
 
 
-# Start Numberpad
-exec_always swaymsg input type:keyboard xkb_numlock enabled
+# Numlock
+input type:keyboard xkb_numlock enabled
+
+
+# Clipboard manager
+exec_always wl-paste --type text --watch cliphist store
+exec_always wl-paste --type image --watch cliphist store
+bindsym $mod+Shift+v exec clipboard
+
+
+# Fuzzel Modules
+bindsym $mod+Shift+p exec fuzzel-media
+bindsym $mod+F4 exec fuzzel-power
+bindsym $mod+Tab exec fuzzel-window
+bindsym $mod+Space exec fuzzel  --mesg "Run"
+
+
+# Volume control
+bindsym --locked XF86AudioRaiseVolume exec volume up
+bindsym --locked XF86AudioLowerVolume exec volume down
+bindsym --locked XF86AudioMute exec volume mute
+
+
 

@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+# Execute the playerctl command passed as an argument
+case "$1" in
+    play-pause|next|previous)
+        playerctl "$1"
+        sleep 0.1 # Small delay to allow the player to update its metadata
+        ;;
+    *)
+        echo "Usage: $0 {play-pause|next|previous}"
+        exit 1
+        ;;
+esac
+
+# Check if a player is actually running
+STATUS=$(playerctl status 2>/dev/null)
+if [[ -z "$STATUS" || "$STATUS" == "Stopped" ]]; then
+    notify-send -a "MusicPlayer" \
+        -h string:x-canonical-private-synchronous:music-player \
+        -u low -i media-playback-stop "Playback Stopped"
+    exit 0
+fi
+
+# Extract track metadata
+TITLE=$(playerctl metadata --format "{{ title }}" 2>/dev/null)
+ARTIST=$(playerctl metadata --format "{{ artist }}" 2>/dev/null)
+ALBUM=$(playerctl metadata --format "{{ album }}" 2>/dev/null)
+
+# Extract artwork URL and strip the 'file://' prefix so notify-send can read it
+ART_URL=$(playerctl metadata --format "{{ mpris:artUrl }}" 2>/dev/null | sed 's/^file:\/\///')
+
+# Determine playback status for a fallback icon
+if [[ "$STATUS" == "Playing" ]]; then
+    ICON="media-playback-start"
+else
+    ICON="media-playback-pause"
+fi
+
+# Send the notification, using album art if it exists locally
+if [[ -n "$ART_URL" && -f "$ART_URL" ]]; then
+    notify-send -a "MusicPlayer" \
+        -h string:x-canonical-private-synchronous:music-player \
+        -u low -i "$ART_URL" \
+        "$TITLE" "${ARTIST} — ${ALBUM}"
+else
+    notify-send -a "MusicPlayer" \
+        -h string:x-canonical-private-synchronous:music-player \
+        -u low -i "$ICON" \
+        "$TITLE" "${ARTIST} — ${ALBUM}"
+fi

@@ -1,0 +1,61 @@
+# --- Global Settings ---
+max-history=100
+sort=-time
+
+# --- Appearance ---
+font=JetBrainsMono Nerd Font 11
+width=400
+height=100
+margin=15
+padding=15
+border-size=1
+border-radius=0
+background-color=#1a1b26
+text-color=#c0caf5
+border-color=#c0caf5
+
+# (Add these under your border-color or progress-color)
+icons=1
+max-icon-size=64
+icon-location=left
+format=<b>%s</b>\n%b
+
+# Progress bar background (useful for volume/brightness OSD)
+progress-color=over #44475a 
+
+# --- Positioning ---
+layer=overlay
+anchor=top-right
+
+# --- Interactions ---
+# Notifications disappear after 5 seconds
+default-timeout=5000 
+ignore-timeout=0
+
+# --- Modifiers & Rules ---
+
+# High urgency notifications (like low battery) stay until clicked
+[urgency=high]
+border-color=#ff5555
+default-timeout=0
+ignore-timeout=1
+
+# Low urgency notifications disappear faster
+[urgency=low]
+border-color=#6272a4
+default-timeout=2000
+
+# Do Not Disturb mode (hides all notifications)
+[mode=dnd]
+invisible=1
+
+# Volume OSD
+[app-name="Volume"]
+default-timeout=1500
+group-by=app-name
+
+# Music Player Album Art
+[app-name="MusicPlayer"]
+max-icon-size=96
+default-timeout=5000
+group-by=app-name

@@ -58,5 +58,7 @@
     "vim.leader": " ",
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "$HOME/.vimrc",
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
+    "chat.viewSessions.orientation": "stacked"
 }

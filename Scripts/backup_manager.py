@@ -68,6 +68,10 @@ config_list = [
     in_config('zathura'),
     in_config('sway'),
     in_config('waybar'),
+    in_config('foot'),
+    in_config('cava'),
+    in_config('mako'),
+    in_config('fuzzel'),
 ]
 vscode_list = [
     in_config('Code/User/settings.json'),

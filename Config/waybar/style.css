@@ -1,31 +1,76 @@
 * {
-    border: none;
-    border-radius: 0;
-    font-family: JetBrainsMono Nerd Font;
-    font-size: 14px;
-    min-height: 0;
+	border: none;
+	border-radius: 0;
+	font-family: JetBrainsMono Nerd Font;
+	font-size: 14px;
+	min-height: 0;
 }
 
 window#waybar {
-    background: #1a1b26;
-    color: #ffffff;
+	background: RGBA(26, 27, 38, 1.0);
+	color: #c0caf5;
+	border-bottom: 1px solid #c0caf5;
 }
 
 #workspaces button {
-    padding: 0 6px;
-    color: #aaaaaa;
+	padding: 3px;
+	color: #c0caf5;
+	border-bottom: 1px solid #c0caf5;
 }
 
 #workspaces button.focused {
-    color: #ffffff;
-    background: #333333;
+	color: #c0caf5;
+	background-color: transparent;
+	border-bottom: 1px solid #c0caf5;
+	font-weight: bold;
 }
 
+/* #workspaces button.empty { */
+/* 	color: #c0caf5; */
+/* 	opacity: 0.55; */
+/* } */
+
+#clock {
+	font-weight: bold;
+}
+
+tooltip {
+	background-color: transparent;
+	border: 1px solid #c0caf5;
+}
+
+/* tooltip label { */
+/* 	font-size: 15px; */
+/* 	background: #1a1b26; */
+/* 	margin: 5px; */
+/* 	color: #c0caf5; */
+/* } */
+
+#custom-separator {
+	color: #414868;
+}
+
+#custom-media {
+	font-size: 13px;
+}
+
+/* #custom-cavax { */
+/* 	color: #414868; */
+/* } */
+
+#custom-cavax,
+#window,
+#disk,
+#custom-power,
+#custom-temps,
+#custom-media,
+#mode,
+#scratchpad,
 #cpu,
 #memory,
 #clock,
 #battery,
 #network,
 #pulseaudio {
-    padding: 0 10px;
+	padding: 9px;
 }

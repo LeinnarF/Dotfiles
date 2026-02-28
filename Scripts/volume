@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+# Adjust this to change the volume step percentage
+STEP=5
+
+get_volume() {
+    # Extracts the volume level and converts it to a clean integer (e.g., 0.50 -> 50)
+    wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}'
+}
+
+is_muted() {
+    wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED
+}
+
+send_notification() {
+    if is_muted; then
+        notify-send -a "Volume" \
+            -h string:x-canonical-private-synchronous:audio-volume \
+            -u low -i audio-volume-muted "Volume Muted"
+    else
+        VOL=$(get_volume)
+        # The int:value:$VOL tag tells mako to draw a progress bar
+        notify-send -a "Volume" \
+            -h string:x-canonical-private-synchronous:audio-volume \
+            -h int:value:"$VOL" \
+            -u low -i audio-volume-high "Volume: ${VOL}%"
+    fi
+}
+
+case "$1" in
+    up)
+        wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
+        wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ ${STEP}%+
+        send_notification
+        ;;
+    down)
+        wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
+        wpctl set-volume @DEFAULT_AUDIO_SINK@ ${STEP}%-
+        send_notification
+        ;;
+    mute)
+        wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+        send_notification
+        ;;
+    *)
+        echo "Usage: $0 {up|down|mute}"
+        exit 1
+        ;;
+esac
