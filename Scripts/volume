@@ -16,14 +16,14 @@ send_notification() {
     if is_muted; then
         notify-send -a "Volume" \
             -h string:x-canonical-private-synchronous:audio-volume \
-            -u low -i audio-volume-muted "Volume Muted"
+            -i audio-volume-muted "Volume Muted"
     else
         VOL=$(get_volume)
         # The int:value:$VOL tag tells mako to draw a progress bar
         notify-send -a "Volume" \
             -h string:x-canonical-private-synchronous:audio-volume \
             -h int:value:"$VOL" \
-            -u low -i audio-volume-high "Volume: ${VOL}%"
+            -i audio-volume-high "Volume: ${VOL}%"
     fi
 }
 

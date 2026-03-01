@@ -136,7 +136,6 @@
 		"format": "  {volume}%",
 		"format-muted": "  muted",
 		"scroll-step": 5,
-		"on-click": "pavucontrol",
 		"tooltip": false
 	},
 

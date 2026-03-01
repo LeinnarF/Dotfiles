@@ -1,0 +1,12 @@
+getantidote/use-omz
+ohmyzsh/ohmyzsh path:plugins/archlinux
+romkatv/powerlevel10k
+zsh-users/zsh-completions
+hlissner/zsh-autopair
+Aloxaf/fzf-tab
+zdharma-continuum/fast-syntax-highlighting
+zsh-users/zsh-autosuggestions
+MichaelAquilina/zsh-you-should-use
+zsh-users/zsh-history-substring-search
+ohmyzsh/ohmyzsh path:plugins/extract
+ohmyzsh/ohmyzsh path:plugins/sudo

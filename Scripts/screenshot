@@ -1,2 +1,14 @@
 #!/bin/bash
-grim -g "$(slurp)" - | wl-copy
+# grim -g "$(slurp)" - | wl-copy
+
+# Generate a temporary file path
+TMP_IMG=$(mktemp -t screenshot_XXXXXX.png)
+
+# Take screenshot, pipe to tee to save it, and continue pipe to wl-copy
+if grim -g "$(slurp)" - | tee "$TMP_IMG" | wl-copy; then
+    # Send notification with the image
+    notify-send -i "$TMP_IMG" "Screenshot Captured" "Image copied to clipboard."
+    
+    # Clean up the temp file in the background after the daemon loads it
+    (sleep 5 && rm "$TMP_IMG") &
+fi

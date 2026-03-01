@@ -173,7 +173,7 @@ output HDMI-A-1 resolution 1920x1080@100Hz
 
 
 # Wallpaper
-output * bg /home/leinnarf/Pictures/Wallpapers/retro_room.png fill
+output * bg /home/leinnarf/Dotfiles/Images/Wallpaper/wave2.png fill
 
 
 # Status bar
@@ -193,9 +193,8 @@ default_border pixel 1
 for_window [class="^.*"] border pixel 1
 for_window [app_id="^.*"] border pixel 1
 
-client.focused   #c0caf5 #c0caf5 #c0caf5 #c0caf5 #c0caf5 
-# client.unfocused #2e3440 #2e3440 #888888 #2e3440 #2e3440
-
+client.focused    #c0caf5 #c0caf5 #c0caf5 #c0caf5 #c0caf5
+client.unfocused  #414868 #414868 #414868 #414868 #414868 
 
 # Set window gaps
 gaps inner 10

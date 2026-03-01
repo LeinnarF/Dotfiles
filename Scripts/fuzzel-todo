@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Define where your tasks are stored
+TODO_FILE="$HOME/.todo"
+
+# Ensure the file exists
+touch "$TODO_FILE"
+
+# Pipe the todo list into fuzzel. 
+# -d enables dmenu mode, -p sets the prompt.
+CHOICE=$(sort "$TODO_FILE" | fuzzel -d -p "📋 Todo: ")
+
+# Exit if the user hits Escape or submits nothing
+[ -z "$CHOICE" ] && exit 0
+
+# Check if the exact string already exists in the file
+if grep -Fxq "$CHOICE" "$TODO_FILE"; then
+    # If it exists, remove it (task completed)
+    grep -Fxv "$CHOICE" "$TODO_FILE" > "$TODO_FILE.tmp" && mv "$TODO_FILE.tmp" "$TODO_FILE"
+    
+    # Optional: Send a desktop notification
+    notify-send -t 2000 "Task Completed" "$CHOICE"
+else
+    # If it doesn't exist, append it (new task)
+    echo "$CHOICE" >> "$TODO_FILE"
+    
+    # Optional: Send a desktop notification
+    notify-send -t 2000 "Task Added" "$CHOICE"
+fi

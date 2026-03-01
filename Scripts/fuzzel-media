@@ -1,66 +1,116 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# Define the rich notification logic as a function
+send_notification() {
+    local status=$(playerctl status 2>/dev/null)
+    
+    if [[ -z "$status" || "$status" == "Stopped" ]]; then
+        notify-send -a "MusicPlayer" \
+            -h string:x-canonical-private-synchronous:music-player \
+            -i media-playback-stop "No Media Playing"
+        return
+    fi
+
+    # Extract track metadata
+    local title=$(playerctl metadata --format "{{ title }}" 2>/dev/null)
+    local artist=$(playerctl metadata --format "{{ artist }}" 2>/dev/null)
+    local album=$(playerctl metadata --format "{{ album }}" 2>/dev/null)
+
+    # Grab the raw artwork URL
+    local raw_art=$(playerctl metadata --format "{{ mpris:artUrl }}" 2>/dev/null)
+    local art_path=""
+
+    # Process the artwork path so notify-send can actually read it
+    if [[ "$raw_art" == http* ]]; then
+        # 1. It's a web URL (Spotify/Browsers). Download it to /tmp.
+        art_path="/tmp/current_album_art.png"
+        curl -s "$raw_art" -o "$art_path"
+    elif [[ "$raw_art" == file://* ]]; then
+        # 2. It's a local file. Strip the prefix.
+        art_path="${raw_art#file://}"
+        # Decode URL-encoded spaces (%20)
+        art_path="${art_path//%20/ }"
+    fi
+
+    # Determine playback status for a fallback icon
+    local icon="media-playback-pause"
+    if [[ "$status" == "Playing" ]]; then
+        icon="media-playback-start"
+    fi
+
+    # Send the notification. -f checks if the processed file path actually exists.
+    if [[ -n "$art_path" && -f "$art_path" ]]; then
+        notify-send -a "MusicPlayer" \
+            -h string:x-canonical-private-synchronous:music-player \
+            -i "$art_path" \
+            "$title" "${artist} — ${album}"
+    else
+        notify-send -a "MusicPlayer" \
+            -h string:x-canonical-private-synchronous:music-player \
+            -i "$icon" \
+            "$title" "${artist} — ${album}"
+    fi
+}
 
 options="󰐊 Play/Pause
 󰒭 Next
 󰒮 Previous
-󰑖 Stop
 󰍹 Volume Up
 󰍺 Volume Down"
 
 while true; do
-    # 1. Fetch current player and metadata at the start of each loop
-    player=$(playerctl -l 2>/dev/null | head -n 1)
+    # Fetch basic info for the fuzzel prompt header
+    prompt_title=$(playerctl metadata title 2>/dev/null)
+    prompt_artist=$(playerctl metadata artist 2>/dev/null)
 
-    if [ -z "$player" ]; then
-        notify-send "Media" "No active player found"
-        exit 1
+    # Create a dynamic prompt message depending on whether media is playing
+    if [[ -n "$prompt_title" ]]; then
+        if [[ -n "$prompt_artist" ]]; then
+            menu_msg="󰎈 $prompt_artist - $prompt_title"
+        else
+            menu_msg="󰎈 $prompt_title"
+        fi
+    else
+        menu_msg="󰎈 No Active Media"
     fi
 
-    title=$(playerctl metadata title 2>/dev/null)
-    artist=$(playerctl metadata artist 2>/dev/null)
+    # Launch fuzzel and wait for selection
+    choice=$(echo -e "$options" | fuzzel --dmenu --mesg "$menu_msg" --lines 5 --anchor=top --y-margin=-1 --width=40)
 
-    # 2. Launch fuzzel and wait for selection
-    choice=$(echo -e "$options" | fuzzel --dmenu --mesg "󰎈 $artist - $title" --lines 6 --anchor=top --y-margin=-1 --width=40)
-
-    # 3. Exit the loop if nothing is selected (e.g., pressing Escape)
+    # Exit the loop if nothing is selected (e.g., pressing Escape)
     if [ -z "$choice" ]; then
         break
     fi
 
-    # 4. Execute the chosen action
+    # Execute the chosen action and trigger the rich notification
+    # Added 2>/dev/null to prevent terminal spam if playerctl is commanded while no player exists
     case "$choice" in
         *Play/Pause) 
-            playerctl play-pause 
-            sleep 0.2
-            new_status=$(playerctl status 2>/dev/null)
-            new_title=$(playerctl metadata title 2>/dev/null)
-            new_artist=$(playerctl metadata artist 2>/dev/null)
-            notify-send "󰐊 $new_status" "$new_artist - $new_title"
+            playerctl play-pause 2>/dev/null
+            sleep 0.1
+            send_notification
             ;;
         *Next) 
-            playerctl next 
-            sleep 0.2
-            new_title=$(playerctl metadata title 2>/dev/null)
-            new_artist=$(playerctl metadata artist 2>/dev/null)
-            notify-send "󰒭 Playing Next" "$new_artist - $new_title"
+            playerctl next 2>/dev/null
+            sleep 1
+            send_notification
             ;;
         *Previous) 
-            playerctl previous 
-            sleep 0.2
-            new_title=$(playerctl metadata title 2>/dev/null)
-            new_artist=$(playerctl metadata artist 2>/dev/null)
-            notify-send "󰒮 Playing Previous" "$new_artist - $new_title"
+            playerctl previous 2>/dev/null
+            sleep 1
+            send_notification
             ;;
         *Stop) 
-            playerctl stop 
-            notify-send "󰑖 Media Stopped" "Playback halted"
-            break # Exiting the menu makes sense if playback is completely stopped
+            playerctl stop 2>/dev/null
+            sleep 0.1
+            send_notification
+            break 
             ;;
         *Volume\ Up) 
-            playerctl volume 0.05+ 
+					  volume up
             ;;
         *Volume\ Down) 
-            playerctl volume 0.05- 
+					  volume down
             ;;
     esac
 done
