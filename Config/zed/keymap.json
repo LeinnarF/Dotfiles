@@ -1,0 +1,80 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace && !editing && !Editor",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space e": "vim::ToggleProjectPanelFocus",
+    },
+  },
+  {
+    "context": "ProjectPanel && !editing",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock",
+      "a": "project_panel::NewFile",
+      "r": "project_panel::Rename",
+    },
+  },
+
+  // Vim insert
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore",
+      "ctrl-s": "workspace::Save",
+      "ctrl-a": "editor::SelectAll",
+    },
+  },
+  // Vim normal
+  {
+    "context": "Editor && vim_mode != insert",
+    "bindings": {
+      "L": "vim::EndOfLine",
+      "H": "vim::FirstNonWhitespace",
+      "ctrl-l": "command_palette::Toggle",
+      "ctrl-a": "editor::SelectAll",
+      "ctrl-shift-i": "agent::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space e": "vim::ToggleProjectPanelFocus",
+      "space q": "pane::CloseActiveItem",
+    },
+  },
+  {
+    // My Custom Keybinds
+    "bindings": {
+      "ctrl-alt-j": "pane::ActivatePreviousItem",
+      "ctrl-alt-l": "pane::ActivateNextItem",
+      "ctrl-alt-shift-l": "lsp_tool::ToggleMenu",
+      "ctrl-shift-n": "project_panel::NewFile",
+    },
+  },
+  // REPL Bindings
+  {
+    "context": "Editor && vim_mode != insert",
+    "bindings": {
+      "space r R": "repl::Run",
+      "space r r": "repl::RunInPlace",
+      "space r c": "repl::ClearOutputs",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-i": "agent::ToggleFocus",
+      "ctrl-l": "command_palette::Toggle",
+    },
+  },
+  {
+    "context": "((VimControl && !menu) || (!Editor && !Terminal))",
+    "bindings": {
+      "space w w": "workspace::ActivateNextPane",
+      "space tab": "workspace::ActivateNextPane",
+    },
+  },
+]

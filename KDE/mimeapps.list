@@ -35,9 +35,9 @@ x-scheme-handler/http=brave-browser.desktop;
 x-scheme-handler/https=brave-browser.desktop;
 
 [Default Applications]
-application/json=code.desktop
-application/json-patch+json=code.desktop
-application/ld+json=code.desktop
+application/json=nvim.desktop
+application/json-patch+json=nvim.desktop
+application/ld+json=nvim.desktop
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
 audio/aac=mpv.desktop
 audio/mp4=mpv.desktop

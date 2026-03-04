@@ -72,13 +72,12 @@ config_list = [
     in_config('cava'),
     in_config('mako'),
     in_config('fuzzel'),
+    in_config('zed'),
 ]
 vscode_list = [
     in_config('Code/User/settings.json'),
     in_config('Code/User/keybindings.json'),
     in_config('Code/User/snippets'),
-    in_config('Code/User/globalStorage/draivin.hsnips'),
-    in_config('Code/User/profiles')
 ]
 obsidian_list = [
     os.path.expanduser('/Documents/Vault/.obsidian/')

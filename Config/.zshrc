@@ -77,6 +77,9 @@ alias nvimconf='nvim ~/.config/nvim/'
 alias g='lazygit'
 alias settings='systemctl-tui'
 alias py='python'
+alias zed='zeditor'
+alias updates='checkupdates'
+alias img='kitten icat'
 
 # ==============================================================================
 # COLORS & FZF
@@ -94,6 +97,7 @@ bg_alt='#24283b'
 fg_alt='#414868'
 
 source <(fzf --zsh)
+
 export FZF_DEFAULT_OPTS="
   --color=fg:$fg_alt,bg:$bg,hl:$red
   --color=fg+:$white,bg+:$bg,hl+:$green

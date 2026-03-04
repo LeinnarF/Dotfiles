@@ -4,6 +4,7 @@
   "snippetsEnabled": true,
   "snippetsTrigger": "Tab",
   "suppressSnippetTriggerOnIME": true,
+  "suppressIMEWarning": false,
   "removeSnippetWhitespace": true,
   "autoDelete$": true,
   "loadSnippetsFromFile": false,
@@ -16,6 +17,8 @@
   "highlightCursorBracketsEnabled": true,
   "mathPreviewEnabled": true,
   "mathPreviewPositionIsAbove": true,
+  "mathPreviewCursor": "",
+  "mathPreviewBracketHighlighting": false,
   "autofractionEnabled": true,
   "autofractionSymbol": "\\frac",
   "autofractionBreakingChars": "+-=\t",
@@ -25,6 +28,7 @@
   "wordDelimiters": "., +-\\n\t:;!?\\/{}[]()=~$",
   "autofractionExcludedEnvs": "[\n\t\t\t[\"^{\", \"}\"],\n\t\t\t[\"\\\\pu{\", \"}\"]\n\t\t]",
   "matrixShortcutsEnvNames": "pmatrix, cases, align, bmatrix, Bmatrix, vmatrix, Vmatrix, array, matrix",
+  "taboutClosingSymbols": "), ], \\rbrack, \\}, \\rbrace, \\rangle, \\rvert, \\rVert, \\rfloor, \\rceil, \\urcorner, }",
   "autoEnlargeBracketsTriggers": "sum, int, frac, prod",
   "forceMathLanguages": "math"
 }

@@ -4,6 +4,8 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 
 exec_always --no-startup-id notify-update
 
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
+
 seat seat0 xcursor_theme Bibata-Modern-Ice 24
 
 # Mod Key

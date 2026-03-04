@@ -1,58 +1,170 @@
 {
+    // Minimal UI
+    "workbench.startupEditor": "none",
+    "workbench.activityBar.location": "hidden",
     "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
     "workbench.navigationControl.enabled": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "github.copilot.nextEditSuggestions.enabled": true,
-    "python.defaultInterpreterPath": "/bin/python3.13",
+    "editor.wordWrap": "on",
+    "editor.renderLineHighlight": "all",
+    "editor.roundedSelection": false,
+    "editor.stickyScroll.enabled": false,
+    // Zen Editor Settings
+    "editor.cursorBlinking": "solid",
+    "editor.formatOnSave": true,
+    // Vim Configuration
+    "vim.cursorStylePerMode.replace": "underline",
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.statusBarColors.commandlineinprogress": [
+        "#007acc",
+        "#ffffff"
+    ],
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // Line navigation
+        {
+            "before": [
+                "L"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Line navigation
+        {
+            "before": [
+                "L"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        // Workspace & Pane Management
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "commands": [
+                "workbench.files.action.focusFilesExplorer"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.focusNextGroup"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "<tab>"
+            ],
+            "commands": [
+                "workbench.action.focusNextGroup"
+            ]
+        },
+    ],
+    // Jupyter & Python
+    "jupyter.alwaysTrustNotebooks": true,
+    "python.terminal.activateEnvironment": true,
+    // Settings General
+    "telemetry.telemetryLevel": "off",
+    "editor.tabSize": 2,
+    // UI
+    "window.zoomLevel": 1,
+    "window.titleBarStyle": "native",
+    "editor.cursorSmoothCaretAnimation": "on",
     "editor.fontSize": 15,
-    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', monospace",
+    "workbench.colorTheme": "Tokyo Night",
+    "workbench.colorCustomizations": {
+        "[Tokyo Night]": {
+            "sideBar.background": "#1A1B26",
+            "sideBar.border": "#1A1B26",
+            "editorGroup.border": "#1A1B26",
+            "panel.background": "#1A1B26",
+            "panel.border": "#1A1B26",
+            "tab.activeBackground": "#1A1B26",
+            "tab.inactiveBackground": "#1A1B26",
+            "tab.border": "#1A1B26",
+            "tab.activeBorderTop": "#1A1B26",
+            "tab.selectedBackground": "#1A1B26",
+            "toolbar.activeBackground": "#1A1B26",
+            "statusBar.background": "#1A1B26",
+            "statusBar.border": "#1A1B26",
+            "titleBar.activeBackground": "#1A1B26",
+            "scrollbarSlider.background": "#1A1B26",
+            "scrollbarSlider.activeBackground": "#1A1B26",
+            "scrollbarSlider.hoverBackground": "#1A1B26",
+            "editorWidget.border": "#1A1B26",
+            "scrollbar.shadow": "#00000000",
+            "editorGroupHeader.tabsBackground": "#1A1B26",
+            "editorGroupHeader.tabsBorder": "#1A1B26",
+            "editorGroupHeader.border": "#1A1B26",
+        }
+    },
+    "workbench.iconTheme": "charmed-icons",
     "github.copilot.enable": {
-        "*": false,
+        "*": true,
         "plaintext": false,
         "markdown": true,
-        "scminput": false,
-        "rasi": false,
-        "latex": true,
-        "hsnips": true,
-        "python": true,
-        "css": true
+        "scminput": false
     },
-    "workbench.editor.tabActionLocation": "left",
-    "workbench.editor.tabSizing": "shrink",
-    "telemetry.feedback.enabled": false,
-    "telemetry.editStats.enabled": false,
-    "telemetry.telemetryLevel": "off",
-    "[properties]": {
-        
-    },
-    "files.associations": {
-        "*.conf": "shellscript"
-    },
-    "animations.Install-Method": "Apc Customize UI++",
-    "glassit.alpha": 255,
-    "editor.renderWhitespace": "none",
-    "editor.stickyScroll.enabled": false,
-    "explorer.confirmDelete": false,
-    "window.commandCenter": false,
-    "workbench.layoutControl.enabled": false,
-    "chat.editor.wordWrap": "on",
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "git.confirmSync": false,
-    "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.explorerKind": "external",
-    "jupyter.askForKernelRestart": false,
-    "code-runner.runInTerminal": true,
-    "umath.preview.CursorType": "blacktriangleright",
-    "umath.preview.EnableCursor": false,
-    "workbench.activityBar.location": "top",
-    "window.menuBarVisibility": "toggle",
-    "window.menuStyle": "custom",
-    "window.titleBarStyle": "native",
-    "window.customTitleBarVisibility": "never",
-    "workbench.colorTheme": "Tokyo Night",
-    "window.zoomLevel": 1,
-    "editor.cursorSmoothCaretAnimation": "on"
 }
