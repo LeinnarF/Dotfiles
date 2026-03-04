@@ -18,7 +18,7 @@
 
 ## Todo List 
 ### Mako
-- [ ] Notification for updates
+- [x] Notification for updates
 - [ ] Music player integration
 - [ ] Notification history
 - [ ] Sound Control

@@ -17,12 +17,12 @@ class BackupManager:
         if self.input_list:
             for line in self.input_list:
                 line = line.strip()
-                paths.append(os.path.expanduser(f'~/{line}'))
+                paths.append(os.path.expanduser(f"~/{line}"))
         elif self.input_file:
-            with open(self.input_file, 'r') as f:
+            with open(self.input_file, "r") as f:
                 for line in f:
                     line = line.strip()
-                    paths.append(os.path.expanduser(f'~/{line}'))
+                    paths.append(os.path.expanduser(f"~/{line}"))
         return paths
 
     def check_paths(self):
@@ -32,118 +32,92 @@ class BackupManager:
                 self.confirmed_paths.append(path)
 
     def backup_paths(self):
-        output_path = os.path.expanduser(f'~/{self.backup_dir}')
+        output_path = os.path.expanduser(f"~/{self.backup_dir}")
         if not os.path.exists(output_path):
             os.makedirs(output_path, exist_ok=True)
-            print(f'Created backup directory at {output_path}')
+            print(f"Created backup directory at {output_path}")
 
         for path in self.confirmed_paths:
-            subprocess.run(['rsync', '-avh', path, output_path], check=True)
+            subprocess.run(["rsync", "-avh", path, output_path], check=True)
 
 
 def in_config(target):
-    return os.path.expanduser(f'/.config/{target}')
+    return os.path.expanduser(f"/.config/{target}")
 
 
 config_list = [
-    os.path.expanduser('/.zshrc'),
-    os.path.expanduser('/.p10k.zsh'),
-    os.path.expanduser('/.zsh_plugins.txt'),
-    os.path.expanduser('/.zprofile'),
-    os.path.expanduser('/.vimrc'),
-    in_config('nvim'),
-    in_config('kitty'),
-    in_config('dunst'),
-    in_config('rofi'),
-    in_config('picom'),
-    in_config('polybar'),
-    in_config('i3'),
-    in_config('autostart'),
-    in_config('conky'),
-    in_config('hypr'),
-    in_config('fastfetch'),
-    in_config('xremap'),
-    in_config('bat'),
-    in_config('btop'),
-    in_config('zathura'),
-    in_config('sway'),
-    in_config('waybar'),
-    in_config('foot'),
-    in_config('cava'),
-    in_config('mako'),
-    in_config('fuzzel'),
-    in_config('zed'),
+    os.path.expanduser("/.zshrc"),
+    os.path.expanduser("/.p10k.zsh"),
+    os.path.expanduser("/.zsh_plugins.txt"),
+    os.path.expanduser("/.zprofile"),
+    os.path.expanduser("/.vimrc"),
+    in_config("nvim"),
+    in_config("kitty"),
+    in_config("dunst"),
+    in_config("rofi"),
+    in_config("picom"),
+    in_config("polybar"),
+    in_config("i3"),
+    in_config("autostart"),
+    in_config("conky"),
+    in_config("hypr"),
+    in_config("fastfetch"),
+    in_config("xremap"),
+    in_config("bat"),
+    in_config("btop"),
+    in_config("zathura"),
+    in_config("sway"),
+    in_config("waybar"),
+    in_config("foot"),
+    in_config("cava"),
+    in_config("mako"),
+    in_config("fuzzel"),
+    in_config("zed"),
 ]
 vscode_list = [
-    in_config('Code/User/settings.json'),
-    in_config('Code/User/keybindings.json'),
-    in_config('Code/User/snippets'),
+    in_config("Code/User/settings.json"),
+    in_config("Code/User/keybindings.json"),
+    in_config("Code/User/snippets"),
 ]
-obsidian_list = [
-    os.path.expanduser('/Documents/Vault/.obsidian/')
-]
+obsidian_list = [os.path.expanduser("/Documents/Vault/.obsidian/")]
 script_list = [
-    os.path.expanduser('/Dotfiles/Scripts/'),
-    os.path.expanduser('.local/bin/')
+    os.path.expanduser("/Dotfiles/Scripts/"),
+    os.path.expanduser(".local/bin/"),
 ]
 
-kde_list = os.path.expanduser('~/Dotfiles/Scripts/path.txt')
 
-repo_path = os.path.expanduser('/Dotfiles/')
-output_config = repo_path + 'Config'
-output_vscode = repo_path + 'Vscode'
-output_obsidian = repo_path + 'Obsidian'
-output_scripts = repo_path + 'Scripts'
-output_kde = repo_path + 'KDE'
+repo_path = os.path.expanduser("/Dotfiles/")
+output_config = repo_path + "Config"
+output_vscode = repo_path + "Config/vscode"
+output_obsidian = repo_path + "Obsidian"
+output_scripts = repo_path + "Scripts"
 
 
 def backup_all():
     # Backup Configs
-    config_backup = BackupManager(
-        input_list=config_list,
-        backup_dir=output_config
-    )
+    config_backup = BackupManager(input_list=config_list, backup_dir=output_config)
     config_backup.check_paths()
     config_backup.backup_paths()
 
     # Backup VSCode
-    vscode_backup = BackupManager(
-        input_list=vscode_list,
-        backup_dir=output_vscode
-    )
+    vscode_backup = BackupManager(input_list=vscode_list, backup_dir=output_vscode)
     vscode_backup.check_paths()
     vscode_backup.backup_paths()
 
     # Backup Obsidian
     obsidian_backup = BackupManager(
-        input_list=obsidian_list,
-        backup_dir=output_obsidian
+        input_list=obsidian_list, backup_dir=output_obsidian
     )
     obsidian_backup.check_paths()
     obsidian_backup.backup_paths()
 
     # Backup Scripts
-    scripts_backup = BackupManager(
-        input_list=script_list,
-        backup_dir=output_scripts
-    )
+    scripts_backup = BackupManager(input_list=script_list, backup_dir=output_scripts)
     scripts_backup.check_paths()
     scripts_backup.backup_paths()
 
-    # Backup KDE Configs
-    kde_backup = BackupManager(
-        input_file=kde_list,
-        backup_dir=output_kde
-    )
-    kde_backup.check_paths()
-    kde_backup.backup_paths()
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     backup_all()
-    subprocess.run([
-        'notify-send',
-        'Dotfiles Backup',
-        'Backup completed successfully.'
-    ])
+    subprocess.run(["notify-send", "Dotfiles Backup", "Backup completed successfully."])
     print("\033[32mBackup completed successfully!\033[0m")
