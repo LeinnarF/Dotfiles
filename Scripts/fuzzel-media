@@ -75,7 +75,7 @@ while true; do
     fi
 
     # Launch fuzzel and wait for selection
-    choice=$(echo -e "$options" | fuzzel --dmenu --mesg "$menu_msg" --lines 5 --anchor=top --y-margin=-1 --width=40)
+    choice=$(echo -e "$options" | fuzzel --dmenu --mesg "$menu_msg" --lines 5 --width=40)
 
     # Exit the loop if nothing is selected (e.g., pressing Escape)
     if [ -z "$choice" ]; then

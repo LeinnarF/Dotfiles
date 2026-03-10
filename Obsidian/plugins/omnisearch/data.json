@@ -1,0 +1,49 @@
+{
+  "useCache": true,
+  "hideExcluded": true,
+  "recencyBoost": "0",
+  "downrankedFoldersFilters": [
+    "05 Archive/"
+  ],
+  "ignoreDiacritics": true,
+  "ignoreArabicDiacritics": false,
+  "indexedFileTypes": [],
+  "displayTitle": "",
+  "PDFIndexing": false,
+  "officeIndexing": false,
+  "imagesIndexing": false,
+  "aiImageIndexing": false,
+  "unsupportedFilesIndexing": "default",
+  "splitCamelCase": false,
+  "openInNewPane": true,
+  "vimLikeNavigationShortcut": true,
+  "ribbonIcon": false,
+  "showExcerpt": false,
+  "maxEmbeds": 0,
+  "renderLineReturnInExcerpts": false,
+  "showCreateButton": false,
+  "highlight": true,
+  "showPreviousQueryResults": true,
+  "simpleSearch": true,
+  "tokenizeUrls": false,
+  "fuzziness": "0",
+  "weightBasename": 10,
+  "weightDirectory": 7,
+  "weightH1": 6,
+  "weightH2": 5,
+  "weightH3": 4,
+  "weightUnmarkedTags": 2,
+  "weightCustomProperties": [
+    {
+      "name": "aliases",
+      "weight": 5
+    }
+  ],
+  "httpApiEnabled": false,
+  "httpApiPort": "51361",
+  "httpApiNotice": true,
+  "welcomeMessage": "1.21.0",
+  "verboseLogging": false,
+  "DANGER_httpHost": null,
+  "DANGER_forceSaveCache": false
+}

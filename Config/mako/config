@@ -2,7 +2,7 @@ max-history=100
 sort=-time
 
 font=JetBrainsMono Nerd Font 11
-width=400
+width=370
 height=100
 margin=15
 padding=15

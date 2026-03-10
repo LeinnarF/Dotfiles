@@ -112,7 +112,7 @@
     "show_turn_stats": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5-mini",
+      "model": "claude-opus-4.6",
       "enable_thinking": false,
     },
     "dock": "right",

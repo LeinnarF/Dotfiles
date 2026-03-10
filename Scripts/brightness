@@ -1,0 +1,20 @@
+#!/bin/bash
+current=$(ddcutil --bus=0 getvcp 10 2>/dev/null | awk -F'[=,]' '{print $2}' | tr -d ' ')
+increment=5
+
+if [ "$1" == "up" ]; then
+    new=$(( current + increment ))
+elif [ "$1" == "down" ]; then
+    new=$(( current - increment ))
+elif [ "$1" == "current" ]; then
+		echo $current
+		exit 0
+else
+    echo "Usage: $0 [up|down]"
+    exit 1
+fi
+
+# Clamp between 0 and 100
+new=$(( new < 0 ? 0 : new > 100 ? 100 : new ))
+
+ddcutil --bus=0 setvcp 10 $new >/dev/null 2>&1

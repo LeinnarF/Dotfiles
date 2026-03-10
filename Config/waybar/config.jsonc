@@ -1,10 +1,15 @@
 {
 	"layer": "top",
 	"position": "top",
-	"height": 32,
+	"height": 22,
 	"spacing": 6,
+	"margin-top": 10,
+	"margin-left": 15,
+	"margin-right": 15,
 
 	"modules-left": [
+		// "custom/arch",
+		// "custom/separator",
 		"sway/workspaces",
 		"custom/separator",
 		"custom/media",
@@ -12,21 +17,47 @@
 	],
 
 	"modules-center": [
-		"clock"
+		"sway/window"
 	],
 
 	"modules-right": [
-
-		"cpu",
-		"memory",
-		"custom/temps",
+		"group/system",
 		"custom/separator",
-		"pulseaudio",
 		"sway/mode",
 		"sway/scratchpad",
 		"network",
-		"custom/power"
+		"group/controls",
+		"custom/separator",
+		"clock",
 	],
+
+	"group/system": {
+		"orientation": "horizontal",
+		"modules": ["cpu", "memory", "custom/temps"],
+	},
+
+	"group/controls": {
+		"orientation": "horizontal",
+		"modules": ["pulseaudio","custom/brightness"],
+		"drawer":{
+			"transition-duration": 1000,
+			"transition-left-to-right": false,
+			"click-to-reveal": true,
+		}
+	},
+
+	"custom/arch": {
+		"format": " ",
+		"tooltip": false
+	},
+
+	"custom/brightness": {
+		"exec": "brightness current",
+		"interval": 1,
+		"format": "󰃟  {}% ",
+		"on-scroll-up": "brightness up",
+		"on-scroll-down": "brightness down"
+	},
 
 	"custom/cavax": {
 		"exec": "waybar-cava",
@@ -34,7 +65,7 @@
 	},
 
 	"custom/power": {
-		"format": "⏻ ",
+		"format": "⏻  ",
 		"tooltip": false,
 		"on-click": "fuzzel-power"
 	},
@@ -49,26 +80,37 @@
 		"all-outputs": false,
 		"format": "{icon}",
 		"format-icons": {
-			"1": "",
-			"2": "",
-			"3": "",
-			"4": "",
-			"focused": ""
+			"1": "日",
+			"2": "大",
+			"3": "人",
+			"4": "生",
+			"5": "力",
+			"6": "如",
+			"7": "幻",
+			"8": "般",
+			"9": "的",
+			"10": "梦",
+			// "focused": ""
 		},
 		"persistent-workspaces": {
 			"1": [],
 			"2": [],
 			"3": [],
-			"4": []
+			"4": [],
+			"5": [],
 		}
 	},
 
 	"sway/window": {
-		"format":"",
+		"format":"{}",
 		"tooltip": true,
-		"icon": true,
-		"icon-size": 18,
-		"tooltip-format": "{app_id}"
+		"icon": false,
+		"tooltip-format": "{app_id}",
+		"max-length": 50,
+		"rewrite": {
+			"": "Desktop"
+
+		}
 	},
 
 	"disk": {
@@ -104,7 +146,7 @@
 		"format": "  {usage}%",
 		"tooltip": 	true,
 		"interval": 2,
-		"on-click": "foot btop"
+		// "on-click": "foot btop"
 	},
 
 	"memory": {
@@ -117,7 +159,9 @@
 
 	"clock": {
 		// "format": "<span foreground='#7dcfff'> </span> {:%H:%M}",
-		"format": "{:%a, %b %d, %H:%M}",
+		// "format": "{:%a, %b %d %H:%M}",
+		// "format": "  {:%H:%M} ",
+		"format": "{:%b %d %H:%M} ",
 		"tooltip": false,
 		"tooltip-format": "{calendar}",
 		"calendar": {
@@ -129,7 +173,7 @@
 				"today":      "<span color='#ff6699'><b>{}</b></span>"
 			}
 		},
-		"on-click": "cal | fuzzel -d --lines=6 --width=21 --anchor=top --y-margin=-1"
+		"on-click": "cal | fuzzel -d --lines=6 --width=21 --anchor=top-right --y-margin=15 --x-margin=15"
 	},
 
 	"pulseaudio": {

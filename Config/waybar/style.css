@@ -1,76 +1,101 @@
-* {
+@define-color background #1a1b26;
+@define-color foreground #c0caf5;
+@define-color alt-foreground #414868;
+@define-color cyan #7dcfff;
+@define-color magenta #bb9af7;
+@define-color red #f7768e;
+@define-color green #9ece6a;
+@define-color yellow #e0af68;
+@define-color blue #7aa2f7;
+
+*{
 	border: none;
 	border-radius: 0;
 	font-family: JetBrainsMono Nerd Font;
-	font-size: 14px;
+	font-size: 12px;
+	font-weight: bold;
 	min-height: 0;
 }
 
 window#waybar {
-	background: RGBA(26, 27, 38, 1.0);
-	color: #c0caf5;
-	border-bottom: 1px solid #c0caf5;
+	background-color: @background;
+	color: @foreground;
+	border: 1px solid @foreground;
 }
 
 #workspaces button {
 	padding: 3px;
-	color: #c0caf5;
-	border-bottom: 1px solid #c0caf5;
+	font-size: 8px;
+	font-weight: normal;
+	color: @foreground;
+	border: 1px solid transparent;
 }
+
+#workspaces button:hover {
+	box-shadow: none; 
+	text-shadow: none; 
+	background: none;  
+	transition: none;  
+	background-color: inherit; 
+	color: inherit;
+	border-color: transparent;
+}
+
 
 #workspaces button.focused {
-	color: #c0caf5;
+	color: @cyan;
 	background-color: transparent;
-	border-bottom: 1px solid #c0caf5;
-	font-weight: bold;
+	font-weight: bolder;
 }
-
-/* #workspaces button.empty { */
-/* 	color: #c0caf5; */
-/* 	opacity: 0.55; */
-/* } */
 
 #clock {
 	font-weight: bold;
 }
 
-tooltip {
-	background-color: transparent;
-	border: 1px solid #c0caf5;
+#tray {
+	color: @foreground;
+	-gtk-icon-style: symbolic;
 }
 
-/* tooltip label { */
-/* 	font-size: 15px; */
-/* 	background: #1a1b26; */
-/* 	margin: 5px; */
-/* 	color: #c0caf5; */
-/* } */
+#custom-cavax {
+	color: @red;
+}
+
+#custom-arch {
+	color: @blue;
+}
+
+#custom-power {
+	color: @red;
+}
+
+#memory,
+#custom-temps,
+#cpu{
+	color: @foreground;
+	padding: 8px;
+}
 
 #custom-separator {
-	color: #414868;
+	color: @alt-foreground;
 }
 
 #custom-media {
 	font-size: 13px;
 }
 
-/* #custom-cavax { */
-/* 	color: #414868; */
-/* } */
-
+#custom-arch,
+#custom-power,
+#custom-brightness,
 #custom-cavax,
 #window,
 #disk,
-#custom-power,
-#custom-temps,
 #custom-media,
 #mode,
 #scratchpad,
-#cpu,
-#memory,
 #clock,
 #battery,
 #network,
 #pulseaudio {
-	padding: 9px;
+	padding: 5px;
 }

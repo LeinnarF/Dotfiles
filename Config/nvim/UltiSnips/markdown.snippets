@@ -1,0 +1,25 @@
+extends tex
+
+global !p
+def math():
+    import vim
+    filetype = vim.eval('&filetype')
+    if filetype == 'tex':
+        return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+    else:
+        result = vim.eval(
+            "luaeval(\"local node = vim.treesitter.get_node();" +
+            "while node do " +
+            "local t = node:type(); " +
+            "if t == 'inline_formula' or t == 'displayed_equation' or t == 'math_environment' then return true end; " +
+            "node = node:parent() end; " +
+            "return false\")"
+        )
+        return result == 1 or result == True
+
+def comment():
+    return False
+
+def env(name):
+    return False
+endglobal

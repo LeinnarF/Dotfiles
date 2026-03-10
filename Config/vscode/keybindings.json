@@ -15,6 +15,11 @@
     "command": "renameFile",
     "when": "filesExplorerFocus && !inputFocus"
   },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
   // Window & Tab Management
   {
     "key": "ctrl+alt+j",
@@ -40,5 +45,13 @@
   {
     "key": "ctrl+shift+i",
     "command": "workbench.action.chat.open"
-  }
+  },
+  {
+    "key": "alt+l",
+    "command": "editor.action.inlineSuggest.acceptNextWord"
+  },
+  {
+    "key": "ctrl+shift+enter",
+    "command": "jupyter.notebookeditor.runallcells"
+  },
 ]

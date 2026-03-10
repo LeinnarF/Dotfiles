@@ -1,12 +1,9 @@
 [
   "obsidian-latex-suite",
   "restore-tab-key",
-  "short-internal-links-to-headings",
   "obsidian-style-settings",
   "obsidian-completr",
-  "tag-wrangler",
-  "start-page",
   "obsidian-icon-folder",
-  "pretty-properties",
-  "obsidian-vimrc-support"
+  "obsidian-vimrc-support",
+  "omnisearch"
 ]

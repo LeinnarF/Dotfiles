@@ -5,6 +5,12 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 
 
+-- Formatting
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.list = false
+
+
 -- Numbering and cursor line
 vim.opt.number = true
 vim.opt.cursorline = true
@@ -28,6 +34,8 @@ vim.g.copilot_assume_mapped = true
 -- Latex setup
 vim.g.vimtex_compiler_method = 'latexmk'
 vim.g.vimtex_quickfix_mode = 0
+vim.g.vimtex_syntax_enabled = 1
+vim.g.vimtex_syntax_conceal_disable =0
 
 
 -- Error lens 

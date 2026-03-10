@@ -80,9 +80,10 @@ alias py='python'
 alias zed='zeditor'
 alias updates='checkupdates'
 alias img='kitten icat'
-
+alias img-prev='fd -e png -e jpg -e jpeg -e webp -e gif | \
+fzf --preview="kitty icat --clear --transfer-mode=memory --stdin=no --place=${FZF_PREVIEW_COLUMNS:-40}x${FZF_PREVIEW_LINES:-12}@0x0 {}"'
 # ==============================================================================
-# COLORS & FZF
+# FZF
 # ==============================================================================
 
 red='#f7768e'
@@ -103,10 +104,16 @@ export FZF_DEFAULT_OPTS="
   --color=fg+:$white,bg+:$bg,hl+:$green
   --color=info:$cyan,prompt:$green,pointer:$bg_alt
   --color=marker:$magenta,spinner:$cyan,header:$bg_alt
+	--color=border:$bg_alt
+	--layout=reverse
+	--prompt='❯ '
+	--height=40%
 "
 
-# Inject custom colors into fzf-tab
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
+
 zstyle ':fzf-tab:*' fzf-flags \
+	--preview-window=right:50%:wrap \
   --color=fg:$fg_alt,bg:$bg,hl:$red \
   --color=fg+:$white,bg+:$bg,hl+:$green \
   --color=info:$cyan,prompt:$green,pointer:$bg_alt \
@@ -114,12 +121,21 @@ zstyle ':fzf-tab:*' fzf-flags \
 	--color=border:$bg_alt
 
 zstyle ':fzf-tab:*' switch-group '<' '>'
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --level=2 --color=always $realpath'
 zstyle ':fzf-tab:complete:(bat|cat|nvim|nano):*' fzf-preview 'bat --color=always --style=numbers --line-range=:500 $realpath'
 zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
 
-bindkey '^R' fzf-history-widget
-bindkey '^t' fzf-file-widget
+zstyle ':fzf-tab:complete:*:*' fzf-preview '
+case "$realpath" in
+  *.png|*.jpg|*.jpeg|*.webp|*.gif)
+    kitty icat --clear --transfer-mode=memory --stdin=no \
+      --place=${FZF_PREVIEW_COLUMNS:-80}x${FZF_PREVIEW_LINES:-24}@0x0 "$realpath"
+    ;;
+  *)
+    bat --color=always --style=numbers --line-range=:500 "$realpath" 2>/dev/null
+    ;;
+esac
+'
 
 # ==============================================================================
 # INITIALIZERS & WRAPPERS

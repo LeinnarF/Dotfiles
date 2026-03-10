@@ -8,6 +8,8 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 
 seat seat0 xcursor_theme Bibata-Modern-Ice 24
 
+exec_always pkill conky
+
 # Mod Key
 set $mod Mod4
 
@@ -175,7 +177,7 @@ output HDMI-A-1 resolution 1920x1080@100Hz
 
 
 # Wallpaper
-output * bg /home/leinnarf/Dotfiles/Images/Wallpaper/wave2.png fill
+output * bg /home/leinnarf/Dotfiles/Images/Wallpaper/reze.png fill
 
 
 # Status bar
@@ -228,9 +230,9 @@ bindsym $mod+Shift+v exec clipboard
 
 # Fuzzel Modules
 bindsym $mod+Shift+p exec fuzzel-media
-bindsym $mod+F4 exec fuzzel-power
+bindsym Mod1+F4 exec fuzzel-power
 bindsym $mod+Tab exec fuzzel-window
-bindsym $mod+Space exec fuzzel  --mesg "Run"
+bindsym $mod+Space exec fuzzel
 
 
 # Volume control
@@ -239,4 +241,8 @@ bindsym --locked XF86AudioLowerVolume exec volume down
 bindsym --locked XF86AudioMute exec volume mute
 
 
+# Conky
+for_window [app_id="conky"] floating enable, sticky enable, border none, focus_passing disable
+
+exec_always --no-startup-id sleep 2 && env -u DISPLAY conky -c ~/.config/conky/conky.conf
 

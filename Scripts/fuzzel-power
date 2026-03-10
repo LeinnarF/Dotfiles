@@ -2,7 +2,7 @@
 
 entries="Lock\nSuspend\nLogout\nReboot\nShutdown"
 
-selected=$(echo -e "$entries" | fuzzel --dmenu --mesg "Power Menu" --lines 5 --anchor=top-right --y-margin=-1 --x-margin=1 --width=14)
+selected=$(echo -e "$entries" | fuzzel --dmenu --mesg "Power Menu" --lines 5 --anchor=top-right --y-margin=14 --x-margin=15  --width=14)
 
 case "$selected" in
   Lock)

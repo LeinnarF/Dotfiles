@@ -11,7 +11,7 @@ WINDOW_LIST=$(echo "$TREE" | jq -r '
   "\(.app_id // .window_properties.class): \(.name)"
 ' | awk '{print NR "  " $0}')
 
-SELECTED=$(echo "$WINDOW_LIST" | fuzzel --dmenu --mesg "Window")
+SELECTED=$(echo "$WINDOW_LIST" | fuzzel --dmenu)
 
 if [ -z "$SELECTED" ]; then
     exit 0

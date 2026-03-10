@@ -9,7 +9,6 @@ span.cm-foldPlaceholder {
   line-height: 0px;
   /* font-family: Century Gothic; */
   font-weight: 500;
-  color: rgb(173, 173, 173);
 }
 
 p {
@@ -18,7 +17,7 @@ p {
 
 ol > li::marker,
 ul > li::marker {
-  color: lightgray;
+  color: #C0CAF5;
 }
 
 ol > li,
@@ -60,7 +59,7 @@ ul > li {
 .markdown-rendered hr {
   border: none;
   border-top: 1px solid;
-  border-color: lightgrey;
+  border-color: #C0CAF5;
 }
 
 .math-booster-end-proof {

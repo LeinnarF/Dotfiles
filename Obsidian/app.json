@@ -3,8 +3,8 @@
   "showLineNumber": true,
   "readableLineLength": true,
   "defaultViewMode": "preview",
-  "newFileLocation": "root",
-  "showInlineTitle": true,
+  "newFileLocation": "folder",
+  "showInlineTitle": false,
   "pdfExportSettings": {
     "includeName": true,
     "pageSize": "A4",
@@ -16,5 +16,7 @@
   "showIndentGuide": false,
   "spellcheck": true,
   "promptDelete": false,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "newFileFolderPath": "00 Inbox",
+  "attachmentFolderPath": "04 System/Files"
 }

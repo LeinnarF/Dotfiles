@@ -1,19 +1,15 @@
 {
   "showRibbon": false,
   "theme": "obsidian",
-  "cssTheme": "Minimal",
-  "accentColor": "#7d87ba",
+  "cssTheme": "Minimal tokyo night",
+  "accentColor": "#fafcff",
   "monospaceFontFamily": "JetBrainsMono Nerd Font",
   "showViewHeader": true,
   "nativeMenus": true,
   "baseFontSize": 18,
-  "textFontFamily": "Arial",
+  "textFontFamily": "JetBrainsMono Nerd Font",
   "enabledCssSnippets": [
-    "paragraph",
-    "Image_center",
-    "Invert",
-    "callout",
-    "Format"
+    "paragraph"
   ],
   "interfaceFontFamily": ""
 }

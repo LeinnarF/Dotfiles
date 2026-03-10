@@ -3,7 +3,6 @@
     "workbench.startupEditor": "none",
     "workbench.activityBar.location": "hidden",
     "editor.minimap.enabled": false,
-    "breadcrumbs.enabled": false,
     "window.menuBarVisibility": "toggle",
     "workbench.layoutControl.enabled": false,
     "window.commandCenter": false,
@@ -158,13 +157,20 @@
             "editorGroupHeader.tabsBackground": "#1A1B26",
             "editorGroupHeader.tabsBorder": "#1A1B26",
             "editorGroupHeader.border": "#1A1B26",
+            "notebook.cellBorderColor": "#1A1B26",
         }
     },
     "workbench.iconTheme": "charmed-icons",
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "plaintext": false,
         "markdown": true,
         "scminput": false
     },
+    "explorer.confirmPasteNative": false,
+    "explorer.confirmDelete": false,
+    "notebook.lineNumbers": "on",
+    "breadcrumbs.enabled": false,
+    "git.confirmSync": false,
+    "chat.viewSessions.orientation": "stacked",
 }

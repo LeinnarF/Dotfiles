@@ -18,6 +18,7 @@ vim.keymap.set('n', 'H', '^', { desc='Beginning of Line' })
 vim.keymap.set('n', 'L', '$', { desc='End of Line' })
 vim.keymap.set('v', 'H', '^', { desc='Beginning of Line' })
 vim.keymap.set('v', 'L', '$', { desc='End of Line' })
+vim.keymap.set('i', 'jk', '<Esc>', { desc='Exit Insert Mode' })
 
 
 -- Vanilla Vim Enhancements 
