@@ -9,7 +9,7 @@
 @define-color blue #7aa2f7;
 
 *{
-	border: none;
+	/* border: none; */
 	border-radius: 0;
 	font-family: JetBrainsMono Nerd Font;
 	font-size: 15px;
@@ -45,7 +45,7 @@ window#waybar {
 #workspaces button.focused {
 	color: @blue;
 	background-color: transparent;
-	font-weight: bolder;
+	font-weight: bold;
 }
 
 #clock {
@@ -75,7 +75,7 @@ window#waybar {
 #cpu{
 	color: @blue;
 	padding: 0px 9px;
-	/* font-size: 12px; */
+	font-size: 12px;
 }
 
 #custom-separator {
@@ -83,7 +83,8 @@ window#waybar {
 }
 
 #custom-media {
-	font-size: 12px;
+	font-size: 14px;
+	color: @blue;
 }
 
 #scratchpad{

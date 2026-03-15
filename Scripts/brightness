@@ -7,10 +7,14 @@ if [ "$1" == "up" ]; then
 elif [ "$1" == "down" ]; then
     new=$(( current - increment ))
 elif [ "$1" == "current" ]; then
-		echo $current
+		echo "Current brightness: $current%"
+		notify-send -a "Brightness" \
+		-h string:x-canonical-private-synchronous:brightness \
+		-h int:value:"$current" \
+		-i display-brightness "Brightness: ${current}%"
 		exit 0
 else
-    echo "Usage: $0 [up|down]"
+    echo "Usage: $0 [up|down|current]"
     exit 1
 fi
 
@@ -18,3 +22,9 @@ fi
 new=$(( new < 0 ? 0 : new > 100 ? 100 : new ))
 
 ddcutil --bus=0 setvcp 10 $new >/dev/null 2>&1
+
+notify-send -a "Brightness" \
+    -h string:x-canonical-private-synchronous:brightness \
+    -h int:value:"$new" \
+    -i display-brightness "Brightness: ${new}%"
+

@@ -3,5 +3,5 @@
 updates=$(checkupdates 2>/dev/null | wc -l)
 
 if [ "$updates" -gt 0 ]; then
-    notify-send -t 0 -u normal -i software-update-available "Arch Updates" "$updates packages ready to upgrade"
+    notify-send -t 5000 -u normal -i software-update-available "Arch Updates" "$updates packages ready to upgrade"
 fi

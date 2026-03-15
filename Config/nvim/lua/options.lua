@@ -22,13 +22,8 @@ vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "NONE"})
 
 
 -- Disable mode display since we use lualine
-vim.opt.showmode = false
+vim.opt.showmode = true
 vim.opt.cmdheight = 0
-
-
--- Copilot setup
-vim.g.copilot_no_tab_map = false
-vim.g.copilot_assume_mapped = true
 
 
 -- Latex setup
@@ -36,7 +31,6 @@ vim.g.vimtex_compiler_method = 'latexmk'
 vim.g.vimtex_quickfix_mode = 0
 vim.g.vimtex_syntax_enabled = 1
 vim.g.vimtex_syntax_conceal_disable =0
-
 
 -- Error lens 
 vim.diagnostic.config({
@@ -70,3 +64,5 @@ vim.diagnostic.config({
 		},
 	}
 })
+
+

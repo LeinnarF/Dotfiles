@@ -3,11 +3,13 @@
 	"position": "top",
 	"spacing": 6,
 	"margin-top": 0,
+	"margin-bottom": 0,
 	"margin-left": 0,
 	"margin-right": 0,
 
 	"modules-left": [
-		"sway/workspaces"
+		"sway/workspaces",
+		"custom/media"
 	],
 
 	"modules-center": [
@@ -20,7 +22,7 @@
 		"sway/mode",
 		"sway/scratchpad",
 		"group/controls",
-		"custom/power",
+		"custom/power"
 	],
 
 	"group/system": {
@@ -29,19 +31,19 @@
 		"drawer":{
 			"transition-duration": 1000,
 			"transition-left-to-right": false,
-			"click-to-reveal": true,
+			"click-to-reveal": true
 		}
 	},
 
 	"group/controls": {
 		"orientation": "horizontal",
-		"modules": ["custom/brightness","pulseaudio"],
+		"modules": ["custom/brightness","pulseaudio"]
 	},
 
 
 	"custom/stats":{
 		"format": "",
-		"tooltip": false,
+		"tooltip": false
 	},
 
 	"custom/arch": {
@@ -50,13 +52,13 @@
 	},
 
 	"custom/brightness": {
-		"exec": "brightness current",
-		"interval": 1,
+		// "interval": 1,
 		"format": "󰃟 ",
-		"tooltip": true,
+		"tooltip": false,
 		"tooltip-format": "Brightness: {}%",
 		"on-scroll-up": "brightness up",
-		"on-scroll-down": "brightness down"
+		"on-scroll-down": "brightness down",
+		"on-click": "brightness current"
 	},
 
 	"custom/cavax": {
@@ -89,7 +91,7 @@
 			"7": "7",
 			"8": "8",
 			"9": "9",
-			"10": "10",
+			"10": "10"
 			// "focused": ""
 		},
 		"persistent-workspaces": {
@@ -97,7 +99,7 @@
 			"2": [],
 			"3": [],
 			"4": [],
-			"5": [],
+			"5": []
 		}
 	},
 
@@ -145,7 +147,7 @@
 	"cpu": {
 		"format": "CPU: {usage}%",
 		"tooltip": 	true,
-		"interval": 2,
+		"interval": 2
 		// "on-click": "foot btop"
 	},
 
@@ -159,7 +161,8 @@
 	"clock": {
 		// "format": "<span foreground='#7dcfff'> </span> {:%H:%M}",
 		// "format": "  {:%H:%M} ",
-		"format": "{:%a, %b %d %H:%M}",
+		// "format": "{:%a, %b %d %H:%M}",
+		"format": "{:%b %d, %H:%M}",
 		"tooltip": false,
 		"tooltip-format": "{calendar}",
 		"calendar": {
@@ -171,7 +174,7 @@
 				"today":      "<span color='#ff6699'><b>{}</b></span>"
 			}
 		},
-		"on-click": "cal | fuzzel -d --lines=6 --width=19 --anchor=top --y-margin=15 --x-margin=15"
+		"on-click": "cal | fuzzel -d --lines=6 --width=19 --anchor=top --y-margin=3 --x-margin=15"
 	},
 
 	"pulseaudio": {
@@ -179,27 +182,30 @@
 		"format": "",
 		"format-muted": "  muted",
 		"scroll-step": 5,
-		"tooltip": true,
+		"tooltip": false,
 		"tooltip-format": "Volume: {volume}%",
+		"on-scroll-down": "volume down",
+		"on-scroll-up": "volume up",
+		"on-click" : "volume current"
 	},
 
 	"network": {
 		"format-wifi": "  {essid}",
 		"format-ethernet": "󰖩",
 		"format-disconnected": "󰖪 ",
-		"tooltip": false,
+		"tooltip": false
 	},
 
 	"tray": {
 		"spacing": 8
 	},
 	"custom/media": { 
-		"exec": "playerctl metadata --format '{{artist}} - {{title}}' 2>/dev/null || echo 'Offline'", 
+		"exec": "playerctl metadata --format '{{artist}} - {{title}}' 2>/dev/null", 
 		"interval": 1, 
 		"return-type": "text", 
 		"on-click": "playerctl play-pause", 
 		"on-double-click": "playerctl next",
-		"format": "󰝚  {}",
+		"format": " {}",
 		"max-length": 24 
 	}
 }

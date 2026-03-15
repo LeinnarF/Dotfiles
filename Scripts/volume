@@ -42,8 +42,16 @@ case "$1" in
         wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
         send_notification
         ;;
+		current)
+			if is_muted; then
+					echo "Muted"
+			else
+					echo "Volume: $(get_volume)%"
+					send_notification
+			fi
+			;;
     *)
-        echo "Usage: $0 {up|down|mute}"
+        echo "Usage: $0 {up|down|mute|current}"
         exit 1
         ;;
 esac

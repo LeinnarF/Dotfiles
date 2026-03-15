@@ -1,4 +1,4 @@
-return{
+return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
 	dependencies = {
@@ -16,26 +16,72 @@ return{
 		cmdline = {
 			view = "cmdline_popup",
 			format = {
-				cmdline = { icon = "", title = "Command Line" },
-				-- search_down = { icon = " ", title = "Search Down" },
-				-- search_up = { icon = " ", title = "Search Up" },
-				-- filter = { icon = " ", title = "Filter" },
-				-- lua = { icon = " ", title = "Lua" },
-				-- help = { icon = " ", title = "Help" },
+				cmdline = { icon = "❯", title = " Command " },
 			},
 		},
-		message = {
+		messages = {
 			enabled = true,
-			view = "notify",
-			view_error = "notify",
-			view_warn = "notify",
-			view_history = "messages",
-			view_search = "virtualtext",
 		},
-		presets = {
-			bottom_search = false,
-			command_palette = true,
-			long_message_to_split = true,
+		notify = {
+			enabled = true,
 		},
+		views = {
+			cmdline_popup = {
+				position = {
+					row = "35%",
+					col = "50%",
+				},
+				size = {
+					width = 70,
+					height = "auto",
+				},
+				border = {
+					style = "single",
+					padding = { 0, 1 },
+				},
+				win_options = {
+					winhighlight = "Normal:Normal,FloatBorder:NoiceCmdlinePopupBorder",
+				},
+			},
+			cmdline_popupmenu = {
+				relative = "editor",
+				position = {
+					row = "52%",
+					col = "50%",
+				},
+				size = {
+					width = 70,
+					height = 10,
+				},
+				border = {
+					style = "single",
+				},
+			},
+		}
 	},
+	config = function(_, opts)
+		require("noice").setup(opts)
+
+		local border = { fg = "#c0caf5" }
+		local groups = {
+			"NoiceCmdlinePopupBorder",
+			"NoiceCmdlinePopupTitle",
+			"NoiceConfirmBorder",
+			"NoicePopupBorder",
+			"NoiceSplitBorder",
+			"NoiceCmdlineText",
+		}
+
+		vim.api.nvim_create_autocmd("ColorScheme", {
+			callback = function()
+				for _, g in ipairs(groups) do
+					vim.api.nvim_set_hl(0, g, border)
+				end
+			end,
+		})
+
+		for _, g in ipairs(groups) do
+			vim.api.nvim_set_hl(0, g, border)
+		end
+	end,
 }
