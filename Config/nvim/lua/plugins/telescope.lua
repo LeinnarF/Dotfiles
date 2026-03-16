@@ -31,7 +31,7 @@ return {
 						preview_width = 0.5,
 						results_width = 0.5,
 					},
-					width = 0.7,
+					width = 0.9,
 					height = 0.40,
 					preview_cutoff = 120,
 				},

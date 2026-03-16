@@ -40,7 +40,17 @@ vim.diagnostic.config({
 	},
 	severity_sort = true,
 	float = {
-		source = true
+		source = true,
+		border = {
+			{ "┌", "FloatBorder" },
+			{ "─", "FloatBorder" },
+			{ "┐", "FloatBorder" },
+			{ "│", "FloatBorder" },
+			{ "┘", "FloatBorder" },
+			{ "─", "FloatBorder" },
+			{ "└", "FloatBorder" },
+			{ "│", "FloatBorder" },
+		},
 	},
 	signs = {},
 	update_in_insert = false,

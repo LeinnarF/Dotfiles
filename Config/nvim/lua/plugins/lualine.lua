@@ -9,7 +9,6 @@ return{
 				component_separators = " ",
 				globalstatus = true,
 			},
-			sectionss = {},
 			extensions ={}
 		}
 	end,

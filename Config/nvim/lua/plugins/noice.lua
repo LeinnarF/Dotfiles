@@ -25,7 +25,22 @@ return {
 		notify = {
 			enabled = true,
 		},
+		hover = {
+			enabled = true,
+			opts = {},
+			view = nil,
+		},
 		views = {
+			hover = {
+				border = "single",
+				relative = "cursor",
+				position = {
+					row = 2,
+				},
+				win_options = {
+					winhighlight = "Normal:Normal,FloatBorder:NoiceHoverBorder",
+				},
+			},
 			cmdline_popup = {
 				position = {
 					row = "35%",
@@ -61,7 +76,6 @@ return {
 	},
 	config = function(_, opts)
 		require("noice").setup(opts)
-
 		local border = { fg = "#c0caf5" }
 		local groups = {
 			"NoiceCmdlinePopupBorder",
@@ -70,8 +84,8 @@ return {
 			"NoicePopupBorder",
 			"NoiceSplitBorder",
 			"NoiceCmdlineText",
+			"NoiceHoverBorder",
 		}
-
 		vim.api.nvim_create_autocmd("ColorScheme", {
 			callback = function()
 				for _, g in ipairs(groups) do
@@ -79,7 +93,6 @@ return {
 				end
 			end,
 		})
-
 		for _, g in ipairs(groups) do
 			vim.api.nvim_set_hl(0, g, border)
 		end
