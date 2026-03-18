@@ -35,10 +35,6 @@
   },
   // Utility Overrides
   {
-    "key": "ctrl+l",
-    "command": "workbench.action.showCommands"
-  },
-  {
     "key": "ctrl+alt+shift+l",
     "command": "editor.action.showHover"
   },

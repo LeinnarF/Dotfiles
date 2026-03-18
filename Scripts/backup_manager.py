@@ -51,7 +51,6 @@ config_list = [
     os.path.expanduser("/.zsh_plugins.txt"),
     os.path.expanduser("/.zprofile"),
     os.path.expanduser("/.vimrc"),
-    in_config("nvim"),
     in_config("kitty"),
     in_config("dunst"),
     in_config("rofi"),
