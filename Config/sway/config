@@ -6,6 +6,7 @@ set $mod Mod4
 
 # Default terminal
 set $term kitty
+set $term2 foot
 
 # Drag floating windows with Mod+mouse
 floating_modifier $mod

@@ -1,9 +1,11 @@
 fastfetch
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -151,9 +153,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # ==============================================================================
 # COMPLETION SYSTEM SETTINGS
 # ==============================================================================
@@ -171,7 +170,5 @@ zstyle ':completion:*' group-name ''
 zstyle ':fzf-tab:complete:-command-:*' fzf-preview \
   '(out=$(man $word 2>/dev/null | head -n 5); [ -n "$out" ] && echo "$out") || echo "No manual entry"'
 
-
-
-
-
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

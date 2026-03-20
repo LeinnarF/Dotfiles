@@ -1,7 +1,7 @@
 getantidote/use-omz
 ohmyzsh/ohmyzsh path:plugins/archlinux
-romkatv/powerlevel10k
 zsh-users/zsh-completions
+romkatv/powerlevel10k
 hlissner/zsh-autopair
 Aloxaf/fzf-tab
 zdharma-continuum/fast-syntax-highlighting
