@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ -z "$1" ]]; then
+    echo "Usage: proton <file.exe>"
+    exit 1
+fi
+
+STEAM_COMPAT_DATA_PATH=~/.proton-prefix \
+STEAM_COMPAT_CLIENT_INSTALL_PATH=~/.steam/steam \
+~/.steam/steam/steamapps/common/Proton\ 10.0/proton run "$1"

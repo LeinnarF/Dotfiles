@@ -84,6 +84,8 @@ alias updates='checkupdates'
 alias img='kitten icat'
 alias img-prev='fd -e png -e jpg -e jpeg -e webp -e gif | \
 fzf --preview="kitty icat --clear --transfer-mode=memory --stdin=no --place=${FZF_PREVIEW_COLUMNS:-40}x${FZF_PREVIEW_LINES:-12}@0x0 {}"'
+alias search='w3m https://duckduckgo.com'
+
 # ==============================================================================
 # FZF
 # ==============================================================================
@@ -145,6 +147,7 @@ esac
 
 eval "$(zoxide init zsh)"
 
+# `yazi` wrapper to change directory after execution if needed
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"

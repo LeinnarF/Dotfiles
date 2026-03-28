@@ -46,6 +46,7 @@ window#waybar {
 	color: @blue;
 	background-color: transparent;
 	font-weight: bold;
+	/* border-bottom: 1px solid @blue;	 */
 }
 
 #clock {

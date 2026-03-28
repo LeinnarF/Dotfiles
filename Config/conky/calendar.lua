@@ -9,11 +9,11 @@ conky.config = {
 	own_window = true,
 	own_window_type = 'desktop',
 	own_window_argb_visual = true,
-	own_window_argb_value = 0,  -- Transparency (0-255)
+	own_window_argb_value = 150,  -- Transparency (0-255)
 	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
 
 	-- Layout
-	alignment = 'bottom_right',
+	alignment = 'middle_right',
 	gap_x = 40,
 	gap_y = 40,
 	minimum_width = 250,
@@ -41,15 +41,3 @@ conky.config = {
 	cpu_avg_samples = 2,
 	net_avg_samples = 2,
 };
-
-conky.text = [[
-RAM ${alignr}${font JetBrains Mono Nerd Font:size=11}${mem}
-${membar 6}
-${top_mem name 1} ${alignr} ${top_mem mem_res 1}
-${top_mem name 2} ${alignr} ${top_mem mem_res 2}
-${top_mem name 3} ${alignr} ${top_mem mem_res 3}
-${top_mem name 4} ${alignr} ${top_mem mem_res 4}
-${top_mem name 5} ${alignr} ${top_mem mem_res 5}
-]]
-
-
