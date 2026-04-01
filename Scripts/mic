@@ -1,0 +1,10 @@
+#!/usr/bin/sh
+
+LATENCY=125
+MODULE_ID=$(pactl load-module module-pipe-source source_name="Scrcpy" channels=2 format=16 rate=48000 file=/tmp/scrcpy_pipe)
+
+parec --raw > /dev/null &
+
+scrcpy --no-video --no-window --no-playback --audio-source=mic --audio-codec=raw --record-format=wav --record=/tmp/scrcpy_pipe --audio-buffer=$LATENCY --audio-output-buffer=10 
+
+pactl unload-module $MODULE_ID

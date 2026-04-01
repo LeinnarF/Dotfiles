@@ -63,7 +63,6 @@
     },
     "explorer.confirmPasteNative": false,
     "explorer.confirmDelete": false,
-    "notebook.lineNumbers": "on",
     "breadcrumbs.enabled": false,
     "git.confirmSync": false,
     "chat.viewSessions.orientation": "stacked",
@@ -74,5 +73,6 @@
         "jk": {
             "command": "vscode-neovim.escape"
         }
-    }
+    },
+    "csv.enabled": false
 }
