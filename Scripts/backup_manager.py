@@ -72,6 +72,7 @@ config_list = [
     in_config("mako"),
     in_config("fuzzel"),
     in_config("zed"),
+    in_config("lazygit"),
 ]
 vscode_list = [
     in_config("Code/User/settings.json"),
