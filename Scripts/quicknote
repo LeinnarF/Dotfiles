@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+# quicknote.sh — Capture quick ideas via fuzzel, one markdown file per day
+# Usage: quicknote.sh [notes_dir]
+# Default notes dir: ~/notes
+
+NOTES_DIR="${1:-$HOME/Documents/Caputure/}"
+
+DATE=$(date "+%Y-%m-%d")
+TIME=$(date "+%H:%M")
+NOTES_FILE="${NOTES_DIR}/${DATE}.md"
+
+# Ensure the notes directory exists
+mkdir -p "$NOTES_DIR"
+
+# Create the daily file with a date title if it doesn't exist yet
+if [[ ! -f "$NOTES_FILE" ]]; then
+    echo "# ${DATE}" > "$NOTES_FILE"
+fi
+
+# Prompt for input using fuzzel in dmenu mode
+NOTE=$(echo "" | fuzzel \
+    --dmenu \
+		--config="$HOME/.config/fuzzel/quicknote.ini"\
+    --prompt="✏️ " \
+    --placeholder="Type your idea and press Enter..." \
+    --lines=0 \
+    --width=60)
+
+# Exit silently if user cancelled (Esc) or gave empty input
+[[ -z "$NOTE" ]] && exit 0
+
+# Append the time as a header and the note body
+{
+    echo ""
+    echo "## ${TIME}"
+    echo "${NOTE}"
+    echo ""
+} >> "$NOTES_FILE"
+
+# Optional: desktop notification confirming the save
+if command -v notify-send &>/dev/null; then
+    notify-send \
+        --icon=document-new \
+        --expire-time=3000 \
+        "Note saved  ${TIME}" \
+        "${NOTE:0:80}$([ ${#NOTE} -gt 80 ] && echo '…')"
+fi
