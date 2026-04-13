@@ -1,0 +1,17 @@
+#!/bin/bash
+# OCR screenshot to clipboard using grim + tesseract
+
+TMP_IMG=$(mktemp -t ocr_screenshot_XXXXXX.png)
+
+if grim -g "$(slurp)" - > "$TMP_IMG"; then
+    OCR_TEXT=$(tesseract "$TMP_IMG" - 2>/dev/null)
+
+    if [ -n "$OCR_TEXT" ]; then
+        echo "$OCR_TEXT" | wl-copy
+        notify-send "OCR Complete" "$OCR_TEXT"
+    else
+        notify-send "OCR Failed" "No text detected in selection."
+    fi
+
+    (sleep 5 && rm "$TMP_IMG") &
+fi

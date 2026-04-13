@@ -1,0 +1,9 @@
+#!/bin/bash
+# Emoji picker using fuzzel + wl-copy
+EMOJI_DB="${XDG_DATA_HOME:-$HOME/.local/share}/emoji-picker/emojis.txt"
+SELECTION=$(fuzzel --dmenu --mesg "Emoji" --anchor=bottom --y-margin=50 --width=50 < "$EMOJI_DB")
+
+if [ -n "$SELECTION" ]; then
+    EMOJI=$(echo "$SELECTION" | cut -f1)
+    echo -n "$EMOJI" | wl-copy
+fi
