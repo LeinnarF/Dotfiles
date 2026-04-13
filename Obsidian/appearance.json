@@ -1,10 +1,10 @@
 {
   "showRibbon": false,
   "theme": "obsidian",
-  "cssTheme": "Minimal tokyo night",
-  "accentColor": "#fafcff",
+  "cssTheme": "Tokyo Night",
+  "accentColor": "",
   "monospaceFontFamily": "JetBrainsMono Nerd Font",
-  "showViewHeader": true,
+  "showViewHeader": false,
   "nativeMenus": true,
   "baseFontSize": 18,
   "textFontFamily": "JetBrainsMono Nerd Font",

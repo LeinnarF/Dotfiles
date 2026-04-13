@@ -8,8 +8,7 @@
 	"margin-right": 0,
 
 	"modules-left": [
-		"sway/workspaces",
-		"custom/media"
+		"sway/workspaces"
 	],
 
 	"modules-center": [

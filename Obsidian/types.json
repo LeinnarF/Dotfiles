@@ -11,6 +11,8 @@
     "volume": "number",
     "catogeries": "multitext",
     "raw note": "multitext",
-    "created": "date"
+    "created": "date",
+    "year_published": "number",
+    "date_captured": "text"
   }
 }

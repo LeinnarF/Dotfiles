@@ -1,9 +1,7 @@
 [
   "obsidian-latex-suite",
   "restore-tab-key",
-  "obsidian-style-settings",
   "obsidian-completr",
   "obsidian-icon-folder",
-  "obsidian-vimrc-support",
-  "omnisearch"
+  "obsidian-vimrc-support"
 ]

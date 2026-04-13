@@ -86,6 +86,7 @@ alias img-prev='fd -e png -e jpg -e jpeg -e webp -e gif | \
 fzf --preview="kitty icat --clear --transfer-mode=memory --stdin=no --place=${FZF_PREVIEW_COLUMNS:-40}x${FZF_PREVIEW_LINES:-12}@0x0 {}"'
 alias search='w3m https://duckduckgo.com'
 alias copy='wl-copy'
+alias obs='cd Vault'
 
 # ==============================================================================
 # FZF
