@@ -24,8 +24,10 @@ window#waybar {
 }
 
 #workspaces button {
-	padding: 0px 0px;
+	padding: 0px 0px ;
 	font-size: 8px;
+	min-width: 16px;
+	min-height: 0;
 	font-weight: normal;
 	color: @foreground;
 	border: 1px solid transparent;
@@ -41,6 +43,12 @@ window#waybar {
 	border-color: transparent;
 }
 
+#workspaces button.empty {
+	color: @alt-foreground;
+	background-color: transparent;
+	font-weight: bold;
+	/* border-bottom: 1px solid @red; */
+}
 
 #workspaces button.focused {
 	color: @blue;
@@ -49,8 +57,10 @@ window#waybar {
 	/* border-bottom: 1px solid @blue;	 */
 }
 
+
 #clock {
 	font-weight: normal;
+	font-size: 14px;
 }
 
 #tray {
@@ -92,6 +102,11 @@ window#waybar {
 	font-size: 13px;
 }
 
+#custom-swaync{
+	font-weight: bold;
+}
+
+#custom-swaync,
 #custom-stats,
 #system,
 #tray,

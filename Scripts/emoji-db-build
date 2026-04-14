@@ -1,0 +1,16 @@
+#!/bin/bash
+# Build emoji database from unicode.org
+
+EMOJI_DB="${XDG_DATA_HOME:-$HOME/.local/share}/emoji-picker/emojis.txt"
+
+mkdir -p "$(dirname "$EMOJI_DB")"
+
+echo "Fetching emoji list..."
+curl -sL "https://unicode.org/Public/emoji/latest/emoji-test.txt" \
+    | grep -E "^[^#].*fully-qualified" \
+    | sed 's/.*# //' \
+    | sed 's/ E[0-9]\+\.[0-9]\+ /\t/' \
+    > "$EMOJI_DB"
+
+COUNT=$(wc -l < "$EMOJI_DB")
+echo "Done! $COUNT emojis saved to $EMOJI_DB"
