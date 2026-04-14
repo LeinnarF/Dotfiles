@@ -83,5 +83,10 @@ My custom Hsnips snippets for VSCode is located in
 - Btop
 - Bat 
 
+### Screenshot
+![Screenshot](./Images/Screenshots/ss1.png)
+![Screenshot](./Images/Screenshots/ss2.png)
+![Screenshot](./Images/Screenshots/ss3.png)
+
 ### Inspiration
 - [r/unixporn](https://www.reddit.com/r/unixporn/)
