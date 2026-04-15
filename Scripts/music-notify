@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+# music-notify-daemon.sh
+# Watches for media player changes and sends notifications automatically.
+# Run this once on login (e.g. via Sway's exec_always or a systemd user service).
+
+LAST_TITLE=""
+LAST_STATUS=""
+
+send_notification() {
+    local STATUS TITLE ARTIST ALBUM ART_URL ICON
+
+    STATUS=$(playerctl status 2>/dev/null)
+
+    if [[ -z "$STATUS" || "$STATUS" == "Stopped" ]]; then
+        notify-send -a "MusicPlayer" \
+            -h string:x-canonical-private-synchronous:music-player \
+            -u low -i media-playback-stop "Playback Stopped"
+        return
+    fi
+
+    TITLE=$(playerctl metadata --format "{{ title }}" 2>/dev/null)
+    ARTIST=$(playerctl metadata --format "{{ artist }}" 2>/dev/null)
+    ALBUM=$(playerctl metadata --format "{{ album }}" 2>/dev/null)
+    ART_URL=$(playerctl metadata --format "{{ mpris:artUrl }}" 2>/dev/null | sed 's/^file:\/\///')
+
+    if [[ "$STATUS" == "Playing" ]]; then
+        ICON="media-playback-start"
+    else
+        ICON="media-playback-pause"
+    fi
+
+    if [[ -n "$ART_URL" && -f "$ART_URL" ]]; then
+        notify-send -a "MusicPlayer" \
+            -h string:x-canonical-private-synchronous:music-player \
+            -u low -i "$ART_URL" \
+            "$TITLE" "${ARTIST} — ${ALBUM}"
+    else
+        notify-send -a "MusicPlayer" \
+            -h string:x-canonical-private-synchronous:music-player \
+            -u low -i "$ICON" \
+            "$TITLE" "${ARTIST} — ${ALBUM}"
+    fi
+}
+
+# --follow emits a line whenever title, status, or other metadata changes.
+# We filter for meaningful events to avoid duplicate notifications.
+playerctl --follow metadata --format "{{status}} {{title}}" 2>/dev/null | \
+while IFS= read -r line; do
+    STATUS="${line%% *}"
+    TITLE="${line#* }"
+
+    # Notify on track change (any status) or play/pause toggle
+    if [[ "$TITLE" != "$LAST_TITLE" || "$STATUS" != "$LAST_STATUS" ]]; then
+        # Only notify on Playing, Paused, or Stopped — skip transient/empty lines
+        case "$STATUS" in
+            Playing|Paused|Stopped)
+                LAST_TITLE="$TITLE"
+                LAST_STATUS="$STATUS"
+                send_notification
+                ;;
+        esac
+    fi
+done
