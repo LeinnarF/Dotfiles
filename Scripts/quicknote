@@ -4,7 +4,7 @@
 # Usage: quicknote.sh [notes_dir]
 # Default notes dir: ~/notes
 
-NOTES_DIR="${1:-$HOME/Documents/Caputure/}"
+NOTES_DIR="${1:-$HOME/Documents/Vault/01 Journal/00 Daily/}"
 
 DATE=$(date "+%Y-%m-%d")
 TIME=$(date "+%H:%M")
