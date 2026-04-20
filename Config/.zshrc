@@ -127,21 +127,21 @@ zstyle ':fzf-tab:*' fzf-flags \
 	--color=border:$bg_alt
 
 zstyle ':fzf-tab:*' switch-group '<' '>'
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --level=2 --color=always $realpath'
-zstyle ':fzf-tab:complete:(bat|cat|nvim|nano):*' fzf-preview 'bat --color=always --style=numbers --line-range=:500 $realpath'
+# zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --level=2 --color=always $realpath'
+# zstyle ':fzf-tab:complete:(bat|cat|nvim|nano):*' fzf-preview 'bat --color=always --style=numbers --line-range=:500 $realpath'
 zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
 
-zstyle ':fzf-tab:complete:*:*' fzf-preview '
-case "$realpath" in
-  *.png|*.jpg|*.jpeg|*.webp|*.gif)
-    kitty icat --clear --transfer-mode=memory --stdin=no \
-      --place=${FZF_PREVIEW_COLUMNS:-80}x${FZF_PREVIEW_LINES:-24}@0x0 "$realpath"
-    ;;
-  *)
-    bat --color=always --style=numbers --line-range=:500 "$realpath" 2>/dev/null
-    ;;
-esac
-'
+# zstyle ':fzf-tab:complete:*:*' fzf-preview '
+# case "$realpath" in
+#   *.png|*.jpg|*.jpeg|*.webp|*.gif)
+#     kitty icat --clear --transfer-mode=memory --stdin=no \
+#       --place=${FZF_PREVIEW_COLUMNS:-80}x${FZF_PREVIEW_LINES:-24}@0x0 "$realpath"
+#     ;;
+#   *)
+#     bat --color=always --style=numbers --line-range=:500 "$realpath" 2>/dev/null
+#     ;;
+# esac
+# '
 
 # ==============================================================================
 # INITIALIZERS & WRAPPERS
