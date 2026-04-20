@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TOTAL_WS=5
+TOTAL_WS=4
 
 # Grab the currently focused workspace number using swaymsg and jq
 CURRENT=$(swaymsg -t get_workspaces | jq '.[] | select(.focused==true).num')
