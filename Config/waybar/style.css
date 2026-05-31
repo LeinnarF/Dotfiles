@@ -1,4 +1,5 @@
 @define-color background #1a1b26;
+@define-color background-alt #0f0f0f;
 @define-color foreground #c0caf5;
 @define-color alt-foreground #414868;
 @define-color cyan #7dcfff;
@@ -12,7 +13,7 @@
 	/* border: none; */
 	border-radius: 0;
 	font-family: JetBrainsMono Nerd Font;
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: normal;
 	min-height: 0;
 }
@@ -20,7 +21,12 @@
 window#waybar {
 	background-color: @background;
 	color: @foreground;
-	border: 1px solid @background;
+}
+
+#workspaces {
+	background-color: @background-alt;
+	margin: 3px 3px;
+	border-radius: 6px;
 }
 
 #workspaces button {
@@ -43,16 +49,17 @@ window#waybar {
 }
 
 #workspaces button.empty {
-	color: @alt-foreground;
+	color: @foreground;
 	background-color: transparent;
 	font-weight: bold;
 	/* border-bottom: 1px solid @red; */
 }
 
 #workspaces button.focused {
-	color: @blue;
-	background-color: transparent;
-	font-weight: bold;
+	color: @background;
+	background-color: @blue;
+	margin: 3px 1px;
+	border-radius: 6px;
 	/* border-bottom: 1px solid @blue;	 */
 }
 
@@ -60,6 +67,9 @@ window#waybar {
 #clock {
 	font-weight: normal;
 	font-size: 14px;
+	background-color: @background-alt;
+	margin: 3px 0px;
+	border-radius: 6px;
 }
 
 #tray {
@@ -88,6 +98,12 @@ window#waybar {
 	font-size: 12px;
 }
 
+/* #system { */
+/* 	background-color: @background-alt; */
+/* 	margin: 3px 3px; */
+/* 	border-radius: 6px; */
+/* } */
+
 #custom-separator {
 	color: @alt-foreground;
 }
@@ -95,6 +111,9 @@ window#waybar {
 #custom-media {
 	font-size: 14px;
 	color: @blue;
+	background-color: @background-alt;
+	margin: 3px 0px;
+	border-radius: 6px;
 }
 
 #scratchpad{

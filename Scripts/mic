@@ -5,6 +5,6 @@ MODULE_ID=$(pactl load-module module-pipe-source source_name="Scrcpy" channels=2
 
 parec --raw > /dev/null &
 
-scrcpy --no-video --no-window --no-playback --audio-source=mic --audio-codec=raw --record-format=wav --record=/tmp/scrcpy_pipe --audio-buffer=$LATENCY --audio-output-buffer=10 
+scrcpy --no-video --no-window --no-playback --audio-source=voice-performance --audio-codec=raw --record-format=wav --record=/tmp/scrcpy_pipe --audio-buffer=$LATENCY --audio-output-buffer=10 
 
 pactl unload-module $MODULE_ID

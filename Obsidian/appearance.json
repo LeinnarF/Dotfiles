@@ -1,13 +1,13 @@
 {
   "showRibbon": false,
-  "theme": "obsidian",
-  "cssTheme": "Tokyo Night",
-  "accentColor": "",
+  "theme": "moonstone",
+  "cssTheme": "Minimal",
+  "accentColor": "#8ca7d4",
   "monospaceFontFamily": "JetBrainsMono Nerd Font",
   "showViewHeader": false,
   "nativeMenus": true,
   "baseFontSize": 18,
-  "textFontFamily": "JetBrainsMono Nerd Font",
+  "textFontFamily": "Helvetica",
   "enabledCssSnippets": [
     "paragraph"
   ],

@@ -3,7 +3,7 @@
     "aliases": "aliases",
     "cssclasses": "multitext",
     "tags": "tags",
-    "date": "text",
+    "date": "date",
     "time": "text",
     "author": "multitext",
     "year": "number",
@@ -13,6 +13,7 @@
     "raw note": "multitext",
     "created": "date",
     "year_published": "number",
-    "date_captured": "text"
+    "date_captured": "text",
+    "Type": "text"
   }
 }

@@ -20,6 +20,7 @@
 		"group/system",
 		"sway/mode",
 		"sway/scratchpad",
+		"network",
 		"group/controls",
 		"custom/power"
 	],
@@ -102,11 +103,11 @@
 		"all-outputs": false,
 		"format": "{icon}",
 		"format-icons": {
-			"1": "",
-			"2": "",
-			"3": "",
-			"4": "",
-			"5": "",
+			"1": "1",
+			"2": "2",
+			"3": "3",
+			"4": "4",
+			"5": "5",
 			"6": "",
 			"7": "",
 			"8": "",
@@ -192,7 +193,7 @@
 				"today":      "<span color='#ff6699'><b>{}</b></span>"
 			}
 		},
-		"on-click": "cal | fuzzel -d --lines=6 --width=19 --anchor=top --y-margin=3 --x-margin=15"
+		"on-click": "cal | fuzzel -d --lines=7 --width=19 --anchor=top --y-margin=3 --x-margin=15"
 	},
 
 	"pulseaudio": {
@@ -208,9 +209,9 @@
 	},
 
 	"network": {
-		"format-wifi": "  {essid}",
+		"format-wifi": "󰖩",
 		"format-ethernet": "󰖩",
-		"format-disconnected": "󰖪 ",
+		"format-disconnected": "󰖪",
 		"tooltip": false
 	},
 

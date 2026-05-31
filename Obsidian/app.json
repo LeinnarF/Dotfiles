@@ -3,7 +3,7 @@
   "showLineNumber": true,
   "readableLineLength": true,
   "defaultViewMode": "preview",
-  "newFileLocation": "folder",
+  "newFileLocation": "root",
   "showInlineTitle": false,
   "pdfExportSettings": {
     "includeName": false,
@@ -18,5 +18,6 @@
   "promptDelete": false,
   "alwaysUpdateLinks": true,
   "newFileFolderPath": "00 Inbox",
-  "attachmentFolderPath": "04 System/Files"
+  "attachmentFolderPath": "10 System/Files",
+  "openBehavior": ""
 }
