@@ -13,7 +13,7 @@
 	/* border: none; */
 	border-radius: 0;
 	font-family: JetBrainsMono Nerd Font;
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: normal;
 	min-height: 0;
 }
@@ -24,14 +24,14 @@ window#waybar {
 }
 
 #workspaces {
-	background-color: @background-alt;
+	background-color: transparent;
 	margin: 3px 3px;
 	border-radius: 6px;
 }
 
 #workspaces button {
 	padding: 0px 0px ;
-	min-width: 18px;
+	min-width: 15px;
 	min-height: 0;
 	font-weight: normal;
 	color: @foreground;
@@ -59,15 +59,14 @@ window#waybar {
 	color: @background;
 	background-color: @blue;
 	margin: 3px 1px;
-	border-radius: 6px;
+	border-radius: 4px;
 	/* border-bottom: 1px solid @blue;	 */
 }
 
 
 #clock {
 	font-weight: normal;
-	font-size: 14px;
-	background-color: @background-alt;
+	/* background-color: @background-alt; */
 	margin: 3px 0px;
 	border-radius: 6px;
 }
@@ -109,7 +108,7 @@ window#waybar {
 }
 
 #custom-media {
-	font-size: 14px;
+	font-size: 12px;
 	color: @blue;
 	background-color: @background-alt;
 	margin: 3px 0px;
@@ -117,7 +116,7 @@ window#waybar {
 }
 
 #scratchpad{
-	font-size: 13px;
+	/* font-size: 13px; */
 }
 
 #custom-swaync{
@@ -141,5 +140,5 @@ window#waybar {
 #battery,
 #network,
 #pulseaudio {
-	padding: 2px 5px;
+	padding: 2px 3px;
 }

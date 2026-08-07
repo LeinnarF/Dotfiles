@@ -9,7 +9,6 @@
 
 	"modules-left": [
 		"sway/workspaces",
-		"custom/media"
 	],
 
 	"modules-center": [
@@ -42,7 +41,8 @@
 
 
 	"custom/stats":{
-		"format": "",
+		// "format": "",
+		"format": "",
 		"tooltip": false
 	},
 
@@ -118,7 +118,7 @@
 			"1": [],
 			"2": [],
 			"3": [],
-			"4": []
+			"4": [],
 		}
 	},
 

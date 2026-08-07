@@ -7,6 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "text_rendering_mode": "platform_default",
   "languages": {
     "Diff": {
@@ -92,6 +101,7 @@
     "experimental.show": true,
   },
   "project_panel": {
+    "dock": "left",
     "button": false,
     "hide_root": true,
   },
