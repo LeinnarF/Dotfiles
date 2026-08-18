@@ -1,8 +1,8 @@
 {
   "showRibbon": false,
-  "theme": "obsidian",
-  "cssTheme": "Minimal",
-  "accentColor": "#8ca7d4",
+  "theme": "moonstone",
+  "cssTheme": "Ink Paper",
+  "accentColor": "",
   "monospaceFontFamily": "JetBrainsMono Nerd Font",
   "showViewHeader": false,
   "nativeMenus": true,

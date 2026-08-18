@@ -19,5 +19,6 @@
   "alwaysUpdateLinks": true,
   "newFileFolderPath": "00 Inbox",
   "attachmentFolderPath": "10 System/Files",
-  "openBehavior": ""
+  "openBehavior": "",
+  "foldHeading": false
 }

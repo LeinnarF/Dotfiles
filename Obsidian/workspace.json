@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f92ed7a68f602a69",
+        "id": "f5621577db72a9fc",
         "type": "tabs",
         "children": [
           {
-            "id": "14ddaf83cb4ac062",
+            "id": "2dff8dcc153b3c88",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -42,7 +42,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -79,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 210.5,
-    "collapsed": true
+    "width": 210.5
   },
   "right": {
     "id": "87b5bdb46152530b",
@@ -157,14 +158,24 @@
       "daily-notes:Open today's daily note": false
     }
   },
-  "active": "14ddaf83cb4ac062",
+  "active": "2dff8dcc153b3c88",
   "lastOpenFiles": [
-    "Intro to Regression with statsmodels.md~",
-    "draft.md",
+    "01 Journal/2026-08-18.md",
+    "01 Journal/00 Daily/2026-08-06.md",
+    "01 Journal/2026-08-17.md",
+    "01 Journal/2026-08-14.md",
     "01 Journal/2026-07-31.md",
+    "01 Journal/2026-07-27.md",
+    "01 Journal/2026-07-17.md",
+    "01 Journal/2026-07-16.md",
+    "01 Journal/2026-07-15.md",
+    "01 Journal/2026-07-12.md",
+    "01 Journal/2026-06-19.md",
+    "Intro to Regression with statsmodels.md",
+    "draft.md",
+    "Intro to Regression with statsmodels.md~",
     "Data Communication Concepts.md",
     "Data Communication Concepts.md~",
-    "01 Journal/2026-07-27.md",
     "Exploratory Data Analysis in Python.md",
     "Exploratory Data Analysis in Python.md~",
     "Introduction to Statistics in Python.md",
@@ -178,23 +189,13 @@
     "05 DataCamp/SQL Fundamentals Track/Simple EDA in SQL.md",
     "06 Index/Applied Linear Algebra.md",
     "06 Index/Linear Algebra.md",
-    "06 Index/Statistics.md",
-    "06 Index/SQL.md",
-    "01 Journal/2026-07-17.md",
     "Introduction to Statistics in Python.md~",
-    "01 Journal/2026-07-16.md",
-    "02 Concepts/Statistics/Continuous Probability Distributions.md",
-    "02 Concepts/Statistics/t-test.md",
-    "02 Concepts/Statistics/ANOVA.md",
-    "01 Journal/2026-07-12.md",
-    "01 Journal/2026-07-15.md",
     "01 Journal/2026-07-12.md~",
     "Joining Data with Pandas.md~",
     "Data Manipulation with Pandas.md~",
     "Intermediate Python.md~",
     "Workout Program.md~",
     "05 DataCamp/Associate Data Scientist Track",
-    "05 DataCamp/SQL Fundamentals Track",
     "10 System/Files/Pasted image 20260529114120.png",
     "10 System/Files/Pasted image 20260529112832.png",
     "10 System/Files/Pasted image 20260529112415.png",

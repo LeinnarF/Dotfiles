@@ -65,7 +65,7 @@ window#waybar {
 
 
 #clock {
-	font-weight: normal;
+	font-weight: bold;
 	/* background-color: @background-alt; */
 	margin: 3px 0px;
 	border-radius: 6px;
